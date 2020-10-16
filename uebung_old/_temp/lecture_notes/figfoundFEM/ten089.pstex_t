@@ -1,0 +1,49 @@
+\begin{picture}(0,0)%
+\includegraphics{./figfoundFEM/ten089.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6623,3107)(125,-4241)
+\put(1646,-4196){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}b)}%
+}}}}
+\put(4736,-4196){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}c)}%
+}}}}
+\put(181,-4191){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}a)}%
+}}}}
+\put(5803,-1267){\makebox(0,0)[b]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm d^{\,\nodeidpic{2}}_1$}%
+}}}}
+\put(6624,-2995){\makebox(0,0)[b]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm d^{\,\nodeidpic{2}}_2$}%
+}}}}
+\put(5810,-2673){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm\bd^{\,\nodeidpic{2}}$}%
+}}}}
+\put(5823,-1800){\makebox(0,0)[b]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vert\Delta\rm l_2\vert$}%
+}}}}
+\put(4956,-2134){\makebox(0,0)[b]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vert\Delta\rm l_1\vert$}%
+}}}}
+\put(4023,-2964){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm F^{\nodeidpic{2}}_2$}%
+}}}}
+\put(2790,-4086){\makebox(0,0)[b]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm S_2$}%
+}}}}
+\put(3214,-2603){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$45^\circ$}%
+}}}}
+\put(3077,-3542){\makebox(0,0)[b]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm 0,01 kN$}%
+}}}}
+\put(3754,-1815){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vert \rm F^{\,\nodeidpic{2}}_1\vert$}%
+}}}}
+\put(1350,-2606){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm S_2$}%
+}}}}
+\put(588,-2355){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm \vert F^{\,\nodeidpic{1}}_1 \vert$}%
+}}}}
+\put(679,-2887){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm S_1$}%
+}}}}
+\put(2521,-2716){\makebox(0,0)[b]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm S_1$}%
+}}}}
+\put(856,-1996){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\vert \rm F^{\,\nodeidpic{2}}_2 \vert$}%
+}}}}
+\end{picture}%

@@ -1,0 +1,60 @@
+\clearpage
+\setcounter{page}{1}
+
+\section{Gauss-Quadratur}
+
+Die Formel für die numerische Integration mittels Gauss-Quadratur lautet
+\eb
+\int_{-1}^1 f(\xi)\ \mrm{d} \xi \approx
+\sum_{i=1}^n w_i\ f(\xi_i)\ .
+\ee
+Dabei sind $w_i$ die Wichungsfaktoren und $\xi_i$ die Gausspunkte.
+
+
+\subsection{Quadratisches Viereckselement}
+
+Für das quadratische isoparametrische Viereckselement wird die Gaussintegrationsordnung $n=3$ gewählt.
+
+\enab
+\item Wie viele Gausspunkte hat das Element dann? 
+\item Ist die Gaussintegration der Ordnung $n=3$ für eine quadratische Funktion $f(\xi)$ (Polynomgrad $p=2$) exakt? 
+      Welche Bedingung muss erfüllt sein?
+          
+      \textit{Hinweis}: Da bei Viereckselementen die Übertragung von einer auf zwei Koordinatenrichtungen direkt möglich ist reicht es in dieser Aufgabe eine Funktion $f(\xi)$ mit nur einer Koordinate zu betrachten.
+\enae
+
+
+
+
+\enabres
+\item Gibt es Gründe eine höhere Integrationsordnung als nötig zu verwenden? Erläutern Sie ihre Antwort anhand eines Beispiels.
+\enae
+
+Findet die Gaussintegration über das Intervall $[-1,1]$ statt so lassen sich die Gausspunke $\xi_i\ (i=1,\hdots,n)$ als Nullstellen des n-ten Legendrepolynoms bestimmen:
+
+\eb
+P_n(\xi)=\frac{1}{2^n\,n!}\ \frac{\mrm{d}^n}{\mrm{d}\xi^n}(\xi^2-1)^n
+\ee
+
+\enabres
+\item Wie lautet das Legendrepolynom 3. Ordnung?
+\item Bestimmen Sie die entsprechenden Gausspunktkoordinaten $\xi_i$
+\enae
+
+Die Zugehörigen Wichtungsfaktoren $w_i$ lassen sich über folgende Beziehung bestimmen:
+
+\eb
+w_i=\int_{-1}^1 l_i(\xi)\ \mrm{d}\xi
+\ee
+
+Dabei ist $l_i$ das i-te Lagrangepolynom (Ordnung $n-1$) mit den Gausspunkten $\xi_i$ als Stützstellen.
+
+\enabres
+\item Bestimmen Sie die zu den Gausspunktkoordinaten gehörigen Wichtungsfaktoren $w_i$
+\enae
+
+\clearpage
+
+
+% \subsection*{Zusatzinfo: Herleitung Gausspunktbestimmung}
+

@@ -1,0 +1,39 @@
+\begin{picture}(0,0)%
+\includegraphics{./figures/bild809.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(4893,2811)(195,-4048)
+\put(3863,-1584){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$F_c$}%
+}}}}
+\put(3872,-3110){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$F_c$}%
+}}}}
+\put(4796,-2184){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$F$}%
+}}}}
+\put(3951,-2166){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\alpha$}%
+}}}}
+\put(3953,-2566){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\alpha$}%
+}}}}
+\put(2163,-2198){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$F$}%
+}}}}
+\put(472,-1928){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$h$}%
+}}}}
+\put(474,-2816){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$h$}%
+}}}}
+\put(1482,-2936){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{16.8}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$c$}%
+}}}}
+\put(1522,-1803){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{16.8}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$c$}%
+}}}}
+\put(2001,-3861){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$l$}%
+}}}}
+\put(1735,-3554){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$x$}%
+}}}}
+\put(1244,-3551){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$l_0$}%
+}}}}
+\end{picture}%

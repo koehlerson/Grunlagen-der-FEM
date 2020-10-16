@@ -1,0 +1,61 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Classification of partial differential equations of second order}{2}
+\contentsline {section}{\numberline {3}Finite-Difference-Method}{5}
+\contentsline {subsection}{\numberline {3.1}One-dimensional Problem}{5}
+\contentsline {subsubsection}{\numberline {3.1.1}Discretization 1D}{5}
+\contentsline {subsubsection}{\numberline {3.1.2}Differential quotients 1D}{6}
+\contentsline {subsubsection}{\numberline {3.1.3}Example: Beam with constant cross section.}{8}
+\contentsline {subsubsection}{\numberline {3.1.4}Parabolic problems: equation of heat conduction}{12}
+\contentsline {subsection}{\numberline {3.2}Two-dimensional problem}{15}
+\contentsline {subsubsection}{\numberline {3.2.1}Discretization 2D}{15}
+\contentsline {subsubsection}{\numberline {3.2.2}Difference quotients 2D}{16}
+\contentsline {section}{\numberline {4}Foundations of the Calculus of Variations}{21}
+\contentsline {subsection}{\numberline {4.1}Preliminaries}{21}
+\contentsline {subsection}{\numberline {4.2}Classical Method, Euler-Lagrange Equation}{23}
+\contentsline {subsubsection}{\numberline {4.2.1}Boundary Conditions}{27}
+\contentsline {subsubsection}{\numberline {4.2.2}Constraint Conditions}{29}
+\contentsline {subsection}{\numberline {4.3}Direct Methods}{31}
+\contentsline {subsubsection}{\numberline {4.3.1}Ritz's Method}{31}
+\contentsline {subsubsection}{\numberline {4.3.2}Weighted Residual Methods}{33}
+\contentsline {section}{\numberline {5}Introduction to Matlab}{39}
+\contentsline {subsection}{\numberline {5.1}Introduction}{39}
+\contentsline {subsection}{\numberline {5.2}Basics}{40}
+\contentsline {subsubsection}{\numberline {5.2.1}Graphical User Interface of \unhbox \voidb@x \hbox {\sc Matlab}}{40}
+\contentsline {subsubsection}{\numberline {5.2.2}Additional Environments}{41}
+\contentsline {subsubsection}{\numberline {5.2.3}General Commands}{42}
+\contentsline {subsubsection}{\numberline {5.2.4}Variables}{42}
+\contentsline {subsubsection}{\numberline {5.2.5}Mathematical Functions}{43}
+\contentsline {subsubsection}{\numberline {5.2.6}Vectors and Matrices}{43}
+\contentsline {subsubsection}{\numberline {5.2.7}Operations on Vectors and Matrices}{44}
+\contentsline {subsubsection}{\numberline {5.2.8}Scripts and Functions}{45}
+\contentsline {subsubsection}{\numberline {5.2.9}Relational and Logical Operators}{46}
+\contentsline {subsubsection}{\numberline {5.2.10}IF-/CASE Statements and Loops}{46}
+\contentsline {subsubsection}{\numberline {5.2.11}Plotting Figures}{46}
+\contentsline {subsection}{\numberline {5.3}Exercises}{48}
+\contentsline {subsubsection}{\numberline {5.3.1}Animation of a rotating cantilever}{48}
+\contentsline {subsubsection}{\numberline {5.3.2}Animation of a rotating cantilever using a subroutine}{48}
+\contentsline {subsubsection}{\numberline {5.3.3}Source code}{49}
+\contentsline {section}{\numberline {6}Linear Finite Element Method}{51}
+\contentsline {subsection}{\numberline {6.1}Illustration of the Finite Element Concept}{51}
+\contentsline {subsubsection}{\numberline {6.1.1}Idealization of the Physical System}{52}
+\contentsline {subsubsection}{\numberline {6.1.2}The Assembly Procedure}{54}
+\contentsline {subsubsection}{\numberline {6.1.3}Remarks Concerning the Implementation}{57}
+\contentsline {subsection}{\numberline {6.2}Generalizations}{71}
+\contentsline {subsection}{\numberline {6.3}Triangular and Tetrahedral Elements}{73}
+\contentsline {subsubsection}{\numberline {6.3.1}Triangular Elements}{73}
+\contentsline {subsubsection}{\numberline {6.3.2}Tetrahedral Elements}{80}
+\contentsline {subsection}{\numberline {6.4}Isoparametric Concept}{82}
+\contentsline {subsection}{\numberline {6.5}Numerical Integration}{84}
+\contentsline {subsection}{\numberline {6.6}Quadrilateral Element}{90}
+\contentsline {subsubsection}{\numberline {6.6.1}Variational Formulation}{90}
+\contentsline {subsubsection}{\numberline {6.6.2}Finite-Element-Discretization}{92}
+\contentsline {subsection}{\numberline {6.7}Beam Elements}{96}
+\contentsline {subsubsection}{\numberline {6.7.1}Beam Theory according to Euler-Bernoulli for simple bending}{96}
+\contentsline {subsection}{\numberline {6.8}Plate Elements}{110}
+\contentsline {subsubsection}{\numberline {6.8.1}Kinematics}{110}
+\contentsline {subsubsection}{\numberline {6.8.2}Kirchhoff Theory}{111}
+\contentsline {subsubsection}{\numberline {6.8.3}16 Parameter Element by Kirchhoff- Theory}{112}
+\contentsline {subsubsection}{\numberline {6.8.4}Reissner-Mindlin Theory}{114}
+\contentsline {subsection}{\numberline {6.9}Isoparametric Four-Node-Element of the Shear-Elastic Theory}{115}
+\contentsline {subsection}{\numberline {6.10}Axis-Symmetric Shell Elements}{116}
+\contentsline {subsubsection}{\numberline {6.10.1}Two-Node Axis-Symmetric Shell Element}{120}

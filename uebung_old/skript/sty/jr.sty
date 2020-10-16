@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Control style file for LaTex articles
+%% This file includes all other style files
+%% 
+%% v1.0 Oct-01-2019 
+%%                                                              
+%% Author: Johannes Riesselmann      
+%%         Chair of Continuum Mechanics,
+%%         Ruhr-University Bochum
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% packages
+% -----------------------------------------------------------
+\RequirePackage{color}     % for colored text, definition of colors etc.
+\RequirePackage{titlesec}  % package for editing format of section headers
+
+
+
+% style files
+% -----------------------------------------------------------
+\usepackage{ifthen} % needed for boolean variables in style db
+% true: italic bold variables in math mode
+% false: roman bold variables in math mode
+\newboolean{boldeqnitalic}
+\setboolean{boldeqnitalic}{true}
+\usepackage{stylefiles/defdb1} % style db
+\usepackage{stylefiles/defjrjk} % style jrjk
+
+
+
+% path declarations for figures
+% -----------------------------------------------------------
+\newcommand{\logopath}{figures_logo} % folder in which different possibly required logos and the files for the paper layout are stored
+\newcommand{\gfxpath}{figures_sup}   % folder for files made with xfig etc., necessary files (pstex + pstex_t) should be copied to \figpath in final version
+\newcommand{\figpath}{figures}       % final path for all figure files required to compile the document (eps, pstex, pstex_t), single eps files
+
+
+
+% front matter declarations (c.f. seminar_bad_honnef.cls)
+% -----------------------------------------------------------
+\newcommand{\address}[1]{\gdef\@address{#1}}
+\newcommand{\corresp}[1]{\gdef\@corresp{#1}}%$^*$ Corresponding author: \gdef\@corresp{#1}}
+\renewcommand{\abstract}[1]{\gdef\@abstract{#1}}
+\newcommand{\keywords}[1]{\gdef\@keywords{#1}}
+
+% maketitle
+\renewcommand{\maketitle}{
+ \newpage
+% \thispagestyle{plain}
+ \begin{center}
+  {% title
+   \LARGE
+   \bfseries
+   \@title
+   \par
+  }\vspace{18pt}
+  {% authors
+   \large
+   \@author
+   \par
+  }\vspace{12pt}
+  {% adress
+   \def\and{\\\vspace{12pt}}
+   \@address
+   \par
+  }\vspace{12pt}
+  {% corresponding author
+   $^*$ E-mail address of corresponding author: 
+   \@corresp
+   \par
+  }
+ \end{center}
+ \vspace{18pt}
+ % abstract
+ \noindent\textbf{Abstract:\space}{\textit\@abstract}
+ \par
+ \vspace{0.5cm}
+ % keywords
+ \noindent\textbf{Keywords:\space}\@keywords
+ \par
+ \vspace{0.5cm} 
+}
+
+
+
+% acknowledgement
+% -----------------------------------------------------------
+\newcommand{\acknowledge}[1]{\gdef\@acknowledge{#1}}
+\newcommand{\makeacknowledgement}{
+\section*{Acknowledgement}
+\@acknowledge
+}
+
+
+
+% bibliography
+% -----------------------------------------------------------
+\newcommand{\makebib}[1]{
+\bibliographystyle{plain}
+\bibliography{#1}
+}
+
+
+
+% appendix
+% -----------------------------------------------------------
+\newcommand{\makeappendix}[1]{
+\begin{appendix}
+\input{#1}
+\end{appendix}
+}
+
+
+
+% format of section headers
+% -----------------------------------------------------------
+% \titleformat{command}[shape]{format}{label}{sep}{before}[after]
+\titleformat{\subsubsection}[runin]{\normalfont\bfseries}{\thesubsection.}{3pt}{} % remove new line from subsection

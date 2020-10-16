@@ -1,0 +1,20 @@
+\begin{picture}(0,0)%
+\epsfig{file=\dir/fig303.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(4049,918)(202,-540)
+\put(4141,-221){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$x$}}}
+\put(943,-295){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$1$}}}
+\put(1508,-295){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$2$}}}
+\put(2088,-290){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$3$}}}
+\put(398,-540){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$0$}}}
+\put(3533,-540){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$n\!$}}}
+\put(1828,213){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$h$}}}
+\end{picture}

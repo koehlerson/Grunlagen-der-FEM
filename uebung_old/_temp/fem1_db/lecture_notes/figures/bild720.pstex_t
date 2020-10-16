@@ -1,0 +1,22 @@
+\begin{picture}(0,0)%
+\includegraphics{./figures/bild720.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(1844,1005)(2243,-4178)
+\put(2693,-4178){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\xi_1$}%
+}}}
+\put(3653,-4178){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\xi_2$}%
+}}}
+\put(2768,-3615){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$f_1$}%
+}}}
+\put(3721,-3368){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$f_2$}%
+}}}
+\end{picture}
+

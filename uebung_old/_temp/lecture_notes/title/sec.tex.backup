@@ -1,0 +1,28 @@
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+{\bf \Large Vorlesungsskript zu \\ \vspace{1cm} 
+\LARGE Numerische Methoden der Mechanik I }
+
+\vspace{3cm}
+
+{\bf Prof. Dr.-Ing. J"org Schr"oder \\ 
+Fachbereich Bauwissenschaften \\
+Institut f\"ur Mechanik \\
+Universit\"at Duisburg-Essen}
+
+\vspace{2cm}
+
+\begin{figure}[h]
+\begin{center}
+\epsfig{file=penrose4.eps,width=.2\hsize}
+\end{center}
+\end{figure}
+
+\vspace{6cm}
+
+Wintersemester 2006/2007
+
+\end{center}
+\end{titlepage}
+

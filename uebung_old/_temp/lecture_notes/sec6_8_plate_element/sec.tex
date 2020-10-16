@@ -1,0 +1,409 @@
+\ssect{Plate Elements}
+
+Plates carry off the main part of the loading via bending 
+(cf. beams) and have a great technical importance. 
+They are geometrically described by the thickness-measurement 
+$h$ which is much smaller than the length-measurement 
+$l_x$, $l_y$, 
+i.e.
+\eb
+h \ll l_x, l_y \, .
+\ee
+We differentiate between shear-rigid and shear-weak 
+formulations. 
+If we start from the assumption that the cross-section 
+planes remain even, we obtain the shear-weak formulation 
+by {\sc Reissner \& Mindlin}, respectively. 
+In this case, independent approximations for the deflection 
+$w(x)$ and the curvature of the cross-section $\beta_x(x)$, 
+$\beta_y(x)$ are considered. 
+If we take into account the additional assumption of 
+remaining normals (``normal remains normal''), we arrive at 
+the shear-rigid theory of the {\sc Kirchhoff}-plate. 
+In this case, $C^1$-consistent approximations for $w(x)$ 
+are required, because the slope of the cross-section is 
+computed by the derivatives $\beta_y=-w_{,y}$ and 
+$\beta_x=-w_{,x}$. 
+Hence, $\beta_x$ and $\beta_y$ are independent variables. 
+
+%-------------------------------------------------------------------------
+\sssect{Kinematics}
+%-------------------------------------------------------------------------
+\begin{Figure}[htb]
+\begin{center}
+\input{\dir/fig57.pstex_t}
+\setlength{\baselineskip}{11pt}
+\caption{Kinematics.}
+\end{center}
+\end{Figure}%
+
+The deformation in the $x$-$z$-plane is given by the twist of the cross-section %Die Deformation in der $x$-$z$- Ebene ist durch die Verdrehung des Querschnitts
+\eb
+w_{,x} = - \beta_x + \gamma_{xz} \, .
+\ee
+Hence, the average shear strain results in
+%bestimmt. Hieraus ergibt sich die mittlere Schubverzerrung zu
+\eb
+\gamma_{xz} = w_{,x} + \beta_x \, .
+\ee
+The $u$-displacement in $x$-direction is given via 
+the curvature of the cross-section $\beta_x$
+\eb
+u = \beta_x z \, .
+\ee
+Analogously, the deformation in the $y$-$z$-plane and therefore the twist of the cross-section results in
+\eb
+w_{,y} = - \beta_y + \gamma_{yz} \, .
+\ee
+Hence, we obtain the average shear strain
+\eb
+\gamma_{yz} = w_{,y} + \beta_y \, .
+\ee
+The $v$-displacement in $y$-direction reads
+%Die $v$- Verschiebung in $y$- Richtung ist
+\eb
+v = \beta_y z \, .
+\ee
+
+\begin{Figure}[htb]
+\begin{center}
+\input{\dir/fig59.pstex_t}
+\setlength{\baselineskip}{11pt}
+\caption{Stress distribution.} 
+\end{center}
+\end{Figure}%
+\begin{Figure}[htb]
+\begin{center}
+\input{\dir/fig58.pstex_t}
+\setlength{\baselineskip}{11pt}
+\caption{Internal force variables.}
+\end{center}
+\end{Figure}%
+
+%-------------------------------------------------------------------------
+\sssect{Kirchhoff Theory}
+%-------------------------------------------------------------------------
+With respect to the shear-rigid {\sc Kirchhoff}-theory the 
+assumption of remaining normals is evaluated and 
+%Im Rahmen der schubstarren {\sc Kirchhoff}- Theorie wird das Senkrechtbleiben der Querschnitte gefordert und es gilt
+\eb
+\gamma_{xz} = \gamma_{yz} = 0 \, 
+\ee
+is aplied. Hence, for the curvatures of the cross-sections 
+it follows that 
+%Hieraus folgt f\"ur die Querschnittsneigungen
+\eb
+\beta_x = - w_{,x} \qquad \mbox{und} \qquad \beta_y = - w_{,y}\, ,
+\ee
+as well as for the displacements
+%sowie f\"ur die Verschiebungen
+\eb
+u = - z w_{,x} \qquad \mbox{and} \qquad v = - z w_{,y} \, .
+\ee
+For the strains we obtain
+%F"ur die Verzerrungen erhalten wir
+\eb
+\Bvarepsilon = \left[ \begin{array}{c} \varepsilon_x \\ \varepsilon_y \\
+\gamma_{xy} \end{array} \right] = \left[ \begin{array}{c} u_{,x} \\
+v_{,y} \\ u_{,y} + v_{,x} \end{array} \right] =
+\left[ \begin{array}{c} - z w_{,xx} \\ -z w_{,yy} \\ -z (w_{,xy} +
+w_{,yx}) \end{array} \right] =
+z \left[ \begin{array}{c} - w_{,xx} \\ - w_{,yy} \\ - 2 w_{,xy}
+\end{array} \right] = z \Bkappa \, ,
+\label{eq:nKinStr}
+\ee
+whereby $\Bkappa$ characterizes the curvatures. With the material law
+%wobei $\Bkappa$ die Kr"ummungen charakterisiert. Mit dem Stoffgesetz
+\eb
+\left[ \begin{array}{c} \sigma_x \\ \sigma_y \\ \tau_{xy} \end{array}
+\right] = \dfrac{E}{1 - \nu^2} \left[ \begin{array}{ccc} 1 & \nu & 0 \\
+\nu & 1 & 0 \\ 0 & 0 & \dfrac{1 - \nu}{2} \end{array} \right]
+\left[ \begin{array}{c} \varepsilon_x  \\ \varepsilon_y \\ \gamma_{xy}
+\end{array} \right] \quad \mbox{and} \; \Bsigma = {\bf \IC} \,
+\Bvarepsilon, \quad \mbox{respectively} \, ,
+\label{eq:nMatLaw}
+\ee
+we are able to calculate the stress resultants by the 
+integration over the thickness
+%k"onnen wir nun die Schnittgr"o"sen "uber Dickenintegration berechnen
+\eb
+m_x = \int_{(z)} \sigma_x z \, dz \, , \quad m_y = \int_{(z)} \sigma_y z
+\, dz \, , \quad m_{xy} = \int_{(z)} \tau_{xy} z \, dz \, .
+\label{eq:nSchnittGr}
+\ee
+With (\ref{eq:nMatLaw}) and (\ref{eq:nKinStr}) we obtain 
+%Mit (\ref{eq:nMatLaw}) und (\ref{eq:nKinStr}) erhalten wir aus (\ref{eq:nSchnittGr})
+\eb
+\bM := \left[ \begin{array}{c} m_x \\ m_y \\ m_{xy} \end{array} \right] =
+\int_{(z)} \Bsigma z \, dz = \int_{(z)} {\bf \IC} z^2 \Bkappa \, dz =
+{\bf \IC} \int_{-h/2}^{h/2} z^2 \, dz \, \Bkappa
+\label{eq:nSchnittGr2}
+\ee
+and therefore 
+%und es folgt
+\eb
+\bM = \dfrac{E h^3}{12 (1 - \nu^2)} \left[ \begin{array}{ccc}
+1 & \nu & 0 \\ \nu & 1 & 0 \\ 0 & 0 & \dfrac{1 - \nu}{2} \end{array}
+\right] \Bkappa = : {\bf \IC}_B \Bkappa \, .
+\ee
+The principle of virtual work reads 
+%Prinzip der virtuellen Arbeit
+\eb
+\delta\Pi = \delta\Pi_i + \delta\Pi_a
+\ee
+with the internal and external parts 
+%mit
+\eb
+\delta\Pi_i = \int_{(A)} \delta\Bkappa^T \bM \, dA \qquad \mbox{and}
+\qquad \delta\Pi_a = \int_{(A)} \delta w q_z \, dA \, .
+\ee
+In the linear elastic case, the potential of the inner forces reads
+%Im linear elastischen Fall ist das Potential der inneren Kr"afte
+\eb
+\Pi_i = \dfrac{1}{2} \int_{(A)} \Bkappa^T {\bf \IC}_B \Bkappa \, dA \, .
+\ee
+The ansatz functions with respect to the {\sc Kirchhoff}- theory 
+have to be continuous in the displacement and in the 
+derivatives of the displacements, i.e. we require 
+$C^1$-continuous functions. 
+%Die Ansatzfunktionen im Rahmen der {\sc Kirchhoff}- Theorie m"ussen stetig in den Verschiebungen und den Ableitungen der Verschiebungen sein, d.h. wir ben"otigen $C^1$- stetige Funktionen.
+
+
+
+
+
+
+%-------------------------------------------------------------------------
+\sssect{16 Parameter Element by Kirchhoff- Theory}
+%-------------------------------------------------------------------------
+According to the {\sc Kirchhoff} theory with respect to a 
+rectangular plate element, the approximations of the 
+Bernoulli-beam with 4 Hermite polynomials 
+%Bei dem Rechteckplattenelement nach der {\sc Kirchhoff}- Theorie werden die Ans"atze des Bernoulli- Balkens mit 4 Hermiten Polynomen auf die Platte "ubertragen. Beim Stab war
+\eb
+w(\xi) = N_1(\xi) w_1 + \bar{N}_1(\xi) \beta_1 + N_2(\xi) w_2 +
+\bar{N}_2(\xi) \beta_2 \, 
+\label{approxbeam}
+\ee
+are transferred to the case of a plate, thus, we require 
+16 ansatz functions from a formal 2-dimensional expansion 
+of (\ref{approxbeam}). 
+The ansatz for $w_\nodeid{1}$ is given by 
+%F"ur die Platte ben"otigen wir aus einer formalen 2- dimensionalen Erweiterung von () nun 16 Ansatzfunktionen. Der Ansatz f"ur $w_1$ ist
+\eb
+N_{11} = N_{\nodeid{1}}(\xi) N_{\nodeid{1}}(\eta) \, ,
+\ee
+and the approximations for $\beta_{y\nodeid{1}}$ and $\beta_{x\nodeid{1}}$ 
+are
+%die Ans"atze f"ur $\beta_{1,y}$ und $\beta_{1,x}$ sind
+\eb
+N_{1\bar{1}} = N_{\nodeid{1}}(\xi) \bar{N}_{\nodeid{1}}(\eta) \; ; 
+\quad 
+N_{\bar{1}1} = \bar{N}_{\nodeid{1}}(\xi) N_{\nodeid{1}}(\eta) \, . 
+\ee
+With the node displacement vector
+%Mit dem Knotenverschiebungsvektor
+\eb
+\bd_I^T = [w_I, \beta_{xI}, \beta_{yI}, w_{xyI}] \quad \mbox{for} \;
+I = 1, ..., 4
+\ee
+we obtain the element displacement vector
+%erhalten wir den Elementverschiebungsvektor
+\eb
+\bd^{eT} = [\bd_{\nodeid{1}}^T, \bd_{\nodeid{2}}^T, \bd_{\nodeid{3}}^T, \bd_{\nodeid{4}}^T] \, .
+\ee
+From this we get the approximation for the deflection 
+%Es folgt
+\eb
+w^h = \sum_{I=1}^{4} \bN_I \cdot \bd_I \, , 
+\ee
+wherein
+%mit
+\eb
+\left. \begin{array}{ll}
+\bN_{\nodeid{1}} & = [N_{11}, N_{\bar{1}1}, N_{1\bar{1}}, N_{\bar{11}}] \\
+\bN_{\nodeid{2}} & = [N_{21}, N_{\bar{2}1}, N_{2\bar{1}}, N_{\bar{21}}] \\
+\bN_{\nodeid{3}} & = [N_{22}, N_{\bar{2}2}, N_{2\bar{2}}, N_{\bar{22}}] \\
+\bN_{\nodeid{4}} & = [N_{12}, N_{\bar{1}2}, N_{1\bar{2}}, N_{\bar{12}}]
+\end{array} \right\}.
+\ee
+This ansatz is cubically complete with ansatz functions 
+$N_I$, $\bar N_I$ following the scheme 
+%Dieser Ansatz ist mit
+\eb
+\left. \begin{array}{ccccccc}
+ & & & 1  & & & \\
+ & & \xi & & \eta & & \\
+ & \xi^2 & & \xi\eta & & \eta^2 & \\
+\xi^3 & & \xi^2\eta & & \xi\eta^2 & & \eta^3 \\
+ & \xi^3\eta & & \xi^2\eta^2 & & \xi\eta^3 & \\
+ & & \xi^3\eta^2 & & \xi^2\eta^3 & & \\
+ & & & \xi^3\eta^3 & & &
+\end{array} \right\} \, . 
+\ee
+Herewith, we are able to represent rigid-body displacements 
+and twists, constant curvatures and constant torsions. 
+Furthermore, homogeneous differential equations 
+(no loading) are exactly reflected if linear stress 
+resultants and constant shear forces occur. 
+The approximation for the strains is then given by 
+%kubisch vollst"andig. Somit lassen sich Starrk"orperverschiebungen 
+% und Verdrehungen $(1,x,y)$ und konstante Kr"ummungen $(x^2,y^2)$ 
+% und konstante Verwindungen $(x,y)$ darstellen. 
+% Zudem werden Zust"ande, die durch eine homogene DGL beschrieben 
+% werden (keine Belastung) mit linear ver"anderlichen Momenten 
+% und konstanten Querkraftverl"aufen exakt beschrieben. 
+% Die Verzerrungen berechnen sich aus
+\eb
+\Bkappa^h = \left[ \begin{array}{c} - w_{,xx} \\ - w_{,yy} \\ - 2 w_{,xy}
+\end{array} \right] = \sum_{I=1}^{4} \bB_I \bd_I
+\ee
+with the B-matrix
+%mit
+\eb
+\bB_I = \left[ \begin{array}{c} - N_{I,xx} \\ - N_{I,yy} \\ - 2 N_{I,xy}
+\end{array} \right]
+\ee
+and the particular terms 
+%und
+\eb
+N_{I,xx} = N_{I,\xi\xi} \dfrac{4}{l_x^2} \; ; \quad
+N_{I,yy} = N_{I,\eta\eta} \dfrac{4}{l_y^2} \; ; \quad
+N_{I,xy} = N_{I,\xi\eta} \dfrac{4}{l_x l_y} \, .
+\ee
+The stiffness matrix is then computed by 
+%Die Steifigkeitsmatrix ergibt sich aus
+\eb
+k_{IJ}^e = \int_{(A)} \bB_I^{eT} {\bf \IC}_B \bB_J^e \, dA \, .
+\ee
+The integration can be computed by numerical quadratures 
+or analytically. 
+%Die Integration kann sowohl analytisch als auch numerisch erfolgen.
+
+%-------------------------------------------------------------------------
+\sssect{Reissner-Mindlin Theory}
+%-------------------------------------------------------------------------
+With respect to the shear-weak formulation by {\sc Reissner, Mindlin} 
+the displacements are computed by 
+%Im Rahmen der schubweichen Formulierung nach 
+% {\sc Rei"sner} bzw. {\sc Mindlin} ergibt sich f\"ur die 
+% Verschiebungen
+\eb
+u = z \beta_x \qquad \mbox{and} \qquad v = z \beta_y \, . 
+\ee
+Then the strains are given by 
+%Verzerrungen
+\eb
+\Bvarepsilon = \left[ \begin{array}{c} z \beta_{x,x} \\ z \beta_{y,y} \\
+z (\beta_{x,y} + \beta_{y,x}) \end{array} \right] = z \Bkappa \;,
+\ee
+and a material law has to be provided also for the shear stresses 
+which are not in the plate plain, i.e. 
+%Materialgesetz
+\eb
+\left[ \begin{array}{c} \sigma_x \\ \sigma_y \\ \tau_{xy} \end{array}
+\right] = \dfrac{E}{1 - \nu^2} \left[ \begin{array}{ccc} 1 & \nu & 0 \\
+\nu & 1 & 0 \\ 0 & 0 & \dfrac{1 - \nu}{2} \end{array} \right]
+\left[ \begin{array}{c} \varepsilon_x \\ \varepsilon_y \\ \gamma_{xy}
+\end{array} \right] \; ; \quad \left[ \begin{array}{c} \tau_{xz} \\
+\tau_{yz} \end{array} \right] = \kappa_s \,\mu\, {\bf 1} \left[
+\begin{array}{c} \gamma_{xz} \\ \gamma_{yz} \end{array} \right]
+\ee
+which can be expressed in the total notation by 
+%bzw.
+\eb
+\Bsigma = {\bf \IC}\, \Bvarepsilon \qquad \mbox{and} \qquad
+\Btau = \bG \Bgamma \, , 
+\ee
+respectively. 
+Herein, $\kappa_s$ is the shear correction coefficient. 
+In addition to the stress resultants $m_x$, $m_y$, $m_{xy}$ 
+in (\ref{eq:nSchnittGr2}), we consider 
+%$\kappa_s$ ist der Schubkorrekturfaktor. Zus"atzlich zu den Schnittgr"o"sen $m_x$, $m_y$, $m_{xy}$ nach (\ref{eq:nSchnittGr2}) erhalten wir
+\eb
+q_{xz} = \int_{(z)} \tau_{xz} \, dz 
+\qquad \mbox{and} \qquad 
+q_{yz} = \int_{(z)} \tau_{yz} \, dz 
+\ee
+and obtain the additional stress resultants 
+%Schnittgr"o"sen
+\eb
+\bQ = \left[ \begin{array}{c} q_{xz} \\ q_{yz} \end{array} \right] =
+\int_{-h/2}^{h/2} \bG \Bgamma \, dz = \kappa_s\, \mu\, h \left[
+\begin{array}{cc} 1 & 0 \\ 0 & 1 \end{array}\right] \Bgamma =
+{\bf \IC}_s \Bgamma \, . 
+\ee
+The principle of virtual work states that 
+%Prinzip der virtuellen Arbeit
+\eb
+\delta\Pi = \delta\Pi_i + \delta\Pi_a \, , 
+\ee
+with the internal 
+%mit
+\eb
+\delta\Pi_i = \int_{(A)} \delta\Bkappa^T \bM \, dA +
+\int_{(A)} \delta\Bgamma^T \bQ \, dA
+\ee
+and external part
+%und
+\eb
+\delta\Pi_a = \int_{(A)} \delta w q_z \, dA \, . 
+\ee
+The internal potential reads then 
+%Potential
+\eb
+\Pi_i = \dfrac{1}{2} \int_{(A)} \Bkappa^T {\bf \IC}_B \Bkappa \, dA +
+\dfrac{1}{2} \int_{(A)} \Bgamma^T {\bf \IC}_S \Bgamma \, dA
+\ee
+
+%-------------------------------------------------------------------------
+\ssect{Isoparametric Four-Node-Element of the Shear-Elastic
+Theory}
+%-------------------------------------------------------------------------
+The degrees of freedom at the nodes are $w$, $\beta_x$, $\beta_y$. 
+Thus, we consider the approximation 
+\eb
+\bu^h = \left[ \begin{array}{c} w \\ \beta_x \\ \beta_y \end{array}
+\right] = \sum_{I=1}^{n_{el}} N_I \bd_I \;,
+\ee
+with the ansatz functions
+%Ansatzfunktionen
+\eb
+N_I = \dfrac{1}{4} (1 + \xi \xi_I) (1 + \eta \eta_I)\, . 
+\ee
+The approximations for the curvatures are given by 
+%Kr"ummungen
+\eb
+\Bkappa^h = \left[ \begin{array}{c} \beta_{x,x}^h \\ \beta_{y,y}^h \\
+\beta_{x,y}^h + \beta_{y,x}^h \end{array} \right] = \sum_{I=1}^{n_{el}}
+\bB_b^I \bd_I 
+\quad \mbox{with} \quad 
+\bB_b^I = \left[ \begin{array}{cc}
+N_{I,x} & 0 \\ 0 & N_{I,y} \\ N_{I,y} & N_{I,x} \end{array} \right] \, , 
+\ee
+whereas the shear-strains are approximated by 
+%Schubverzerrungen
+\eb
+\gamma^h = \left[ \begin{array}{c} w_{,x}^h + \beta_x^h \\ 
+w_{,y}^h + \beta_y^h\end{array} \right]  
+= \sum_{I=1}^{n_{el}} \bB_s^I \bd_I 
+\quad \mbox{with}\quad 
+\bB_s^I = \left[ \begin{array}{ccc} N_{I,x} & N_I & 0 \\ N_{I,y} & 0 &
+N_I \end{array} \right]\, . 
+\ee
+The Jacobi matrix is computed by 
+%Jakobi Matrix
+\eb
+\left[ \begin{array}{c} N_{I,x} \\ N_{I,y} \end{array} \right] =
+\bJ^{-1} \left[ \begin{array}{c} N_{I,\xi} \\ N_{I,\eta} \end{array}
+\right] \, , 
+\ee
+hence, we obtain the element stiffness matrix decomposed into 
+two parts by 
+\eb
+\delta\Pi_i^e = \delta\bd^{eT} \left[ \underbrace{\int_{(A)} \bB_b^{eT}
+{\bf \IC}_b \bB_b^e \, dA}_{=: \bk_b^e} + \underbrace{\int_{(A)}
+\bB_s^{eT} {\bf \IC}_s \bB_s^e \, dA}_{=: \bk_s^e} \right] \bd^e \, . 
+\ee
+
+

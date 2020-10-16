@@ -1,0 +1,36 @@
+feap * * Cook's membrane-test
+  0     0     1      2   2   3
+! numnp numel nummat ndm ndf nen
+
+para
+ nx = 160                 ! Number of elements at the boundary in x-direction
+ ny = 80                  ! Number of elements at the boundary in y-direction
+ p0 = 500.0               ! Uniformly distributed load at the right side
+ pp = p0*(60.0-44.0)/nx/2 ! Load at each node of the right boundary
+
+bloc
+ cartesian nx ny 1 1 1 0 5
+ 1  0.  0.
+ 2  6.  2.
+ 3  6.  3.
+ 4  0.  3.
+
+eboun
+ 1 0.0   1 1
+
+eforc
+ 2 3.0  0 -pp
+
+forc
+ (nx+1)*(ny+1) 0  0.0 pp/2
+
+mate 1
+ user,3
+ 210000.0       0.3
+!young-modulus  nue
+
+end 
+
+inter
+  
+stop  

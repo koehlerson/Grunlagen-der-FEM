@@ -1,0 +1,18 @@
+\begin{picture}(0,0)%
+\epsfig{file=\dir/fig5_12.pstex}%
+\end{picture}%
+\setlength{\unitlength}{3315sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2970,1665)(721,-1126)
+\put(2016,244){\makebox(0,0)[lb]{\smash{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}$\alpha$}}}
+\put(1306,-1126){\makebox(0,0)[lb]{\smash{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}$z_G$}}}
+\put(721,-1051){\makebox(0,0)[lb]{\smash{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}$z_L$}}}
+\put(3691,344){\makebox(0,0)[lb]{\smash{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}$x_G$}}}
+\put(3556,-466){\makebox(0,0)[lb]{\smash{\SetFigFont{10}{12.0}{\familydefault}{\mddefault}{\updefault}$x_L$}}}
+\end{picture}

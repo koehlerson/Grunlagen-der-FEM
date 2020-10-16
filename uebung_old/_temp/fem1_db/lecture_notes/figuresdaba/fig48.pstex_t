@@ -1,0 +1,21 @@
+\begin{picture}(0,0)%
+\includegraphics{./figuresdaba/fig48.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2233,1571)(1144,-1149)
+\put(2105,-189){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}6}}}}
+\put(1675,-1149){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}x}}}}
+\put(1219,-665){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}y}}}}
+\put(1611,-803){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}1}}}}
+\put(2520,-770){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}4}}}}
+\put(2957,-72){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}5}}}}
+\put(3256,-531){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}2}}}}
+\put(2656,281){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}3}}}}
+\end{picture}%

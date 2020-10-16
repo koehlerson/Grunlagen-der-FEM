@@ -1,0 +1,32 @@
+\begin{picture}(0,0)%
+\epsfig{file=./figuresdaba/fig49.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6414,2293)(775,-2771)
+\put(6593,-648){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\eta $}}}
+\put(7094,-2489){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\xi $}}}
+\put(4327,-2771){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}b)}}}
+\put(2375,-2541){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}\kr {4}}}}
+\put(3211,-643){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\eta $}}}
+\put(3712,-2484){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\xi $}}}
+\put(945,-2766){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}a)}}}
+\put(3140,-2517){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}\kr {2}}}}
+\put(1445,-2509){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}\kr {1}}}}
+\put(2101,-1540){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}\kr {6}}}}
+\put(2762,-933){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}\kr {3}}}}
+\put(2954,-1651){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}\kr {5}}}}
+\put(6161,-904){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}\kr {3}}}}
+\put(6343,-1649){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}\kr {5}}}}
+\put(5754,-2516){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}\kr {4}}}}
+\put(4823,-2510){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}\kr {1}}}}
+\put(6526,-2518){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}\kr {2}}}}
+\put(4320,-1355){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}1}}}
+\put(962,-2004){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}1}}}
+\end{picture}

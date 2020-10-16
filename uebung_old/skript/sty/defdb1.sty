@@ -1,0 +1,430 @@
+%-----------------------------------------------------------------------
+%
+% Style-File for publications of the 
+%                                
+% Institute of Mechanics and Shell Structures, TU Dresden
+% Prof. Dr.-Ing. habil. Daniel Balzani
+% 
+% Based on the style file defjs2.sty from the 
+% 
+% Institute of Mechanics, University Duisburg-Essen
+% Prof. Dr.-Ing. habil. Joerg Schroeder
+%
+%   First version 22/03/2016 Daniel Balzani
+%
+% Modifications:
+%   - replacement of \rm by \mathrm since \rm is no longer supported      az: 26/10/2016
+%     in KOMA-script classes
+%   - replacement of {\cal } by \mathcal{}                                az: 12/04/2017
+%   - addition of command \textfrac{}{} for diagonally set fractions      az: 30/06/2017
+%-----------------------------------------------------------------------
+% To change appearance of formulae the following has to be part of the 
+% main latex file: 
+% \usepackage{ifthen}
+% \newboolean{boldeqnitalic}
+% \setboolean{boldeqnitalic}{true} 
+% % True  = Boldface variables italic
+% % False = Boldface variables non-italic
+%
+%-----------------------------------------------------------------------
+\RequirePackage{bm}
+\RequirePackage{bbm}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{relsize}
+\RequirePackage{ifthen}
+% 
+% Equations.............................................................
+\newcommand {\eb}{\begin{equation}}       % with number
+\newcommand {\ee}{\end{equation}}
+\newcommand {\ebn}{\begin{displaymath}}   % without number
+\newcommand {\een}{\end{displaymath}}
+%
+%-----------------------------------------------------------------------
+% Tensor-valued quantities (all orders aside from 4th order)
+%-----------------------------------------------------------------------
+% Greek letters: 
+\newcommand{\BGamma     }{{\bm{\Gamma      }}}
+\newcommand{\BDelta     }{{\bm{\Delta      }}}
+\newcommand{\BTheta     }{{\bm{\Theta      }}}
+\newcommand{\BLambda    }{{\bm{\Lambda     }}}
+\newcommand{\BXi        }{{\bm{\Xi         }}}
+\newcommand{\BPi        }{{\bm{\Pi         }}}
+\newcommand{\BSigma     }{{\bm{\Sigma      }}}
+\newcommand{\BUpsilon   }{{\bm{\Upsilon    }}}
+\newcommand{\BPhi       }{{\bm{\Phi        }}}
+\newcommand{\BPsi       }{{\bm{\Psi        }}}
+\newcommand{\BOmega     }{{\bm{\Omega      }}}
+\newcommand{\Balpha     }{{\bm{\alpha      }}}
+\newcommand{\Bbeta      }{{\bm{\beta       }}}
+\newcommand{\Bgamma     }{{\bm{\gamma      }}}
+\newcommand{\Bdelta     }{{\bm{\delta      }}}
+\newcommand{\Bepsilon   }{{\bm{\epsilon    }}}
+\newcommand{\Bzeta      }{{\bm{\zeta       }}}
+\newcommand{\Beta       }{{\bm{\eta        }}}
+\newcommand{\Btheta     }{{\bm{\theta      }}}
+\newcommand{\Biota      }{{\bm{\iota       }}}
+\newcommand{\Bkappa     }{{\bm{\kappa      }}}
+\newcommand{\Blambda    }{{\bm{\lambda     }}}
+\newcommand{\Bmu        }{{\bm{\mu         }}}
+\newcommand{\Bnu        }{{\bm{\nu         }}}
+\newcommand{\Bxi        }{{\bm{\xi         }}}
+\newcommand{\Bpi        }{{\bm{\pi         }}}
+\newcommand{\Brho       }{{\bm{\rho        }}}
+\newcommand{\Bsigma     }{{\bm{\sigma      }}}
+\newcommand{\Btau       }{{\bm{\tau        }}}
+\newcommand{\Bupsilon   }{{\bm{\upsilon    }}}
+\newcommand{\Bphi       }{{\bm{\phi        }}}
+\newcommand{\Bchi       }{{\bm{\chi        }}}
+\newcommand{\Bpsi       }{{\bm{\psi        }}}
+\newcommand{\Bomega     }{{\bm{\omega      }}}
+\newcommand{\Bvarepsilon}{{\bm{\varepsilon }}}
+\newcommand{\Bvartheta  }{{\bm{\vartheta   }}}
+\newcommand{\Bvarpi     }{{\bm{\varpi      }}}
+\newcommand{\Bvarrho    }{{\bm{\varrho     }}}
+\newcommand{\Bvarsigma  }{{\bm{\varsigma   }}}
+\newcommand{\Bvarphi    }{{\bm{\varphi     }}}
+% Roman letters: 
+% (Boldface variables depending of boolean variable 'boldeqnitalic')
+\ifthenelse{\boolean{boldeqnitalic}}
+{\newcommand{\boldvars}[1]{{\bm{#1}}}}% true
+{\newcommand{\boldvars}[1]{{\bm{\mathrm{#1}}}}}% false
+\newcommand{\bA}{{\boldvars{A}}}
+\newcommand{\bB}{{\boldvars{B}}}
+\newcommand{\bC}{{\boldvars{C}}}
+\newcommand{\bD}{{\boldvars{D}}}
+\newcommand{\bE}{{\boldvars{E}}}
+\newcommand{\bF}{{\boldvars{F}}}
+\newcommand{\bG}{{\boldvars{G}}}
+\newcommand{\bH}{{\boldvars{H}}}
+\newcommand{\bI}{{\boldvars{I}}}
+\newcommand{\bJ}{{\boldvars{J}}}
+\newcommand{\bK}{{\boldvars{K}}}
+\newcommand{\bL}{{\boldvars{L}}}
+\newcommand{\bM}{{\boldvars{M}}}
+\newcommand{\bN}{{\boldvars{N}}}
+\newcommand{\bO}{{\boldvars{O}}}
+\newcommand{\bP}{{\boldvars{P}}}
+\newcommand{\bQ}{{\boldvars{Q}}}
+\newcommand{\bR}{{\boldvars{R}}}
+\newcommand{\bS}{{\boldvars{S}}}
+\newcommand{\bT}{{\boldvars{T}}}
+\newcommand{\bU}{{\boldvars{U}}}
+\newcommand{\bV}{{\boldvars{V}}}
+\newcommand{\bW}{{\boldvars{W}}}
+\newcommand{\bX}{{\boldvars{X}}}
+\newcommand{\bY}{{\boldvars{Y}}}
+\newcommand{\bZ}{{\boldvars{Z}}}
+%
+\newcommand{\ba}{{\boldvars{a}}}
+\newcommand{\bb}{{\boldvars{b}}}
+\newcommand{\bc}{{\boldvars{c}}}
+\newcommand{\bd}{{\boldvars{d}}}
+\newcommand{\be}{{\boldvars{e}}}
+\newcommand{\bbf}{{\boldvars{f}}}
+\newcommand{\bg}{{\boldvars{g}}}
+\newcommand{\bh}{{\boldvars{h}}}
+\newcommand{\bi}{{\boldvars{i}}}
+\newcommand{\bj}{{\boldvars{j}}}
+\newcommand{\bk}{{\boldvars{k}}}
+\newcommand{\bbl}{{\boldvars{l}}}
+\newcommand{\bbm}{{\boldvars{m}}}
+\newcommand{\bn}{{\boldvars{n}}}
+\newcommand{\bo}{{\boldvars{o}}}
+\newcommand{\bp}{{\boldvars{p}}}
+\newcommand{\bq}{{\boldvars{q}}}
+\newcommand{\bbr}{{\boldvars{r}}}
+\newcommand{\bs}{{\boldvars{s}}}
+\newcommand{\bt}{{\boldvars{t}}}
+\newcommand{\bu}{{\boldvars{u}}}
+\newcommand{\bv}{{\boldvars{v}}}
+\newcommand{\bw}{{\boldvars{w}}}
+\newcommand{\bx}{{\boldvars{x}}}
+\newcommand{\by}{{\boldvars{y}}}
+\newcommand{\bz}{{\boldvars{z}}}
+% 
+% Special tensors
+\newcommand{\bone}{{\boldvars{1}}}
+\newcommand{\bzero}{{\boldvars{0}}}
+%
+%-----------------------------------------------------------------------
+% Tensor-valued quantities (4th order)
+%-----------------------------------------------------------------------
+\newcommand{\IA}{\mathbb{A}}
+\newcommand{\ia}{\mathbbm{a}}
+\newcommand{\IC}{\mathbb{C}}
+\newcommand{\ic}{\mathbbm{c}}
+\newcommand{\IE}{\mathbb{E}}
+\newcommand{\II}{\mathbb{I}}
+\newcommand{\IL}{\mathbb{L}}
+\newcommand{\IP}{\mathbb{P}}
+\newcommand{\IS}{\mathbb{S}}
+%
+%-----------------------------------------------------------------------
+% Quantities in matrix notation/reduced matrix notation
+%-----------------------------------------------------------------------
+% Greek letters: 
+\newcommand{\MGamma     }{\underline{\bm{\Gamma      }}}
+\newcommand{\MDelta     }{\underline{\bm{\Delta      }}}
+\newcommand{\MTheta     }{\underline{\bm{\Theta      }}}
+\newcommand{\MLambda    }{\underline{\bm{\Lambda     }}}
+\newcommand{\MXi        }{\underline{\bm{\Xi         }}}
+\newcommand{\MPi        }{\underline{\bm{\Pi         }}}
+\newcommand{\MSigma     }{\underline{\bm{\Sigma      }}}
+\newcommand{\MUpsilon   }{\underline{\bm{\Upsilon    }}}
+\newcommand{\MPhi       }{\underline{\bm{\Phi        }}}
+\newcommand{\MPsi       }{\underline{\bm{\Psi        }}}
+\newcommand{\MOmega     }{\underline{\bm{\Omega      }}}
+\newcommand{\Malpha     }{\underline{\bm{\alpha      }}}
+\newcommand{\Mbeta      }{\underline{\bm{\beta       }}}
+\newcommand{\Mgamma     }{\underline{\bm{\gamma      }}}
+\newcommand{\Mdelta     }{\underline{\bm{\delta      }}}
+\newcommand{\Mepsilon   }{\underline{\bm{\epsilon    }}}
+\newcommand{\Mzeta      }{\underline{\bm{\zeta       }}}
+\newcommand{\Meta       }{\underline{\bm{\eta        }}}
+\newcommand{\Mtheta     }{\underline{\bm{\theta      }}}
+\newcommand{\Miota      }{\underline{\bm{\iota       }}}
+\newcommand{\Mkappa     }{\underline{\bm{\kappa      }}}
+\newcommand{\Mlambda    }{\underline{\bm{\lambda     }}}
+\newcommand{\Mmu        }{\underline{\bm{\mu         }}}
+\newcommand{\Mnu        }{\underline{\bm{\nu         }}}
+\newcommand{\Mxi        }{\underline{\bm{\xi         }}}
+\newcommand{\Mpi        }{\underline{\bm{\pi         }}}
+\newcommand{\Mrho       }{\underline{\bm{\rho        }}}
+\newcommand{\Msigma     }{\underline{\bm{\sigma      }}}
+\newcommand{\Mtau       }{\underline{\bm{\tau        }}}
+\newcommand{\Mupsilon   }{\underline{\bm{\upsilon    }}}
+\newcommand{\Mphi       }{\underline{\bm{\phi        }}}
+\newcommand{\Mchi       }{\underline{\bm{\chi        }}}
+\newcommand{\Mpsi       }{\underline{\bm{\psi        }}}
+\newcommand{\Momega     }{\underline{\bm{\omega      }}}
+\newcommand{\Mvarepsilon}{\underline{\bm{\varepsilon }}}
+\newcommand{\Mvartheta  }{\underline{\bm{\vartheta   }}}
+\newcommand{\Mvarpi     }{\underline{\bm{\varpi      }}}
+\newcommand{\Mvarrho    }{\underline{\bm{\varrho     }}}
+\newcommand{\Mvarsigma  }{\underline{\bm{\varsigma   }}}
+\newcommand{\Mvarphi    }{\underline{\bm{\varphi     }}}
+% Roman letters: 
+\newcommand{\mA}{\underline{\boldvars{A}}}
+\newcommand{\mB}{\underline{\boldvars{B}}}
+\newcommand{\mC}{\underline{\boldvars{C}}}
+\newcommand{\mD}{\underline{\boldvars{D}}}
+\newcommand{\mE}{\underline{\boldvars{E}}}
+\newcommand{\mF}{\underline{\boldvars{F}}}
+\newcommand{\mG}{\underline{\boldvars{G}}}
+\newcommand{\mH}{\underline{\boldvars{H}}}
+\newcommand{\mI}{\underline{\boldvars{I}}}
+\newcommand{\mJ}{\underline{\boldvars{J}}}
+\newcommand{\mK}{\underline{\boldvars{K}}}
+\newcommand{\mL}{\underline{\boldvars{L}}}
+\newcommand{\mM}{\underline{\boldvars{M}}}
+\newcommand{\mN}{\underline{\boldvars{N}}}
+\newcommand{\mO}{\underline{\boldvars{O}}}
+\newcommand{\mP}{\underline{\boldvars{P}}}
+\newcommand{\mQ}{\underline{\boldvars{Q}}}
+\newcommand{\mR}{\underline{\boldvars{R}}}
+\newcommand{\mS}{\underline{\boldvars{S}}}
+\newcommand{\mT}{\underline{\boldvars{T}}}
+\newcommand{\mU}{\underline{\boldvars{U}}}
+\newcommand{\mV}{\underline{\boldvars{V}}}
+\newcommand{\mW}{\underline{\boldvars{W}}}
+\newcommand{\mX}{\underline{\boldvars{X}}}
+\newcommand{\mY}{\underline{\boldvars{Y}}}
+\newcommand{\mZ}{{\boldvars{Z}}}
+%
+\newcommand{\ma}{\underline{\boldvars{a}}}
+\newcommand{\mb}{\underline{\boldvars{b}}}
+\newcommand{\mc}{\underline{\boldvars{c}}}
+\newcommand{\md}{\underline{\boldvars{d}}}
+\newcommand{\me}{\underline{\boldvars{e}}}
+\newcommand{\mf}{\underline{\boldvars{f}}}
+\newcommand{\mg}{\underline{\boldvars{g}}}
+\newcommand{\mh}{\underline{\boldvars{h}}}
+\newcommand{\mi}{\underline{\boldvars{i}}}
+\newcommand{\mj}{\underline{\boldvars{j}}}
+\newcommand{\mk}{\underline{\boldvars{k}}}
+\newcommand{\ml}{\underline{\boldvars{l}}}
+\newcommand{\mm}{\underline{\boldvars{m}}}
+\newcommand{\mn}{\underline{\boldvars{n}}}
+\newcommand{\mo}{\underline{\boldvars{o}}}
+\newcommand{\mmp}{\underline{\boldvars{p}}}
+\newcommand{\mq}{\underline{\boldvars{q}}}
+\newcommand{\mr}{\underline{\boldvars{r}}}
+\newcommand{\ms}{\underline{\boldvars{s}}}
+\newcommand{\mt}{\underline{\boldvars{t}}}
+\newcommand{\mmu}{\underline{\boldvars{u}}}
+\newcommand{\mv}{\underline{\boldvars{v}}}
+\newcommand{\mw}{\underline{\boldvars{w}}}
+\newcommand{\mx}{\underline{\boldvars{x}}}
+\newcommand{\my}{\underline{\boldvars{y}}}
+\newcommand{\mz}{\underline{\boldvars{z}}}
+% 
+% Special matrices
+\newcommand{\mone}{\underline{\boldvars{1}}}
+\newcommand{\mzero}{\underline{\boldvars{0}}}
+%
+% Matrix notation of 4th-order tensors
+\newcommand{\mIA}{\underline{\mathbb{A}}}
+\newcommand{\mia}{\underline{\mathbbm{a}}}
+\newcommand{\mIC}{\underline{\mathbb{C}}}
+\newcommand{\mic}{\underline{\mathbbm{c}}}
+\newcommand{\mIE}{\underline{\mathbb{E}}}
+\newcommand{\mII}{\underline{\mathbb{I}}}
+\newcommand{\mIL}{\underline{\mathbb{L}}}
+\newcommand{\mIP}{\underline{\mathbb{P}}}
+\newcommand{\mIS}{\underline{\mathbb{S}}}
+%
+%-----------------------------------------------------------------------
+% Sets of numbers
+%-----------------------------------------------------------------------
+\def\R{\mathrm{I\kern-.25em R}}
+\def\N{\mathrm{I\kern-.23em N}}
+% 
+%-----------------------------------------------------------------------
+% Mathematical accents
+%-----------------------------------------------------------------------
+%
+\newcommand{\ostar}[1]{\overset{\star}{#1}}           % star
+\newcommand{\oast}[1]{\overset{\ast}{#1}}             % ast
+\newcommand{\otriangle}[1]{\overset{\triangle}{#1}}   % triangle
+\newcommand{\oDelta}[1]{\overset{\Delta}{#1}}         % Delta
+%
+%-----------------------------------------------------------------------
+% Mathematical operators, functions
+%-----------------------------------------------------------------------
+% 'b'-commandos produce arguments in square brackets
+\def\adj{\operatorname{adj}}      % adj  ohne Argument
+\def\Adj{\operatorname{Adj}}      % Adj  ohne Argument
+\def\adjb#1{\adj[{#1}]}           % adjugate boxed Argument Adj[#]
+\def\Adjb#1{\Adj[{#1}]}           % Adjugate boxed Argument Adj[#]
+\def\Cof{\operatorname{Cof}}      % Cof  ohne Argument
+\def\Cofb#1{\Cof[{#1}]}           % Cofactor boxed Argument Cof[#]
+\def\det{\operatorname{det}}      % det  ohne Argument
+\def\Det{\operatorname{Det}}      % Det  ohne Argument
+\def\detb#1{\det[{#1}]}           % Determinat boxed Argument det[#]
+\def\Detb#1{\Det[{#1}]}           % Determinat boxed Argument Det[#]
+\def\dev{\operatorname{dev}}      % dev ohne Argument
+\def\Dev{\operatorname{Dev}}      % Dev ohne Argument
+\def\devb#1{\dev[{#1}]}           % Deviator boxed Argument dev[#]
+\def\Devb#1{\Dev[{#1}]}           % Deviator boxed Argument Dev[#]
+\def\div{\operatorname{div}}      % div ohne Argument
+\def\Div{\operatorname{Div}}      % Div ohne Argument
+\def\divb#1{\div[{#1}]}           % Divergence boxed Argument div[#]
+\def\Divb#1{\Div[{#1}]}           % Divergence boxed Argument Div[#]
+\def\grad{\operatorname{grad}}    % grad ohne Argument
+\def\Grad{\operatorname{Grad}}    % Grad ohne Argument
+\def\gradb#1{\grad[{#1}]}         % gradient boxed Argument grad[#]
+\def\Gradb#1{\Grad[{#1}]}         % Gradient boxed Argument Grad[#]
+\def\rot{\operatorname{rot}}      % rot ohne Argument
+\def\Rot{\operatorname{Rot}}      % Rot ohne Argument
+\def\rotb#1{\rot[{#1}]}           % rot boxed Argument rot[#]
+\def\Rotb#1{\Rot[{#1}]}           % Rot boxed Argument Rot[#]
+\def\skew{\operatorname{skew}}    % skew ohne Argument
+\def\Skew{\operatorname{Skew}}    % Skew ohne Argument
+\def\skewb#1{\skew[{#1}]}         % skew boxed Argument skew[#]
+\def\Skewb#1{\Skew[{#1}]}         % Skew boxed Argument Skew[#]
+\def\sym{\operatorname{sym}}      % sym ohne Argument
+\def\Sym{\operatorname{Sym}}      % Sym ohne Argument
+\def\symb#1{\sym[{#1}]}           % sym boxed Argument sym[#]
+\def\Symb#1{\Sym[{#1}]}           % Sym boxed Argument Sym[#]
+\def\tr{\operatorname{tr}}        % tr ohne Argument
+\def\trb#1{\tr[{#1}]}             % tr boxed Argument tr[#]
+% Assembly operator
+\newfont{\Sf}{cmssbx10 scaled 2074}
+\newcommand{\Assem}{{
+  \underset{\mathsmaller{e=1}}{\overset{\mathsmaller{n_\mathrm{ele}}}%
+  {\raisebox{-0.5ex}{\mbox{\Sf A}}}}\;%
+  }}
+% Assembly operator with user-defined arguments
+\newcommand{\Assemarg}[2]{{
+  \underset{\mathsmaller{#1}}{\overset{\mathsmaller{#2}}%
+  {\raisebox{-0.5ex}{\mbox{\Sf A}}}}\;%
+  }}
+%
+%-----------------------------------------------------------------------
+% Derivatives
+%-----------------------------------------------------------------------
+% partial derivatives......................................................
+\newcommand{\p}[1] { \partial_{#1} }
+\newcommand{\pp}[2]{ \frac{\partial{#1}} {\partial{#2}} }  
+\newcommand{\ppp}[2]{ \frac{\partial^2{#1}} {\partial{#2}} }  
+\newcommand{\pppp}[3]{ \frac{\partial^2{#1}} {\partial{#2} \partial{#3}} }
+% total derivatives
+\newcommand{\dd}[2]{ \frac{\mathrm{d}{#1}} {\mathrm{d}{#2}} }  %Leibniz derivative
+\newcommand{\ddt}{{\pp{}{t}}}                              %\partial/\partial t
+% 
+%-----------------------------------------------------------------------
+% Domains
+%-----------------------------------------------------------------------
+\newcommand{\B}{\mathcal{B}}         % Reference configuration (microscale)
+\newcommand{\Bt}{\mathcal{S}}        % Actual configuration (microscale)
+\newcommand{\Bnull}{\mathcal{B}_0}   % Alternative reference configuration
+\newcommand{\Btime}{\mathcal{B}_t}   % Alternative actual configuration
+\newcommand{\OG}{\mathcal{O}}
+\newcommand{\SOG}{\mathcal{SO}}
+\newcommand{\MO}{\mathcal{MO}}
+% 
+%-----------------------------------------------------------------------
+% Jump of a quantity
+%-----------------------------------------------------------------------
+\newcommand{\jumpl}{{[\kern-.15em[}}
+\newcommand{\jumpr}{{]\kern-.15em]}}
+% 
+%-----------------------------------------------------------------------
+% Special fractions
+%-----------------------------------------------------------------------
+\def\half{{\textstyle{\frac{1}{2}}}}           % 1/2
+\def\third{{\textstyle{\frac{1}{3}}}}          % 1/3
+\def\fourth{{\textstyle{\frac{1}{4}}}}         % 1/4
+\def\sixth{{\textstyle{\frac{1}{6}}}}          % 1/6
+\def\eighth{{\textstyle{\frac{1}{8}}}}         % 1/8
+\def\twothird{{\textstyle{\frac{2}{3}}}}       % 2/3
+\def\thirdtwo{{\textstyle{\frac{3}{2}}}}       % 3/2
+\def\sqtwo3{{\textstyle{\sqrt{\frac{2}{3}}}}}  % sqrt(2/3)
+
+% fractions with diagonally set numbers (e.g. for formulas in text passages)
+\def\textfrac#1#2{\leavevmode\kern.1em\raise.5ex\hbox{$\scriptstyle #1$}\kern-.1em/\kern-.15em\lower.25ex\hbox{$\scriptstyle #2$}}
+% 
+%-----------------------------------------------------------------------
+% definition symbols := and =:
+%-----------------------------------------------------------------------
+\newcommand*{\defeq}{\mathrel{\rlap{%
+                     \raisebox{0.32ex}{$\cdot$}}%
+                     \raisebox{-0.3ex}{$\cdot$}}%
+                     =}
+\newcommand*{\eqdef}{\mathrel{=\hspace{-0.25em}{%
+                     \raisebox{0.32ex}{$\cdot$}}%
+                     \llap{\raisebox{-0.3ex}{$\cdot$}}}%
+                     }
+
+% 
+%-----------------------------------------------------------------------
+% Mathematical definitions (following P. Neff)
+%-----------------------------------------------------------------------
+% Spaces
+\newcommand{\Lp}[1]{L^{#1}(\Omega)}
+\newcommand{\Wmp}[2]{W^{#1,#2}(\Omega)}
+\newcommand{\Hmp}[2]{H^{#1,#2}(\Omega)}
+\newcommand{\Hmpo}[2]{H_{\circ}^{#1,#2}(\Omega)}
+\newcommand{\Co}{C_0^{\infty}(\Omega)}
+\newcommand{\Cgam}{C^\infty(\Omega,\Gamma)}
+\newcommand{\qeda}{\tag*{$\blacksquare$} }
+\newcommand{\Psym}{P\mathbb{S}ym}
+% Norms
+\newcommand{\abs}[1]{|#1|}\newcommand{\norm}[1]{\|#1\|}
+\newcommand{\HmpOnorm}[3]{{\|#1\|}_{#2,#3,\Omega}}
+\newcommand{\LpOnorm}[2]{{\|#1\|}_{#2,\Omega}}
+\newcommand{\Skalint}[2]{{\langle #1,#2\rangle}_{\Omega}}
+\newcommand{\Skalprod}[2]{\langle #1,#2\rangle}
+\newcommand{\rSkalprod}[2]{ {\langle #1,#2\rangle}^{\bullet} }
+\newcommand{\Mprod}[2]{ {\langle #1 ,#2\rangle} }
+\newcommand{\MSkalprod}[2]{ {\langle #1,#2\rangle}_{\MM^{3\times3}} }
+\newcommand{\Rprod}[2]{ {\langle #1,#2\rangle}_{\RR^{3}} }
+\newcommand{\RSkalprod}[2]{ {\langle #1,\!#2\rangle}_{\RR^{3}} }
+\newcommand{\rLpOnorm}[2]{ {{\|#1\|}_{#2,\Omega}^{\bullet}} }                 
+\newcommand{\rHnorm}[1]{ {{\rule[-0.1cm]{0.025cm}{0.45cm}#1
+                      \rule[-0.1cm]{0.025cm}{0.45cm} }_{\Omega}^{\bullet}} }
+\newcommand{\Mnorm}[1]{ {{\|#1\|}_{\MM^{3\times3}} } }   
+\newcommand{\Rnorm}[1]{ {{\|#1\|}_{\RR^3}} }
+\newcommand{\Mnnorm}[2]{ {{\|#1\|}_{#2,\MM^{3\times3}} }} 
+%

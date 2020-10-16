@@ -1,0 +1,27 @@
+\begin{verbatim}
+% MAIN PROGRAM
+%--------------------------------------------------------------------
+% FEM for simple plane struss structures
+%--------------------------------------------------------------------
+clear all
+close all
+%-read general properties--------------------------------------------
+num_ele   = input('give the total number of elements. num_ele = ');
+num_nodes = input('give the total number of nodes.  num_nodes = ');
+disp(' ');
+\end{verbatim}
+\begin{verbatim}
+%-define nodes, coordinates and stiffnes (E and A) for elements------
+for i = 1:num_ele
+    fprintf('element no.%g\n',i);
+    connectivity(1,i) = input('  global node for 1st local node = ');
+    connectivity(2,i) = input('  global node for 2nd local node = ');
+    elementdata(i,:)  = input('  element data           [ E A ] = ');
+    disp(' ');
+end
+for i = 1:num_nodes
+    fprintf('node no.%g\n',i);
+    X(:,i) = input('  global node coordinates [ x y ] = ')';
+    disp(' ');
+end
+\end{verbatim}

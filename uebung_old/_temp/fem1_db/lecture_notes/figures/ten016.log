@@ -1,0 +1,236 @@
+This is TeX, Version 3.14159 (Web2C 7.4.5) (format=latex 2003.9.23)  22 MAR 2005 23:47
+**ten016
+(./ten016.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+(./svmono.cls
+Document Class: svmono 2003/07/23 3.9 
+Springer Verlag global LaTeX document class for monographs
+Class Springer-SVMono Info: extra/valid Springer sub-package 
+(Springer-SVMono)           not found in option list - using "global" style.
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\betweenumberspace=\dimen103
+\headlineindent=\dimen104
+\c@chapter=\count87
+\chapstarthookwidth=\dimen105
+\svitemindent=\dimen106
+\verbatimindent=\dimen107
+\tocchpnum=\dimen108
+\tocsecnum=\dimen109
+\tocsectotal=\dimen110
+\tocsubsecnum=\dimen111
+\tocsubsectotal=\dimen112
+\tocsubsubsecnum=\dimen113
+\tocsubsubsectotal=\dimen114
+\tocparanum=\dimen115
+\tocparatotal=\dimen116
+\tocsubparanum=\dimen117
+\foot@parindent=\dimen118
+\spthmsep=\dimen119
+\c@theorem=\count88
+\instindent=\dimen120
+\figgap=\dimen121
+\figcapgap=\dimen122
+\tabcapgap=\dimen123
+\c@merk=\count89
+)
+(/usr/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen124
+\Gin@req@width=\dimen125
+)
+(/usr/share/texmf/tex/latex/tools/multicol.sty
+Package: multicol 2000/07/10 v1.5z multicolumn formatting (FMi)
+\c@tracingmulticols=\count90
+\mult@box=\box26
+\multicol@leftmargin=\dimen126
+\c@unbalance=\count91
+\c@collectmore=\count92
+\doublecol@number=\count93
+\multicoltolerance=\count94
+\multicolpretolerance=\count95
+\full@width=\dimen127
+\page@free=\dimen128
+\premulticols=\dimen129
+\postmulticols=\dimen130
+\multicolsep=\skip43
+\multicolbaselineskip=\skip44
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count96
+\c@finalcolumnbadness=\count97
+\last@try=\dimen131
+\multicolovershoot=\dimen132
+\multicolundershoot=\dimen133
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+)
+(/usr/share/texmf/tex/generic/misc/psfig.sty
+\@unused=\write3
+\ps@stream=\read1
+\p@intvaluex=\dimen134
+\p@intvaluey=\dimen135
+
+psfig/tex 1.10-dvips
+) (/usr/share/texmf/tex/latex/misc/psfrag.sty
+Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
+\pfg@pcount=\count98
+\pfg@scount=\count99
+\pfg@temp=\write4
+)
+(/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+
+(/usr/share/texmf/tex/latex/config/color.cfg
+File: color.cfg 2001/08/31 v1.1 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 125.
+
+(/usr/share/texmf/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+(/usr/share/texmf/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen136
+\epsfysize=\dimen137
+)
+(/usr/share/texmf/tex/latex/misc/rotating.sty
+Package: rotating 1997/09/26, v2.13 Rotation package
+
+(/usr/share/texmf/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count100
+\rot@float@box=\box52
+)
+(/usr/share/texmf/tex/latex/carlisle/colortbl.sty
+Package: colortbl 1999/03/24 v0.1i Color table columns (DPC)
+
+(/usr/share/texmf/tex/latex/tools/array.sty
+Package: array 1998/05/13 v2.3m Tabular extension package (FMi)
+\col@sep=\dimen138
+\extrarowheight=\dimen139
+\NC@list=\toks15
+\extratabsurround=\skip45
+\backup@length=\skip46
+)
+\everycr=\toks16
+\minrowclearance=\skip47
+)
+(/usr/share/texmf/tex/latex/misc/slashbox.sty
+slashbox style by K.Yasuoka, May 1993.
+\@slashboxa=\box53
+\@slashboxb=\box54
+\@slashboxc=\box55
+\@slashboxwd=\count101
+\@slashboxht=\count102
+\@slashsepl=\dimen140
+\@slashsepr=\dimen141
+)
+\@indexfile=\write5
+\openout5 = `ten016.idx'.
+
+
+Writing index file ten016.idx
+(./ten016.aux)
+\openout1 = `ten016.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 235.
+LaTeX Font Info:    ... okay on input line 235.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 235.
+LaTeX Font Info:    ... okay on input line 235.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 235.
+LaTeX Font Info:    ... okay on input line 235.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 235.
+LaTeX Font Info:    ... okay on input line 235.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 235.
+LaTeX Font Info:    ... okay on input line 235.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 235.
+LaTeX Font Info:    ... okay on input line 235.
+ (./ten016.pstex_t
+File: ten016.pstex Graphic file (type eps)
+ <ten016.pstex>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 14.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 241.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 241.
+ [1
+
+] (./ten016.aux) ) 
+Here is how much of TeX's memory you used:
+ 1928 strings out of 95847
+ 21752 string characters out of 1195962
+ 76230 words of memory out of 1000001
+ 4854 multiletter control sequences out of 10000+50000
+ 10968 words of font info for 38 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 31i,12n,23p,235b,387s stack positions out of 1500i,500n,5000p,200000b,5000s
+
+Output written on ten016.dvi (1 page, 1128 bytes).

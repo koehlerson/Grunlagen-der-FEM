@@ -1,0 +1,75 @@
+Moodle PW: Galerkin19
+
+
+Keine Ableitung von Energiefunktionen in der Übung machen wegen Überschneidung mit Einführung in die Materialmodellierung 
+
+
+Tensorrechnung und Kontinuumsmechanik
+---------------------
+- In Tensorrechnung Identitätstensor 4. Ordnung aufstellen
+- (IdyadI):A und (dsI:A) ausrechnen
+
+Konti A1:
+- gegeben: C (tens)=... (Hooke)
+- zeige, dass sig=C:eps äquivalent ist zu sig=... (Hooke)
+- Unter welcher annahme kann die beziehung sig=C:eps in voigt notation geschrieben werden?
+- Wie lauten die Komponenten von C in Voigt notation
+
+Konti A2:
+- Gegeben ist das RWP (aufliegender würfel unter surface load)
+- Erfüllt ein Verschiebungsfeld der Form u=a x1,b x2, c x3 die Gleichgewichtsbedingungen?
+- Bestimmen Sie die Konstanten a,b,c unter Auswertung der RB
+- Berechnen Sie die Verschiebung im Punkt A für E=210 GPa, nu=0.3 und q=...
+
+
+Stabelemente
+------------------------------------
+- Nachweis der Nichtinvertierbarkeit der Steifigkeitsmatrix bei Weglasssen der Dirichlet RB
+
+
+
+Dreieckselemente
+------------------------------------
+- D-operatormatrix einführen zur Herleitung der Bmatrix
+
+
+FEAP Einführung
+---------------------
+Selbst implementieren:
+- Cook's Membrane + Konvergenzstudie (P1,Q1) (nu=0.3)
+- Singuläres Matrix zeigen
+
+Lineares Dreieckselement
+-----------------------------------
+- Implementierung mit subroutine für ansatzfunktionen, so dass quadr. Dreieckselemente später auch eingebaut werden können
+
+
+Interpolationsfunktionen
+-----------------------------------
+- Klausurartige aufgabe: Aufstellen der Interpolationsfunktionen (Tri P2)
+
+
+Quadratisches Dreieckselement
+-----------------------------------
+- Konvergenzstudie cm am ende um zu zeigen P2 ist besser als P1
+- Plot over nelem
+- Plot over dof
+
+
+Vierknotenelement
+----------------------------------
+- Implementierung 
+- Frage: Was passiert wenn eine höhere GP-Ordnung verwendet wird? Was Passiert wenn eine zu niedrige GP ordnung verwendet wird.
+- Konvergenzstudie: cm + Vorzugsrichtung (stab unter zug)
+- Plot over nelem
+- Plot over dof
+
+
+Locking Q1P0
+---------------------
+- Cook's Membrane + Konvergenzstudie (P1,P2,Q1,Q2,Q1P0) (nu=0.499)
+
+
+Klausurvorbereitung
+-----------------------
+Galerkin-Methode schwache Form herleiten+ betonen warum galerkin und was wichtig ist

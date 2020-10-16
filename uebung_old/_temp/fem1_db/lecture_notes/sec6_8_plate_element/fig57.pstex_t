@@ -1,0 +1,27 @@
+\begin{picture}(0,0)%
+\includegraphics{\dir/fig57.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6230,2070)(174,-1591)
+\put(2233,-534){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$-\beta _x$}}}}
+\put(2515,-298){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$w,_x$}}}}
+\put(5138,-532){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$-\beta _y$}}}}
+\put(5420,-301){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$w,_y$}}}}
+\put(2740,-676){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\gamma _{xz}$}}}}
+\put(5635,-694){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\gamma _{yz}$}}}}
+\put(2880,-1439){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$w,_x$}}}}
+\put(5851,-1436){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$w,_y$}}}}
+\put(3554,152){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$x, u$}}}}
+\put(3579,-422){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$z, w$}}}}
+\put(682,-436){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$z, w$}}}}
+\put(658,148){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$y, v$}}}}
+\put(4225,254){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$y, v$}}}}
+\put(1319,251){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$x, u$}}}}
+\end{picture}%

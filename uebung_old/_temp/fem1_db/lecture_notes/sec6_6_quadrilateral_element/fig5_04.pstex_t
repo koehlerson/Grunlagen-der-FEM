@@ -1,0 +1,19 @@
+\begin{picture}(0,0)%
+\epsfig{file=\dir/fig5_04.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(3773,1828)(-322,-1334)
+\put(1216,-1096){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\partial{\cal B}_u$}}}
+\put(2566,-1276){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\partial{\cal B}_\sigma$}}}
+\put(2206,-466){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\fett x$}}}
+\put(3241,299){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\bar{{\fett t}}$}}}
+\put(2656,-61){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\fett u({\fett x})$}}}
+\put(2521,-556){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\bar{\fett f}({\fett x})$}}}
+\end{picture}

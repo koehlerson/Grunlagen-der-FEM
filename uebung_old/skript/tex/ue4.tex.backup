@@ -1,0 +1,69 @@
+\clearpage
+\setcounter{page}{1}
+
+\section{Assemblierung}
+
+
+\subsection{Ebenes Fachwerk}
+
+Gegeben sei das folgende Fachwerk bestehend aus Stäben der Länge $l$:\medskip
+
+\begin{minipage}[b]{0.36\textwidth}
+    \input{fig/ue4_fachwerk1.pdf_tex}
+  \captionof{figure}{Randwertproblem}
+  \label{fig:fachw1}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.56\textwidth}
+   \input{fig/ue4_fachwerk1_diskret.pdf_tex}
+  \captionof{figure}{Element- und Knotennummerierung}
+  \label{fig:fw1dis}
+ \end{minipage}
+
+
+
+\enab
+\item Welche grundlegenden Schritte sind erforderlich um das Problem mithilfe der Finite-Elemente Methode zu lösen?
+\enae
+
+Im Folgenden sei angenommen, dass die jeweiligen Elementsteifigkeitsmatrizen $\mk^e$ bekannt sind.
+
+\enabres
+\item Assemblieren Sie aus den Elemmentsteifigkeitsmatrizen die globale Steifigkeitsmatrix unter Berücksichtigung der Dirichlet-Randbedingungen. 
+ Stellen Sie den globalen Lastvektor und das globale Gleichungssystem auf.
+%(Was würde mit der resultierenden globalen Steifigkeitsmatrix passieren wenn diese nicht berücksichtigt werden würden?)
+\enae
+
+Nutzen Sie die in Abbildung \ref{fig:fw1dis} dargestellte Element- und Knotennummerierung. 
+
+%
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Ebenes Fachwerk}
+
+Gegeben sei das dargestellte ebene Fachwerk, für das die jeweiligen Elementsteifigkeitsmatrizen $\mk^e$ als bekannt angenommen werden.
+
+
+\begin{minipage}[b]{0.36\textwidth}
+    \input{fig/ue4_fachwerk2.pdf_tex}
+  \captionof{figure}{Randwertproblem}
+  \label{fig:fachw1}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.56\textwidth}
+   \input{fig/ue4_fachwerk2_diskret.pdf_tex}
+  \captionof{figure}{Element- und Knotennummerierung}
+  \label{fig:fw1dis}
+ \end{minipage}
+
+Stellen sie unter Berücksichtigung der Dirichlet-Randbedingungen das globale Gleichungssystem auf.

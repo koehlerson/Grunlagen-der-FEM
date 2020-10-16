@@ -1,0 +1,43 @@
+\begin{picture}(0,0)%
+\includegraphics{./figures/bild785.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(1452,1449)(1600,-1772)
+\put(2312,-1687){\makebox(0,0)[rb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$7$}%
+}}}}
+\put(2532,-1706){\makebox(0,0)[rb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$2$}%
+}}}}
+\put(1923,-1688){\makebox(0,0)[rb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$4$}%
+}}}}
+\put(2045,-1131){\makebox(0,0)[rb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$8$}%
+}}}}
+\put(2412,-1502){\makebox(0,0)[rb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$5$}%
+}}}}
+\put(1686,-1331){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$9$}%
+}}}}
+\put(1663,-1598){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$1$}%
+}}}}
+\put(1894,-1222){\makebox(0,0)[rb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$12$}%
+}}}}
+\put(1676,-1139){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$6$}%
+}}}}
+\put(1669,-877){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$3$}%
+}}}}
+\put(2028,-1294){\makebox(0,0)[b]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$13$}%
+}}}}
+\put(2183,-1563){\makebox(0,0)[b]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$11$}%
+}}}}
+\put(1903,-1560){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$10$}%
+}}}}
+\put(1711,-511){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm \eta$}%
+}}}}
+\put(2836,-1636){\makebox(0,0)[lb]{\smash{{\SetFigFont{7}{8.4}{\familydefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\rm \xi$}%
+}}}}
+\end{picture}%

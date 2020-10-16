@@ -1,0 +1,22 @@
+\begin{picture}(0,0)%
+\epsfig{file=\dir/fig3_08.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5467,2495)(764,-2076)
+\put(6231,-1902){\makebox(0,0)[lb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$x$}}}
+\put(2931,-2071){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$x_i\! -\! 1$}}}
+\put(3606,-2066){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$x_i$}}}
+\put(4286,-2071){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$x_i\! +\! 1$}}}
+\put(1611,-2066){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$0$}}}
+\put(5621,-2076){\makebox(0,0)[b]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$n$}}}
+\put(1483,254){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$t$}}}
+\put(1481,-561){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$j$}}}
+\put(1472,-997){\makebox(0,0)[rb]{\smash{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$j\! -\! 1$}}}
+\end{picture}

@@ -1,0 +1,246 @@
+\documentclass[envcountsame,envcountchap]{svmono}
+
+% choose options for [] as required from the list
+% in the Reference Guide, Sect. 2.2
+
+\usepackage{makeidx}     % allows index generation
+\usepackage{graphicx}    % standard LaTeX graphics tool
+                         % when including figure files
+\usepackage{multicol}    % used for the two-column index
+\usepackage{psfig}
+\usepackage{graphicx}
+\usepackage{psfrag}
+\usepackage[usenames]{color}
+\usepackage{epsfig}
+\usepackage{rotating}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{slashbox}
+
+
+%###############################################################################% equations.............................................................
+\newcommand {\eb}{\begin{equation}}       % mit Gleichungsnummer
+\newcommand {\ee}{\end{equation}}
+\newcommand {\ebn}{\begin{displaymath}}   % ohne Gleichungsnummer
+\newcommand {\een}{\end{displaymath}}
+\newcommand {\eab}{\begin{eqnarray}}      % Array mit Gleichungsnummer
+\newcommand {\eae}{\end{eqnarray}}
+\newcommand {\eabn}{\begin{eqnarray*}}    % Array ohne Gleichungsnummer
+\newcommand {\eaen}{\end{eqnarray*}}
+
+%-----------------------------------------------------------------------
+%   BOLD FACE MATH ITALIC:  All In Format: \f* .
+%-----------------------------------------------------------------------
+%
+\newcommand{\bA}{{\bf A}}
+\newcommand{\bB}{{\bf B}}
+\newcommand{\bC}{{\bf C}}
+\newcommand{\bD}{{\bf D}}
+\newcommand{\bE}{{\bf E}}
+\newcommand{\bF}{{\bf F}}
+\newcommand{\bG}{{\bf G}}
+\newcommand{\bH}{{\bf H}}
+\newcommand{\bI}{{\bf I}}
+\newcommand{\bJ}{{\bf J}}
+\newcommand{\bK}{{\bf K}}
+\newcommand{\bL}{{\bf L}}
+\newcommand{\bM}{{\bf M}}
+\newcommand{\bN}{{\bf N}}
+\newcommand{\bO}{{\bf O}}
+\newcommand{\bP}{{\bf P}}
+\newcommand{\bQ}{{\bf Q}}
+\newcommand{\bR}{{\bf R}}
+\newcommand{\bS}{{\bf S}}
+\newcommand{\bT}{{\bf T}}
+\newcommand{\bU}{{\bf U}}
+\newcommand{\bV}{{\bf V}}
+\newcommand{\bW}{{\bf W}}
+\newcommand{\bX}{{\bf X}}
+\newcommand{\bY}{{\bf Y}}
+\newcommand{\bZ}{{\bf Z}}
+%
+\newcommand{\ba}{{\bf a}}
+\newcommand{\bb}{{\bf b}}
+\newcommand{\bbb}{{\bf b}}
+\newcommand{\bc}{{\bf c}}
+\newcommand{\bd}{{\bf d}}
+\newcommand{\be}{{\bf e}}
+\newcommand{\bbf}{{\bf f}}
+\newcommand{\bff}{{\bf f}}
+\newcommand{\bg}{{\bf g}}
+\newcommand{\bh}{{\bf h}}
+\newcommand{\bi}{{\bf i}}
+\newcommand{\bj}{{\bf j}}
+\newcommand{\bk}{{\bf k}}
+\newcommand{\bl}{{\bf l}}
+\newcommand{\bm}{{\bf m}}
+\newcommand{\bn}{{\bf n}}
+\newcommand{\bo}{{\bf o}}
+\newcommand{\bp}{{\bf p}}
+\newcommand{\bq}{{\bf q}}
+\newcommand{\br}{{\bf r}}
+\newcommand{\bs}{{\bf s}}
+\newcommand{\bt}{{\bf t}}
+\newcommand{\bu}{{\bf u}}
+\newcommand{\bv}{{\bf v}}
+\newcommand{\bw}{{\bf w}}
+\newcommand{\bx}{{\bf x}}
+\newcommand{\by}{{\bf y}}
+\newcommand{\bz}{{\bf z}}
+%
+%-----------------------------------------------------------------------
+%   BOLD FACE GREEK:  All In Format: \B***** .
+%-----------------------------------------------------------------------
+\def\pmb#1{\setbox0=\hbox{#1}%
+  \kern-.025em\copy0\kern-\wd0
+  \kern.05em\copy0\kern-\wd0
+  \kern-.025em\raise.0433em\box0 }
+%
+\newcommand{\BGamma     }{{\mbox{\boldmath$\Gamma      $}}}
+\newcommand{\BDelta     }{{\mbox{\boldmath$\Delta      $}}}
+\newcommand{\BTheta     }{{\mbox{\boldmath$\Theta      $}}}
+\newcommand{\BLambda    }{{\mbox{\boldmath$\Lambda     $}}}
+\newcommand{\BXi        }{{\mbox{\boldmath$\Xi         $}}}
+\newcommand{\BPi        }{{\mbox{\boldmath$\Pi         $}}}
+\newcommand{\BSigma     }{{\mbox{\boldmath$\Sigma      $}}}
+\newcommand{\BUpsilon   }{{\mbox{\boldmath$\Upsilon    $}}}
+\newcommand{\BPhi       }{{\mbox{\boldmath$\Phi        $}}}
+\newcommand{\BPsi       }{{\mbox{\boldmath$\Psi        $}}}
+\newcommand{\BOmega     }{{\mbox{\boldmath$\Omega      $}}}
+\newcommand{\Balpha     }{{\mbox{\boldmath$\alpha      $}}}
+\newcommand{\Bbeta      }{{\mbox{\boldmath$\beta       $}}}
+\newcommand{\Bgamma     }{{\mbox{\boldmath$\gamma      $}}}
+\newcommand{\Bdelta     }{{\mbox{\boldmath$\delta      $}}}
+\newcommand{\Bepsilon   }{{\mbox{\boldmath$\epsilon    $}}}
+\newcommand{\Bzeta      }{{\mbox{\boldmath$\zeta       $}}}
+\newcommand{\Beta       }{{\mbox{\boldmath$\eta        $}}}
+\newcommand{\Btheta     }{{\mbox{\boldmath$\theta      $}}}
+\newcommand{\Biota      }{{\mbox{\boldmath$\iota       $}}}
+\newcommand{\Bkappa     }{{\mbox{\boldmath$\kappa      $}}}
+\newcommand{\Blambda    }{{\mbox{\boldmath$\lambda     $}}}
+\newcommand{\Bmu        }{{\mbox{\boldmath$\mu         $}}}
+\newcommand{\Bnu        }{{\mbox{\boldmath$\nu         $}}}
+\newcommand{\Bxi        }{{\mbox{\boldmath$\xi         $}}}
+\newcommand{\Bpi        }{{\mbox{\boldmath$\pi         $}}}
+\newcommand{\Brho       }{{\mbox{\boldmath$\rho        $}}}
+\newcommand{\Bsigma     }{{\mbox{\boldmath$\sigma      $}}}
+\newcommand{\Btau       }{{\mbox{\boldmath$\tau        $}}}
+\newcommand{\Bupsilon   }{{\mbox{\boldmath$\upsilon    $}}}
+\newcommand{\Bphi       }{{\mbox{\boldmath$\phi        $}}}
+\newcommand{\Bchi       }{{\mbox{\boldmath$\chi        $}}}
+\newcommand{\Bpsi       }{{\mbox{\boldmath$\psi        $}}}
+\newcommand{\Bomega     }{{\mbox{\boldmath$\omega      $}}}
+\newcommand{\Bvarepsilon}{{\mbox{\boldmath$\varepsilon $}}}
+\newcommand{\Bve        }{{\mbox{\boldmath$\varepsilon $}}}% doppelt definiert
+\newcommand{\Bvartheta  }{{\mbox{\boldmath$\vartheta   $}}}
+\newcommand{\Bvarpi     }{{\mbox{\boldmath$\varpi      $}}}
+\newcommand{\Bvarrho    }{{\mbox{\boldmath$\varrho     $}}}
+\newcommand{\Bvarsigma  }{{\mbox{\boldmath$\varsigma   $}}}
+\newcommand{\Bvarphi    }{{\mbox{\boldmath$\varphi     $}}}
+%
+%-----------------------------------------------------------------------
+%   Special Operators                           
+%-----------------------------------------------------------------------
+\newcommand{\aoverb}[2]{\; \stackrel{#2}{\mbox{$#1$}}{\:\!\!\!}}
+%
+\def\sym{{\rm sym}}          %sym
+\def\bone{{\bf 1}}           %bold 1
+\def\bzero{{\bf 0}}          %bold 0
+%
+\newcommand{\IH}{{\rm I\kern-.25em H}}           % H
+\newcommand{\IE}{{\rm I\kern-.25em E}}           % enhanced c. of element \bE
+\newcommand{\II}{{\rm I\kern-.18em I}}           % 4th order identitytensor
+\newcommand{\IP}{{\rm I\kern-.18em P}}           % 4th order projectiontensor
+\def\IR{{\rm I\kern-.25em R}}
+\def\IN{{\rm I\kern-.25em N}}
+%
+\newcommand{\ia}{{\rm\kern.24em                  %fourth order tensor a
+   \vrule width.02em height0.9ex depth-.05ex
+   \kern-.26em a}}
+\newcommand{\ic}{{\rm\kern.24em                  %fourth order tensor c
+   \vrule width.02em height0.9ex depth-.05ex
+   \kern-.26em c}}
+\newcommand{\IA}{{\rm\kern.22em                  %fourth order tensor A
+    \vrule width.02em
+        height0.5ex depth 0ex
+    \kern-.24em A}}
+\newcommand{\IC}{{\rm\kern.24em                  %fourth order tensor C
+   \vrule width.02em height1.4ex depth-.05ex
+   \kern-.26em C}}
+\newcommand{\IS}{{\rm\kern.24em                  %fourth order Eshelby tensor
+   \vrule width.02em height1.4ex depth-.05ex
+   \kern-.26em S}}
+%
+% brackets
+\newcommand{\Mprod}[2]{ {\langle #1 ,#2\rangle} }
+\newcommand{\jumpl}{{[\kern-.15em[}}
+\newcommand{\jumpr}{{]\kern-.15em]}}
+%
+\newcommand{\pp}[2]{ \frac{\partial{#1}} {\partial{#2}} }  %patial derivative
+\newcommand {\Disp}{\displaystyle}                    % Disp
+\providecommand {\dfrac}{\displaystyle\frac}          % Disp und frac
+\newcommand{\norm}[1]{\|#1\|}
+\def\grad{{\rm grad}}        %grad
+\def\GRAD{{\rm GRAD}}        %GRAD
+\def\Grad{{\rm Grad}}        %GRAD
+%
+\newcommand{\xfh}{^}
+\newcommand{\fett}[1]{%
+         \mbox{\boldmath$ #1 $}}
+\newcommand{\kr}[1]{%
+    $\begin{array}{c}\bigcirc\\[-5.3mm]{\scriptstyle #1}
+     \end{array}$}
+%
+% mappings..............................................................
+\newcommand{\map}[3]{ {#1}:{#2} \to {#3} }       %map, domains
+\newcommand{\maps}[3]{ {#1}:{#2} \mapsto {#3} }  %map, images
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                           m_H
+%%%%   Definition von          A      ------>   \Assem
+%%%                           e=1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Font fuer Assembly-Operator
+\newfont{\Sf}{cmssbx10 scaled 2074}
+%% Assembly Operator
+\newcommand {\Assem}{\unitlength=1mm\begin{picture}(8,7)\put(0,-3){
+       $\stackrel{\stackrel{\mbox{\tiny $\rm num_{ele}$}}{\mbox{\Sf
+A}}}{\mbox{\tiny e=1}}$}\end{picture}}
+%% Assembly Operator ohne Elemente
+\newcommand {\Assemo}{\unitlength=1mm\begin{picture}(8,7)\put(0,-3){
+       $\stackrel{\stackrel{\mbox{\tiny }}{\mbox{\Sf A}}}{\mbox{\tiny
+}}$}\end{picture}}
+%############################################################################
+%
+%mod. AS
+\newcommand{\B}{{\cal B}}                          %Referenzkonfiguration
+
+\catcode`\?=\active
+\def ?#1?{\index{#1}{\it #1}}
+\makeindex
+%--makeindex tensor.idx
+%
+\newcommand{\sect}{
+                    \setcounter{equation}{0}
+                    \section}
+\newcommand{\ssect}{\subsection}
+\newcommand{\sssect}{\subsubsection}
+
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+
+%############################################################################
+
+
+
+
+\begin{document}
+
+\begin{figure}[htb]
+\begin{center}
+\input{ten116.pstex_t}
+\setlength{\baselineskip}{11pt}
+\caption{$ten116.*$ }
+\end{center}
+\end{figure}
+
+\end{document}
+

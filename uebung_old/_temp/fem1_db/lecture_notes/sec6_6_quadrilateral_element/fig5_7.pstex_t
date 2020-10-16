@@ -1,0 +1,36 @@
+\begin{picture}(0,0)%
+\includegraphics{\dir/fig5_7.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5009,2121)(2217,-3960)
+\put(2396,-3025){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\Omega \xfh{e}$}}}}
+\put(3144,-2081){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\eta$}}}}
+\put(4008,-3026){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\xi $}}}}
+\put(5267,-2029){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\eta$}}}}
+\put(4386,-2230){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\bx = \hat{\bx}(\Bxi)$}}}}
+\put(7041,-2274){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\xi $}}}}
+\put(6139,-3608){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}\kr {1}}}}}
+\put(4959,-3249){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$y $}}}}
+\put(5559,-3911){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$x $}}}}
+\put(2564,-3713){\makebox(0,0)[b]{\smash{{\SetFigFont{11}{13.2}{\familydefault}{\mddefault}{\updefault}$(-1,-1)$}}}}
+\put(3813,-3708){\makebox(0,0)[b]{\smash{{\SetFigFont{11}{13.2}{\familydefault}{\mddefault}{\updefault}$(1,-1)$}}}}
+\put(3840,-2123){\makebox(0,0)[b]{\smash{{\SetFigFont{11}{13.2}{\familydefault}{\mddefault}{\updefault}$(1,1)$}}}}
+\put(2585,-2135){\makebox(0,0)[b]{\smash{{\SetFigFont{11}{13.2}{\familydefault}{\mddefault}{\updefault}$(-1,1)$}}}}
+\put(5974,-1983){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}\kr {3}}}}}
+\put(3860,-2317){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}\kr {3}}}}}
+\put(2618,-2323){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}\kr {4}}}}}
+\put(2590,-3487){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}\kr {1}}}}}
+\put(5333,-2846){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}\kr {4}}}}}
+\put(7202,-2904){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}\kr {2}}}}}
+\put(6120,-2437){\makebox(0,0)[lb]{\smash{{\SetFigFont{11}{13.2}{\rmdefault}{\mddefault}{\updefault}$\fett{x}$}}}}
+\put(3425,-2614){\makebox(0,0)[rb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}$\fett{\xi }$}}}}
+\put(6296,-3594){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}${\cal B} \xfh{e}$}}}}
+\put(3849,-3478){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\familydefault}{\mddefault}{\updefault}\kr {2}}}}}
+\end{picture}%

@@ -1,0 +1,136 @@
+\clearpage
+\setcounter{page}{1}
+
+\section{Vierknotenelement}
+
+In dieser Übung wird die FEAPpv Elementsubroutine \verb|elmt04| aus den vorherigen Aufgaben um das isoparametrische Vierknotenelement (vgl. Abbildung \ref{fig:q1gp}) erweitert.
+
+{\center
+\input{fig/ue10_q1.pdf_tex}
+\captionof{figure}{lineares Referenzviereckselement mit Gausspunkten}
+\label{fig:q1gp}
+}\medskip
+
+\textbf{Grundlagen:}
+Mithilfe der Gausspunkte wird das Integral der Elementsteifigkeitsmatrix $\mk^{\mrm{e}}$ wie folgt numerisch berechnet: 
+
+\eb
+\mk^{\mrm{e}} = \int_{\B^{\mrm{e}}} (\mB^{\mrm{e}})^T \mIC\ \mB^{\mrm{e}}\ \mrm{d}V
+ = \sum_{l=1}^{ n_{\mrm{GP}}=4} (\mB^{\mrm{e}}(\Bxi_l))^T \mIC\ \mB^{\mrm{e}}(\Bxi_l) \det\mJ(\Bxi_l) \mrm{w}_l
+ \label{eq:q1ke}
+\ee
+
+Dabei sind $\Bxi_l=[\xi_l,\eta_l]^T $ die Ortsvektoren der Gausspunkte im Parameterraum und $\mrm{w}_l$ die zugehörigen Wichtungsfaktoren.
+Für das Vierknotenelement sind diese Tabelle \ref{tab:q1gp} zu entnehmen.
+
+{\center\begin{tabular}{llll}
+%   \multicolumn{2}{c}{Parameter}\\
+\toprule
+ i      & $\xi_l$ & $\eta_l$ & $\mrm{w}_l$\\\midrule
+ 1      &   $-1/\sqrt{3}$ &  $-1/\sqrt{3}$ & $1$\\
+ 2     & $ \ \ 1/\sqrt{3}$ &  $-1/\sqrt{3}$ & $1$\\
+ 3    & $\ \ 1/\sqrt{3}$ &  $\ \ 1/\sqrt{3}$ & $1$\\
+ 4    & $ -1/\sqrt{3}$ &  $\ \ 1/\sqrt{3}$ & $1$\\
+\midrule
+\end{tabular}
+\captionof{table}{Gausspunktkoordinaten und Wichtungsfaktoren des Vierknotenelementes}
+\label{tab:q1gp}
+}\medskip
+
+Die Summe in \eqref{eq:q1ke} wird im FE-Programm üblicherweise im Schleifendurchlauf aufgestellt, wobei $\mk^{\mrm{e}}$ in jedem Iterationsschritt $l$ geupdated wird:
+
+\begin{align*}
+ & \mk^{\mrm{e}} = \mk^{\mrm{e}}_0\ (\text{in linear elasticity}= \bzero )&&\\
+ & \text{\textbf{do}}\  l=1\ , \  n_{\mrm{GP}}  \\
+ & \quad \mk^{\mrm{e}}\Longleftarrow \mk^{\mrm{e}}+ (\mB^{\mrm{e}}(\Bxi_l))^T \mIC\ \mB^{\mrm{e}}(\Bxi_l) \det\mJ(\Bxi_l) \mrm{w}_l \\
+ & \text{\textbf{end do}}
+\end{align*}
+
+
+
+Desweiteren werden im Postprocessing, nachdem das FE-Problem gelöst ist und der Elementverschiebungsvektor $\md^{\mrm{e}}$ bekannt ist, an den Gausspunkten die Spannungen und Verzerrungen ausgewertet.
+Mithilfe der aus der Vorlesung bekannten Element-Interpolationsfunkionen $\mN^{\mrm{e}}$ und $\mB^{\mrm{e}}$ kann der Gausspunkt in physikalischen Koordinaten ausgedrückt werden:
+
+\eb
+\mx^h(\Bxi_l) = \mN^{\mrm{e}}(\Bxi_l) \mx^{\mrm{e}}
+\label{eq:xgp}
+\ee
+
+Die Verzerrung, welche diesem Punkt zugeordnet ist lässt sich (in Voigt-Notation) wie folgt bestimmen:
+
+\eb
+\Mvarepsilon^{\mrm{V}}(\Bxi_l) = \mB^{\mrm{e}}(\Bxi_l) \md^{\mrm{e}}
+\label{eq:ppeps}
+\ee
+
+Mithilfe des Elastizitätstensors $\mIC^V$ lässt sich ebenso die Spannung bestimmen:
+
+\eb
+\Msigma^{\mrm{V}}(\Bxi_l) = \mIC^V \Mvarepsilon^{\mrm{V}}(\Bxi_l)
+\label{eq:ppsig}
+\ee
+%
+\subsection{Gausspunkte}
+
+Die Subroutine \verb|gauss04(l,lint,eg,wg)| gibt die Koordinaten \verb|eg| und Wichtungsfaktoren \verb|wg| bei Input des aktuellen Gausspunktes \verb|l|.
+\verb|lint| stellt dabei die Anzahl an Elementgausspunkten dar (lineares Dreieck t1: \verb|lint|=1, quadratisches Dreieck t2: \verb|lint|=3 oder lineares Viereck q1: \verb|lint|=4).
+%
+\enab
+\item Vervollständigen Sie \verb|gauss04| um die Informationen aus Tabelle \ref{tab:q1gp}.
+\enae
+%
+\subsection{Postprocessing}
+
+Die Subroutine \verb|str04| berechnet die Verzerrungen \verb|eps| und Spannungen \verb|sig| aus den Elementknotenverschiebungen \verb|du|.
+Dazu werden die Berechnungsschritte \eqref{eq:xgp}-\eqref{eq:ppsig} durchgeführt. 
+Die zugehörigen Programmvariablennamen sind Tabelle \ref{tab:ppparam} zu entnehmen.
+
+
+{\center
+\begin{tabular}{llllllll}
+%   \multicolumn{2}{c}{Parameter}\\
+\toprule
+ $\mx^h(\Bxi_l)$                   & 
+ $\mN^{\mrm{e}}(\Bxi_l)$           & 
+  $\mx^{\mrm{e}}$                  & 
+  $\md^{\mrm{e}}$                  &
+  $\mB^{\mrm{e}}(\Bxi_l)$          &
+ $\Mvarepsilon^{\mrm{V}}(\Bxi_l)$  &
+ $\mIC^V$                          &
+ $\Msigma^{\mrm{V}}(\Bxi_l)$       \\
+  \verb|xg| & \verb|shp(3,*)| & \verb|xl| & \verb|du| & \verb|bmat| & \verb|eps| & \verb|aa|$^*$ & \verb|sig|   
+\\\midrule
+\end{tabular}
+  \captionof{table}{Zuordnung der Programm-Variablennamen zu den Berechnungsgrößen.}
+\label{tab:ppparam}
+}\medskip
+
+\textit{Hinweis:} 
+\verb|aa|$^*$ ist die $[3\times3]$-Elastizitätsmatrix, deren Einträge zur x-y-Ebene gehören.
+Da die implementierten Elemente einen ebenen Verzerrungszustand beschreiben ist zu berücksichtigen, dass $\sigma_{33}\neq 0$ zusätzlich zu berechnen ist.
+
+\enab
+\item Ergänzen Sie \verb|str04| um die Berechnung \eqref{eq:xgp} der phys. Gausspunktkoordinaten
+\item Ergänzen Sie \verb|str04| um die Berechnung \eqref{eq:ppeps} der Verzerrungen
+\item Ergänzen Sie \verb|str04| um die Berechnung \eqref{eq:ppsig} der Spannungen
+% \item Testen Sie \verb|elmt04.f| mit einer Beispielrechnung (\verb|I_cm|) und Vergleichen Sie Outputdateien und Contourplots mit denen der programmeigenen Elemente
+\enae
+
+
+\clearpage
+\subsection{Konvergenzstudie}
+
+\enab
+\item Ersetzen Sie die vervollständigte Datei \verb|elmt04.f| in dem Dateipfad \verb|$FEAPPVHOME4_1/user| und updaten Sie das FEAPpv-Hauptprogram mit dem Befehl \verb|make|
+(vgl Aufgabe 9.2).%\ref{subsec:t1feap})
+\item Testen Sie \verb|elmt04.f| mit einer Beispielrechnung (\verb|I_cm|) und Vergleichen Sie die Ausgabe der Spannungen und Verzerrungen in der Outputdatei (\verb|O_cm|) und die Contourplots mit denen der programmeigenen Elemente.
+\item Ergänzen Sie Netzkonvergenzstudie aus Aufgabe 9.2c) mit den Ergebnissen des Viereckselementes.
+Plotten Sie die Verschiebung des Eckpunktes \verb|A| über der Anzahl der Freiheitsgrade.
+Macht es einen qualitativen unterschied ob der Konvergenzplot über der Anzahl der Freiheitsgrade oder der Anzahl der Elemente erstellt wird? 
+\enae
+
+
+% \subsection{Konvergenzstudie}
+% 
+% Vergleichen Sie das Konvergenzverhalten des linearen Viereckselementes mit den Elementen aus den vorherigen Aufgaben.
+% Lösen Sie Dazu das Cook's Membrane Randwertproblem für verschieden feine Netze und betrachten Sie die Verschiebung am Eckpunkt A (vgl. Aufgabe 6.1a).

@@ -1,0 +1,24 @@
+\begin{verbatim}
+%-compute number of equations----------------------------------------
+disp('give the total number of displacement boundary conditions')
+num_bc = input('                                        num_bc = ');
+num_eq = num_nodes*2 - num_bc;
+%-assemble matrix----------------------------------------------------
+for i = 1:num_nodes
+    assembleid(1,i) = 2*i - 1;
+    assembleid(2,i) = 2*i;
+end
+disp('    input of global dofs with zero boundary displacements')
+disp('                                   for i from 1 to num_bc')
+for i = 1:num_bc
+    dbc = ...
+    input('      global number of constrained degree of freedom = ');
+    r = find(assembleid == dbc);
+    assembleid(r) = 0;
+end
+F = find(assembleid ~= 0);
+FA = sort(F);
+for i = 1:size(F,1)
+    assembleid(FA(i)) = i;
+end
+\end{verbatim}

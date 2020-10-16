@@ -1,0 +1,5 @@
+- place content of the folder 'calc' in subfolder 'feappv41/calc' 
+- place folder 'ue09_f' in personal CIP pool folder 'z'
+- uncomment line
+  '  errck=pinput(d,2) '
+  when placing 'elmt04.f' file in subfolder 'feappv41/ver41/user'

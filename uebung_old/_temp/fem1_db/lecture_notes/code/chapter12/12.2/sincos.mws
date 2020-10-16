@@ -1,0 +1,88 @@
+{VERSION 2 3 "IBM INTEL NT" "2.3" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 0 
+0 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Text Output" -1 2 1 
+{CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 0 0 1 3 0 0 }1 0 0 -1 
+-1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Warning" 2 7 1 {CSTYLE "" -1 -1 "" 0 
+1 0 0 255 1 0 0 0 0 0 0 1 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }
+{PSTYLE "Maple Output" 0 11 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 
+0 0 0 0 0 }3 3 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 13 "with(linalg):" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 26 "id := array(1..3,1..3,[]):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+15 "id[1,1] := 1.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "id[1,2] := 0
+.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "id[1,3] := 0.0:" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 15 "id[2,1] := 0.0:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 15 "id[2,2] := 1.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 
+"id[2,3] := 0.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "id[3,1] := 0.0:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "id[3,2] := 0.0:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 15 "id[3,3] := 1.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 25 "m := array(1..3,1..3,[]):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+25 "h := array(1..3,1..3,[]):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "m[
+1,1] := 3.0 - x:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "m[1,2] := 1.0:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "m[1,3] := 0.0:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 14 "m[2,1] := 1.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 18 "m[2,2] := 2.0 - x:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "m[2,3] \+
+:= 0.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "m[3,1] := 0.0:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 14 "m[3,2] := 0.0:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "m[3,3] := 1.0 - x:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+9 "print(m);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "h[1,1] := 3.0:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "h[1,2] := 1.0:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 14 "h[1,3] := 0.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+14 "h[2,1] := 1.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "h[2,2] := 2.0
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "h[2,3] := 0.0:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 14 "h[3,1] := 0.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 14 "h[3,2] := 0.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "h[3,3] :=
+ 1.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "d :=det(m);" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 21 "solvit:=solve(d=0,x):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 14 "#   Eigenwerte" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "
+solvit[1];solvit[2];solvit[3];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "#
+   Kontrolle der Eigenwerte" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "eige
+nvals(h);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "h2 := multiply(h, h):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "h4 := multiply(h2, h2);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "h6 := multiply(h4, h2):" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 23 "h8 := multiply(h6, h2):" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 24 "h10 := multiply(h8, h2):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 25 "h12 := multiply(h10, h2):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 17 "fact2 := 1.0/2.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+17 "fact3 := 1.0/6.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "fact4 := 1
+.0/24.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "fact5 := 1.0/120.0:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "fact6 := 1.0/720.0:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 20 "fact7 := 1.0/5040.0:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "fact8 := 1.0/40320.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 22 "fact9 := 1.0/362880.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "f
+act10 := 1.0/(362880.0*10.0):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "fa
+ct11 := 1.0/(362880.0*10.0*11.0):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+40 "fact12 := 1.0/(362880.0*10.0*11.0*12.0):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 37 "igleich1 := matadd(h, h2, 1, -fact2);" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 43 "igleich2 := matadd(igleich1, h4, 1, fact4);" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "igleich3 := matadd(igleich2, h6, 1
+, -fact6);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "igleich4 := matadd(ig
+leich3, h8, 1, fact8);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "igleich5 \+
+:= matadd(igleich4, h10, 1, -fact10);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 45 "igleich6 := matadd(igleich5, h12, 1, fact12);" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}{PARA 7 "" 1 "" {TEXT -1 32 "Warning, new defin
+ition for norm" }}{PARA 7 "" 1 "" {TEXT -1 33 "Warning, new definition
+ for trace" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'MATRIXG6#7%7%,&$\"#I!
+\"\"\"\"\"%\"xGF+$\"#5F+\"\"!7%F.,&$\"#?F+F,F-F+F07%F0F0,&F.F,F-F+" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"dG,*$\"%+]!\"$\"\"\"%\"xG$!%+5!\"#
+*$F*\"\"#$\"#g!\"\"*$F*\"\"$F2" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"
+\"\"\"\"!" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#$\"+6g'>Q\"!\"*" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#$\"+*)R.=O!\"*" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6%$\"\"\"\"\"!$\"+6g'>Q\"!\"*$\"+*)R.=OF(" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#h4G-%'MATRIXG6#7%7%$\"(++D\"!\"%$\"'++vF,\"\"!7%F-$
+\"'++]F,F/7%F/F/$\"&++\"F," }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%)iglei
+ch1G-%'MATRIXG6#7%7%$!+++++?!\"*$!+++++:F,\"\"!7%F-$!*++++&F,F/7%F/F/$
+\"+++++]!#5" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%)igleich2G-%'MATRIXG6
+#7%7%$\"+MLL3K!\"*$\"++++D;F,\"\"!7%F-$\"+MLL$e\"F,F/7%F/F/$\"+nmm;a!#
+5" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%)igleich3G-%'MATRIXG6#7%7%$\"**
+)))Q^*!\"*$\"*666O#F,\"\"!7%F-$\"+%yxF:(!#5F/7%F/F/$\"+yxx-aF3" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#>%)igleich4G-%'MATRIXG6#7%7%$\"+>EUy9!
+\"*$\"+V%>jh&!#5\"\"!7%F-$\"+_n!z;*F/F07%F0F0$\"+%zDIS&F/" }}{PARA 11 
+"" 1 "" {XPPMATH 20 "6#>%)igleich5G-%'MATRIXG6#7%7%$\"+D)y<S\"!\"*$\"+
+>!yE9&!#5\"\"!7%F-$\"+N-6v))F/F07%F0F0$\"+QI-.aF/" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%)igleich6G-%'MATRIXG6#7%7%$\"+p#z$49!\"*$\"+A2l*=&!#5
+\"\"!7%F-$\"+v>9/*)F/F07%F0F0$\"+fI-.aF/" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}}{MARK "1 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 }

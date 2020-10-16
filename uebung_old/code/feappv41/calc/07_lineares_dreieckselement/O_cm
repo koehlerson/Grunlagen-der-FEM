@@ -1,0 +1,464 @@
+ FEAP * * tension test                                                          
+
+    F I N I T E   E L E M E N T   A N A L Y S I S   P R O G R A M
+              FEAPpv (P e r s o n a l   V e r s i o n)
+
+             (C) Regents of the University of California
+                       All Rights Reserved.
+
+     Solution date: Mon Dec  9 15:58:54 2019
+
+              VERSION: 4.1 Revision i   
+              DATE: 21 April 2018    
+
+     Input Data Filename: I_cm                                                                                                                            
+
+     Number of Nodal Points  - - - - - - :       66
+     Number of Elements  - - - - - - - - :      100
+
+     Spatial Dimension of Mesh - - - - - :        2
+     Degrees-of-Freedom/Node (Maximum) - :        2
+     Equations/Element       (Maximum) - :        0
+     Number Element Nodes    (Maximum) - :        3
+
+     Number of Material Sets - - - - - - :        1
+     Number Parameters/Set   (Program) - :      300
+     Number Parameters/Set   (Users  ) - :      150
+
+  C o n s t a n t    V a l u e s
+
+     Constant nr =  0.00000000E+00
+     Constant nx =  0.10000000E+02
+     Constant ny =  0.50000000E+01
+     Constant lx =  0.48000000E+02
+     Constant l1 =  0.44000000E+02
+     Constant l2 =  0.60000000E+02
+     Constant p0 =  0.50000000E+04
+     Constant pp =  0.16000000E+05
+     Constant e  =  0.21000000E+06
+     Constant nu =  0.30000000E+00
+
+ FEAP * * tension test                                                         
+
+   M a t e r i a l    P r o p e r t i e s
+
+     Material Number   1: Element Type: soli :                           
+     Degree of Freedom Assignments    Local    Global
+                                     Number    Number
+                                        1         1
+                                        2         2
+
+     T w o   D i m e n s i o n a l   S o l i d   E l e m e n t
+
+     M e c h a n i c a l   P r o p e r t i e s
+
+          Plane Strain  Analysis
+
+          Modulus E        2.10000E+05
+          Poisson ratio    0.30000
+
+          Thickness        1.00000E+00
+          Quadrature: Arrays  2
+          Quadrature: Output  1
+
+          Thickness        1.00000E+00
+          Density          0.00000E+00
+
+          1-Gravity Load   0.00000E+00
+          2-Gravity Load   0.00000E+00
+          3-Gravity Load   0.00000E+00
+
+          Formulation : Small deformation.
+          Element type: Displacement.
+
+          Material density is zero.
+
+ FEAP * * tension test                                                         
+
+   N o d e   G e n e r a t i o n s
+
+          Number of xi_1-increments    10
+          Number of xi_2-increments     5
+          Number of xi_3-increments     1
+          First node number             1
+          First element number          1
+          Element material number       1
+          Node line increment           0
+          Block type (0-10)             6
+
+
+     Block coordinates specified as: cartesian      
+
+     node     1 coord     2 coord
+        1   0.000E+00   0.000E+00
+        2   4.800E+01   4.400E+01
+        3   4.800E+01   6.000E+01
+        4   0.000E+00   4.400E+01
+
+ FEAP * * tension test                                                         
+
+
+  N o d a l   C o o r d i n a t e s
+
+      Node      1 coord      2 coord
+         1       0.0000       0.0000
+         2       4.8000       4.4000
+         3       9.6000       8.8000
+         4      14.4000      13.2000
+         5      19.2000      17.6000
+         6      24.0000      22.0000
+         7      28.8000      26.4000
+         8      33.6000      30.8000
+         9      38.4000      35.2000
+        10      43.2000      39.6000
+        11      48.0000      44.0000
+        12       0.0000       8.8000
+        13       4.8000      12.6400
+        14       9.6000      16.4800
+        15      14.4000      20.3200
+        16      19.2000      24.1600
+        17      24.0000      28.0000
+        18      28.8000      31.8400
+        19      33.6000      35.6800
+        20      38.4000      39.5200
+        21      43.2000      43.3600
+        22      48.0000      47.2000
+        23       0.0000      17.6000
+        24       4.8000      20.8800
+        25       9.6000      24.1600
+        26      14.4000      27.4400
+        27      19.2000      30.7200
+        28      24.0000      34.0000
+        29      28.8000      37.2800
+        30      33.6000      40.5600
+        31      38.4000      43.8400
+        32      43.2000      47.1200
+        33      48.0000      50.4000
+        34       0.0000      26.4000
+        35       4.8000      29.1200
+        36       9.6000      31.8400
+        37      14.4000      34.5600
+        38      19.2000      37.2800
+        39      24.0000      40.0000
+        40      28.8000      42.7200
+        41      33.6000      45.4400
+        42      38.4000      48.1600
+        43      43.2000      50.8800
+        44      48.0000      53.6000
+        45       0.0000      35.2000
+        46       4.8000      37.3600
+        47       9.6000      39.5200
+        48      14.4000      41.6800
+        49      19.2000      43.8400
+        50      24.0000      46.0000
+
+ FEAP * * tension test                                                         
+
+
+  N o d a l   C o o r d i n a t e s
+
+      Node      1 coord      2 coord
+        51      28.8000      48.1600
+        52      33.6000      50.3200
+        53      38.4000      52.4800
+        54      43.2000      54.6400
+        55      48.0000      56.8000
+        56       0.0000      44.0000
+        57       4.8000      45.6000
+        58       9.6000      47.2000
+        59      14.4000      48.8000
+        60      19.2000      50.4000
+        61      24.0000      52.0000
+        62      28.8000      53.6000
+        63      33.6000      55.2000
+        64      38.4000      56.8000
+        65      43.2000      58.4000
+        66      48.0000      60.0000
+
+ FEAP * * tension test                                                         
+
+   E l e m e n t   C o n n e c t i o n s
+
+   Elmt Mat Reg  Type  1-node  2-node  3-node
+      1   1   0  Unk?       1       2      12
+      2   1   0  Unk?       2      13      12
+      3   1   0  Unk?       2      14      13
+      4   1   0  Unk?       2       3      14
+      5   1   0  Unk?       3       4      14
+      6   1   0  Unk?       4      15      14
+      7   1   0  Unk?       4      16      15
+      8   1   0  Unk?       4       5      16
+      9   1   0  Unk?       5       6      16
+     10   1   0  Unk?       6      17      16
+     11   1   0  Unk?       6      18      17
+     12   1   0  Unk?       6       7      18
+     13   1   0  Unk?       7       8      18
+     14   1   0  Unk?       8      19      18
+     15   1   0  Unk?       8      20      19
+     16   1   0  Unk?       8       9      20
+     17   1   0  Unk?       9      10      20
+     18   1   0  Unk?      10      21      20
+     19   1   0  Unk?      10      22      21
+     20   1   0  Unk?      10      11      22
+     21   1   0  Unk?      12      24      23
+     22   1   0  Unk?      12      13      24
+     23   1   0  Unk?      13      14      24
+     24   1   0  Unk?      14      25      24
+     25   1   0  Unk?      14      26      25
+     26   1   0  Unk?      14      15      26
+     27   1   0  Unk?      15      16      26
+     28   1   0  Unk?      16      27      26
+     29   1   0  Unk?      16      28      27
+     30   1   0  Unk?      16      17      28
+     31   1   0  Unk?      17      18      28
+     32   1   0  Unk?      18      29      28
+     33   1   0  Unk?      18      30      29
+     34   1   0  Unk?      18      19      30
+     35   1   0  Unk?      19      20      30
+     36   1   0  Unk?      20      31      30
+     37   1   0  Unk?      20      32      31
+     38   1   0  Unk?      20      21      32
+     39   1   0  Unk?      21      22      32
+     40   1   0  Unk?      22      33      32
+     41   1   0  Unk?      23      24      34
+     42   1   0  Unk?      24      35      34
+     43   1   0  Unk?      24      36      35
+     44   1   0  Unk?      24      25      36
+     45   1   0  Unk?      25      26      36
+     46   1   0  Unk?      26      37      36
+     47   1   0  Unk?      26      38      37
+     48   1   0  Unk?      26      27      38
+     49   1   0  Unk?      27      28      38
+     50   1   0  Unk?      28      39      38
+
+ FEAP * * tension test                                                         
+
+   E l e m e n t   C o n n e c t i o n s
+
+   Elmt Mat Reg  Type  1-node  2-node  3-node
+     51   1   0  Unk?      28      40      39
+     52   1   0  Unk?      28      29      40
+     53   1   0  Unk?      29      30      40
+     54   1   0  Unk?      30      41      40
+     55   1   0  Unk?      30      42      41
+     56   1   0  Unk?      30      31      42
+     57   1   0  Unk?      31      32      42
+     58   1   0  Unk?      32      43      42
+     59   1   0  Unk?      32      44      43
+     60   1   0  Unk?      32      33      44
+     61   1   0  Unk?      34      46      45
+     62   1   0  Unk?      34      35      46
+     63   1   0  Unk?      35      36      46
+     64   1   0  Unk?      36      47      46
+     65   1   0  Unk?      36      48      47
+     66   1   0  Unk?      36      37      48
+     67   1   0  Unk?      37      38      48
+     68   1   0  Unk?      38      49      48
+     69   1   0  Unk?      38      50      49
+     70   1   0  Unk?      38      39      50
+     71   1   0  Unk?      39      40      50
+     72   1   0  Unk?      40      51      50
+     73   1   0  Unk?      40      52      51
+     74   1   0  Unk?      40      41      52
+     75   1   0  Unk?      41      42      52
+     76   1   0  Unk?      42      53      52
+     77   1   0  Unk?      42      54      53
+     78   1   0  Unk?      42      43      54
+     79   1   0  Unk?      43      44      54
+     80   1   0  Unk?      44      55      54
+     81   1   0  Unk?      45      46      56
+     82   1   0  Unk?      46      57      56
+     83   1   0  Unk?      46      58      57
+     84   1   0  Unk?      46      47      58
+     85   1   0  Unk?      47      48      58
+     86   1   0  Unk?      48      59      58
+     87   1   0  Unk?      48      60      59
+     88   1   0  Unk?      48      49      60
+     89   1   0  Unk?      49      50      60
+     90   1   0  Unk?      50      61      60
+     91   1   0  Unk?      50      62      61
+     92   1   0  Unk?      50      51      62
+     93   1   0  Unk?      51      52      62
+     94   1   0  Unk?      52      63      62
+     95   1   0  Unk?      52      64      63
+     96   1   0  Unk?      52      53      64
+     97   1   0  Unk?      53      54      64
+     98   1   0  Unk?      54      65      64
+     99   1   0  Unk?      54      66      65
+    100   1   0  Unk?      54      55      66
+
+ FEAP * * tension test                                                         
+
+  E d g e    N o d a l    B.C.
+
+    node  1-B.C.  2-B.C.
+       1       1       1
+      12       1       1
+      23       1       1
+      34       1       1
+      45       1       1
+      56       1       1
+
+ FEAP * * tension test                                                         
+
+  E d g e    N o d a l    V a l u e
+
+    Node     1-Force     2-Force
+      11  0.0000E+00  1.6000E+04
+      22  0.0000E+00  1.6000E+04
+      33  0.0000E+00  1.6000E+04
+      44  0.0000E+00  1.6000E+04
+      55  0.0000E+00  1.6000E+04
+      66  0.0000E+00  1.6000E+04
+
+     E l e m e n t   S i z e   V a l u e s
+          h-minimum =  3.2000E+00
+          h-maximum =  1.2999E+01
+
+     Tie all nodes with common coordinates
+
+
+      Gap Tolerance =  1.2309E-04
+
+
+
+       T i e  - - -  N o d a l   C o o r d i n a t e s
+
+          The following nodes have been deleted:
+
+      No nodes merged by the tie command
+
+
+     E q u a t i o n / P r o b l e m   S u m m a r y:
+
+          Space dimension (ndm) =         2   Number dof (ndf) =       2
+          Number of equations   =       120   Number nodes     =      66
+          Average col. height   =        19   Number elements  =     100
+          Number profile terms  =      2188   Number materials =       1
+
+
+ FEAP * * tension test                                                         
+
+  M a c r o   I n s t r u c t i o n s
+
+  Macro Statement            Variable 1  Variable 2  Variable 3
+       tang                  1.0000E+00  0.0000E+00  0.0000E+00
+       disp                  6.6000E+01  0.0000E+00  0.0000E+00
+       disp all              0.0000E+00  0.0000E+00  0.0000E+00
+       plot mesh             0.0000E+00  0.0000E+00  0.0000E+00
+       plot axis             0.0000E+00  0.0000E+00  0.0000E+00
+       plot boun             0.0000E+00  0.0000E+00  0.0000E+00
+       plot load             0.0000E+00  0.0000E+00  0.0000E+00
+       plot node             0.0000E+00  0.0000E+00  0.0000E+00
+ *Macro   1 * tang                v:   1.00       0.00       0.00    
+                                                           t=     0.01     0.00
+   Residual norm =     3.9191836E+04    1.0000000E+00      t=     0.01     0.00
+ Condition check: D-max 0.1206E+07; D-min 0.9515E+04; Ratio 0.1268E+03
+ Maximum no. diagonal digits lost:  2
+   End Triangular Decomposition                            t=     0.01     0.00
+   Energy convergence test
+    Maximum   =    8.545190549559044E+05 Current   =    8.545190549559044E+05
+    Relative  =    1.000000000000000E+00 Tolerance =    1.000000000000000E-16
+ *Macro   2 * disp                v:   66.0       0.00       0.00    
+                                                           t=     0.01     0.00
+
+ FEAP * * tension test                                                         
+
+  N o d a l   D i s p l a c e m e n t s     Time       0.00000E+00
+                                            Prop. Ld.  1.00000E+00
+
+   Node     1 Coord     2 Coord     1 Displ     2 Displ
+     66  4.8000E+01  6.0000E+01 -6.5171E+00  9.1659E+00
+ *Macro   3 * disp all            v:   0.00       0.00       0.00    
+                                                           t=     0.01     0.00
+
+ FEAP * * tension test                                                         
+
+  N o d a l   D i s p l a c e m e n t s     Time       0.00000E+00
+                                            Prop. Ld.  1.00000E+00
+
+   Node     1 Coord     2 Coord     1 Displ     2 Displ
+      1  0.0000E+00  0.0000E+00  0.0000E+00  0.0000E+00
+      2  4.8000E+00  4.4000E+00  7.7963E-02  2.1666E-01
+      3  9.6000E+00  8.8000E+00  2.2152E-01  4.6135E-01
+      4  1.4400E+01  1.3200E+01  3.9976E-01  7.8803E-01
+      5  1.9200E+01  1.7600E+01  5.3841E-01  1.2615E+00
+      6  2.4000E+01  2.2000E+01  7.1242E-01  1.9034E+00
+      7  2.8800E+01  2.6400E+01  6.0496E-01  2.8142E+00
+      8  3.3600E+01  3.0800E+01  4.9847E-01  3.9164E+00
+      9  3.8400E+01  3.5200E+01 -3.3578E-02  5.2947E+00
+     10  4.3200E+01  3.9600E+01 -6.4223E-01  6.8745E+00
+     11  4.8000E+01  4.4000E+01 -1.7347E+00  8.6635E+00
+     12  0.0000E+00  8.8000E+00  0.0000E+00  0.0000E+00
+     13  4.8000E+00  1.2640E+01  1.3657E-01  2.2665E-01
+     14  9.6000E+00  1.6480E+01  2.8576E-01  4.7865E-01
+     15  1.4400E+01  2.0320E+01  3.8949E-01  8.3732E-01
+     16  1.9200E+01  2.4160E+01  5.1069E-01  1.2977E+00
+     17  2.4000E+01  2.8000E+01  3.7614E-01  2.0197E+00
+     18  2.8800E+01  3.1840E+01  2.5760E-01  2.8853E+00
+     19  3.3600E+01  3.5680E+01 -2.1892E-01  4.0366E+00
+     20  3.8400E+01  3.9520E+01 -7.1529E-01  5.3745E+00
+     21  4.3200E+01  4.3360E+01 -1.5947E+00  6.9634E+00
+     22  4.8000E+01  4.7200E+01 -2.5668E+00  8.7150E+00
+     23  0.0000E+00  1.7600E+01  0.0000E+00  0.0000E+00
+     24  4.8000E+00  2.0880E+01  1.2206E-01  1.8328E-01
+     25  9.6000E+00  2.4160E+01  1.9466E-01  4.4851E-01
+     26  1.4400E+01  2.7440E+01  2.7252E-01  7.8102E-01
+     27  1.9200E+01  3.0720E+01  1.0426E-01  1.3665E+00
+     28  2.4000E+01  3.4000E+01 -4.6285E-02  2.0402E+00
+     29  2.8800E+01  3.7280E+01 -4.9820E-01  3.0017E+00
+     30  3.3600E+01  4.0560E+01 -9.4565E-01  4.1058E+00
+     31  3.8400E+01  4.3840E+01 -1.6973E+00  5.4919E+00
+     32  4.3200E+01  4.7120E+01 -2.4808E+00  7.0603E+00
+     33  4.8000E+01  5.0400E+01 -3.4588E+00  8.8270E+00
+     34  0.0000E+00  2.6400E+01  0.0000E+00  0.0000E+00
+     35  4.8000E+00  2.9120E+01  2.1654E-02  1.4323E-01
+     36  9.6000E+00  3.1840E+01  3.9695E-02  3.4746E-01
+     37  1.4400E+01  3.4560E+01 -1.9168E-01  8.3561E-01
+     38  1.9200E+01  3.7280E+01 -4.0059E-01  1.3514E+00
+     39  2.4000E+01  4.0000E+01 -8.6335E-01  2.1540E+00
+     40  2.8800E+01  4.2720E+01 -1.3061E+00  3.0496E+00
+     41  3.3600E+01  4.5440E+01 -1.9883E+00  4.2333E+00
+     42  3.8400E+01  4.8160E+01 -2.6651E+00  5.5781E+00
+     43  4.3200E+01  5.0880E+01 -3.5074E+00  7.1747E+00
+     44  4.8000E+01  5.3600E+01 -4.3383E+00  8.9490E+00
+     45  0.0000E+00  3.5200E+01  0.0000E+00  0.0000E+00
+     46  4.8000E+00  3.7360E+01 -9.7134E-02  4.9309E-02
+     47  9.6000E+00  3.9520E+01 -4.5486E-01  4.5804E-01
+     48  1.4400E+01  4.1680E+01 -7.7827E-01  8.2889E-01
+
+ FEAP * * tension test                                                         
+
+  N o d a l   D i s p l a c e m e n t s     Time       0.00000E+00
+                                            Prop. Ld.  1.00000E+00
+
+   Node     1 Coord     2 Coord     1 Displ     2 Displ
+     49  1.9200E+01  4.3840E+01 -1.2961E+00  1.4897E+00
+     50  2.4000E+01  4.6000E+01 -1.7825E+00  2.1921E+00
+     51  2.8800E+01  4.8160E+01 -2.4456E+00  3.1873E+00
+     52  3.3600E+01  5.0320E+01 -3.0817E+00  4.2983E+00
+     53  3.8400E+01  5.2480E+01 -3.8482E+00  5.6885E+00
+     54  4.3200E+01  5.4640E+01 -4.5748E+00  7.2454E+00
+     55  4.8000E+01  5.6800E+01 -5.3947E+00  9.0870E+00
+     56  0.0000E+00  4.4000E+01  0.0000E+00  0.0000E+00
+     57  4.8000E+00  4.5600E+01 -6.3742E-01  3.2783E-01
+     58  9.6000E+00  4.7200E+01 -1.1528E+00  5.3302E-01
+     59  1.4400E+01  4.8800E+01 -1.7855E+00  1.0406E+00
+     60  1.9200E+01  5.0400E+01 -2.3592E+00  1.5561E+00
+     61  2.4000E+01  5.2000E+01 -3.0566E+00  2.3626E+00
+     62  2.8800E+01  5.3600E+01 -3.7070E+00  3.2479E+00
+     63  3.3600E+01  5.5200E+01 -4.4545E+00  4.4206E+00
+     64  3.8400E+01  5.6800E+01 -5.1441E+00  5.7280E+00
+     65  4.3200E+01  5.8400E+01 -5.8793E+00  7.3146E+00
+     66  4.8000E+01  6.0000E+01 -6.5171E+00  9.1659E+00
+ *Macro   4 * plot mesh           v:   0.00       0.00       0.00    
+                                                           t=     0.01     0.00
+ *Macro   5 * plot axis           v:   0.00       0.00       0.00    
+                                                           t=     0.01     0.00
+ *Macro   6 * plot boun           v:   0.00       0.00       0.00    
+                                                           t=     0.01     0.00
+ *Macro   7 * plot load           v:   0.00       0.00       0.00    
+                                                           t=     0.01     0.00
+ *Macro   8 * plot node           v:   0.00       0.00       0.00    
+                                                           t=     0.01     0.00
+ *End of Macro Execution*                                  t=     0.01     0.00

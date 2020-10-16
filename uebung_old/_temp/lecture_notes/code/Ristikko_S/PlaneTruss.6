@@ -1,0 +1,21 @@
+\begin{verbatim}
+%-displacement computed by Gaussian elimination----------------------
+u = K\R;
+%-print the data-----------------------------------------------------
+disp(' ');
+disp('element connectivity table');
+disp(' ');
+disp('  =============================')
+disp('  |  e  |  Node i  |  Node j  |')
+disp('  =============================')
+for i = 1:num_ele
+    fprintf('  |  %g  |     %g    |     %g    |', ...
+    i,connectivity(1,i),connectivity(2,i))
+    disp(' ');
+end
+disp('  =============================')
+disp(' ');disp('global stiffness matrix'); K
+disp(' ');disp('global force vector    '); R
+disp(' ');disp('displacement vector    '); u
+\end{verbatim}
+

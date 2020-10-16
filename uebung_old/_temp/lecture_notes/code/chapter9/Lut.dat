@@ -1,0 +1,22 @@
+
+  ---------------------------- START OF FEAP LOG -----------------------------
+
+  MESH INPUT RECORDS
+  ------------------
+     coord                          
+     elem                           
+     eboun                          
+     forc                           
+     eforc                          
+     mate                           
+     end                            
+
+  SOLUTION SUMMARY
+  ----------------
+
+  Load    Total     Solution     Residual Norm        Energy Norm     CPU Time
+  Step Iterations       Time   Initial     Final   Initial     Final (Seconds)
+  ----------------------------------------------------------------------------
+  NO SOLUTION INFORMATION AVAILABLE
+
+  ----------------------------- END OF FEAP LOG ------------------------------

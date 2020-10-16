@@ -1,0 +1,19 @@
+\begin{picture}(0,0)%
+\includegraphics{./sec4_calculus_of_variations/fig4_06.pstex}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(3688,1730)(628,-1557)
+\put(1356,-768){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$x$}}}}
+\put(876,-1268){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}w}}}}
+\put(3684, 29){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}p(x)}}}}
+\put(4060,-1191){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\rm F_l$}}}}
+\put(2426,-1469){\makebox(0,0)[b]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\rm l$}}}}
+\put(4316,-641){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}$\rm M_l$}}}}
+\end{picture}%
