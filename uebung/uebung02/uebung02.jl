@@ -4,6 +4,15 @@
 using Markdown
 using InteractiveUtils
 
+# This Pluto notebook uses @bind for interactivity. When running this notebook outside of Pluto, the following 'mock version' of @bind gives bound variables a default value (instead of an error).
+macro bind(def, element)
+    quote
+        local el = $(esc(element))
+        global $(esc(def)) = Core.applicable(Base.get, el) ? Base.get(el) : missing
+        el
+    end
+end
+
 # ╔═╡ 17fba392-147c-11eb-3385-85ad7992d53e
 using Tensors, Plots
 
@@ -145,11 +154,13 @@ Implementieren sie zuerst den Einheitstensor 4. Stufe $\mathbb{I}$
 """
 
 # ╔═╡ bbc1d878-1516-11eb-00f3-f7971b3df5b2
-𝕀(i,j,k,l) = (i == j == k == l) ? 1.0 : 0.0
+## Definieren sie in dieser Zelle den Einheitstensor 4. Stufe in Indexnotation
+
 
 # ╔═╡ 2b8a5b56-1488-11eb-0f3f-9758221b2cad
 begin 
-	 ## Definieren sie hier g eine Funktion die die Indexnotation von ℂ beschreibt
+	## Definieren sie hier g eine Funktion die die Indexnotation von ℂ beschreibt
+	
 	ℂ = SymmetricTensor{4, 3}(g)
 	tovoigt(ℂ)
 end
@@ -236,10 +247,10 @@ Um alle Implementierungen einer Funktion `f` gelistet zu bekommen, können sie m
 
 # ╔═╡ 9f0a358c-1466-11eb-122f-0505b19dd76f
 #Fragen sie Julia nach allen Implementierung der Methode hello_course
-which(hello_course, (Int,))
+
 
 # ╔═╡ 9d05b6de-1480-11eb-2637-370719ccd01d
-md"""### Kontrollfluss und Schleifen""
+md"""### Kontrollfluss
 
 Wir können den Kontrollfluss in Julia über Konditionen steuern:
 ```julia
@@ -251,10 +262,124 @@ function test(x,y)
     else
         relation = "greater than"
     end
-        return "x is " * relation * " y."
-    end
+    return "x is " * relation * " y."
+end
+```
+
+Zuästzlich können wir Teile mehrmals evaluieren. Dieses Konzept wird durch Schleifen realisiert. Die wichtigsten Arten von Schleifen sind `for` und `while` Schleifen. Die **for** Schleife hat eine festgelegte Länge. Das heißt, es ist schon beim programmieren klar, wie oft ein bestimmter Teil des Codes wiederholt werden muss. Diese Art von Schleife wird wie folgt in Julia geschrieben:
+
+```julia
+function increment(a)
+	for i in 1:5
+		 a = a + i ## Kurze Schreibweise a+=1
+	end
+	return a
+end
+```
+
+**While** Schleifen verfolgen ein anderes Konzept. Bei diesen Schleifen weiß man in dem Moment, in dem man sie programmiert, nicht, wie oft sie ein bestimmten Teil des Codes wiederholen sollen. Was man dafür aber weiß, ist ein Abbruchkriterium. Sie werden wie folgt in Julia implementiert.
+
+```julia
+function double_increment(a)
+	while true
+    	if a+1 >= 5
+			break
+		end
+	end
+end
+```
+
+Ein klassisches Beispiel für while Schleifen sind iterative Löser wie z.B. Newton Iterationen, die so lange laufen sollen, bis eine gewisse Toleranz erfüllt ist oder eine maximale Anzahl an Iterationen.
+
+"""
+
+# ╔═╡ f7d54034-151d-11eb-0f54-bdae21564eb3
+md"""## Aufgabe 2.7
+Nun sind sie gerüstet ihre ersten komplett selbst geschrieben Funktionen zu schreiben, die die vorgestellten Konzepte nutzen. Schreiben sie hierfür eine eigene funktion namens `my_dot_operation(a,b)`, die Skalare, Vektoren (Skalar Produkt) und Tensoren 2. Stufe miteinander multipliziert. Verwenden sie dabei keine vordefinierten Operationen wie bspw. den \cdot Operator ⋅, sondern lösen sie es ausschließlich über die normalen Arithmetik Operatoren wie +,-,*,/, sowie den vorgestellten Konzepten in dem Kontrollfluss Kapitel.
+
+* Die Skalarmultiplikationen können sie mit den Werten 2 und 3 überprüfen, was 6 ergeben sollte.
+* Die Vektoren Operationen sollte mit folgenden Vektoren überprüft werden
+```julia
+𝐱 = Vec{3}([1.0,2.0,3.0])
+𝐲 = Vec{3}([4.0,5.0,6.0])
+```
+welches zum Ergebnis `32.0` führen sollte
+* Testen sie ihre Implementierung mit den schon definierten Tensoren 2. Stufe 𝐁 und 𝐂. Das ergebnis sollte folgendes sein 
+```julia
+3×3 Tensor{2,3,Int64,9}:
+ 1  2  3
+ 3  5  6
+ 1  2  3
 ```
 """
+
+# ╔═╡ 9b3be99c-1523-11eb-20c1-1f1320c732be
+## Ihre my_dot_operation Implementierung
+
+
+# ╔═╡ d9c89d9a-1523-11eb-3fa6-b99bcb363457
+md"""## Eine kleine Einführung in das Plotten
+Julia besitzt ein umfangreiches plotting Ökosystem, welches im `Plots` Package gebündelt ist. Dieses Package ist für sie schon importiert. Die wichtigste Funktion in diesem Paket ist `plot()`, die in ihrer einfachsten Andwendung x-Werte und y-Werte annimmt, wie bspw.
+
+```julia
+plot(𝐱,𝐲)
+```
+wobei 𝐱 ein Vektor der x Werte ist und 𝐲 der dazugehörige y Werte Vektor.
+
+Ein anschauliches Beispiel:
+"""
+
+# ╔═╡ 77ee562c-1524-11eb-2126-cd18b7f54c7b
+@bind x₀ html"<input type='range' min='0.2' max='10' label='x₀'>"
+
+# ╔═╡ 5d3675fc-1525-11eb-134b-f51f3e2a826d
+x₀
+
+# ╔═╡ 0fe24ea0-152e-11eb-082f-df5c209afe02
+@bind ϕ html"<input type='range' min='0.2' max='10' label='ϕ'>"
+
+# ╔═╡ 15c9645a-152e-11eb-243b-ed07dd658867
+ϕ
+
+# ╔═╡ 412b68fa-152e-11eb-057d-3ff27ff6c2af
+@bind ω html"<input type='range' min='0.2' max='10' label='ω'>"
+
+# ╔═╡ 4efcc88e-152e-11eb-0c91-51052ceb4859
+ω
+
+# ╔═╡ 34470e1e-1524-11eb-0da3-bd3699f0fb43
+begin	
+	x = collect(0:0.01:10)
+	plot(x, (x) -> x₀*sin.((x.+ϕ)*ω), title="Mein erster Plot", label="Sinus Kurve", ylim=(-8,8))
+end
+
+# ╔═╡ c8249444-152e-11eb-29c7-733c4a7ad319
+md"""
+Beachten sie die Notation des 𝐲 Arguments
+```julia
+(x) -> ...
+```
+Dieses Konstrukt nennt man Anonyme Funktion oder auch lambda Funktion.
+Das sind Funktionen, die man innerhalb eines Codes definiert, aber sonst nie wieder braucht und daher auch keinen Namen brauchen (deswegen der Name anonym). Sie können wie im oben dargestellten Fall hilfreich sein. Zum konstruieren sollte man sich immer folgende Sprechart vorstellen:
+* meine Argumente in runden Klammern () bilden -> auf folgendes ab ...
+* Im beispiel vom Plot mein Vektor (𝐱) bildet -> auf $a\sin(\omega(x+\phi))$ ab
+Diese Arten von Funktionen können bspw. sehr gut bei der Konstruktion von Tensoren in Indexnotation angewendet werden. Logischerweise erlauben sie auch mehrere Argumente, so dass der Elastizitätstensor von vorhin, z.b. wie folgt definiert werden kann
+
+```julia
+C = SymmetricTensor{4, 3}((i,j,k,l) -> λ*δ(i,j)*δ(k,l) + μ*(δ(i,k)*δ(j,l) + δ(i,l)*δ(j,k)))
+```
+
+### Aufgabe 2.8 
+Plotten Sie die Fläche 
+
+$$f(x,y) = x_0\sin((x+\phi)\cdot\omega)+x_0\cos((y+\phi)\cdot\omega)$$
+"""
+
+# ╔═╡ ecdaf7e0-1530-11eb-0bb3-1b758418ef3e
+begin
+	y = collect(0:0.01:10)
+	# Hier kommt ihre Plot Code-Zeile hin
+end
 
 # ╔═╡ Cell order:
 # ╟─39a641c6-1458-11eb-0839-ed5e7b38e91e
@@ -275,11 +400,11 @@ function test(x,y)
 # ╠═9a732b32-1484-11eb-207c-ef610a4271c0
 # ╟─e9f9e9e8-1484-11eb-015a-b178f17dfdc1
 # ╠═ccf73382-1484-11eb-35ef-c3e03424a433
-# ╠═a1c460fa-1488-11eb-1337-7d3c3e0ad20e
+# ╟─a1c460fa-1488-11eb-1337-7d3c3e0ad20e
 # ╠═84b569fa-1488-11eb-14ee-4bf29a4afa5a
 # ╠═fece2868-1487-11eb-206f-d92557595592
 # ╠═2ae9446e-1488-11eb-3cdc-87e08efa77ea
-# ╠═ee9d76f2-1515-11eb-31e4-cf7088e9f1e8
+# ╟─ee9d76f2-1515-11eb-31e4-cf7088e9f1e8
 # ╠═bbc1d878-1516-11eb-00f3-f7971b3df5b2
 # ╠═2b8a5b56-1488-11eb-0f3f-9758221b2cad
 # ╟─2d0ec56e-1485-11eb-0e57-a52b9d71c7c3
@@ -297,4 +422,16 @@ function test(x,y)
 # ╠═95aafe32-1361-11eb-176d-bbc95ba8a45a
 # ╟─7a886134-1466-11eb-1b97-216405a0324a
 # ╠═9f0a358c-1466-11eb-122f-0505b19dd76f
-# ╠═9d05b6de-1480-11eb-2637-370719ccd01d
+# ╟─9d05b6de-1480-11eb-2637-370719ccd01d
+# ╟─f7d54034-151d-11eb-0f54-bdae21564eb3
+# ╠═9b3be99c-1523-11eb-20c1-1f1320c732be
+# ╟─d9c89d9a-1523-11eb-3fa6-b99bcb363457
+# ╠═5d3675fc-1525-11eb-134b-f51f3e2a826d
+# ╟─77ee562c-1524-11eb-2126-cd18b7f54c7b
+# ╠═15c9645a-152e-11eb-243b-ed07dd658867
+# ╟─0fe24ea0-152e-11eb-082f-df5c209afe02
+# ╠═4efcc88e-152e-11eb-0c91-51052ceb4859
+# ╟─412b68fa-152e-11eb-057d-3ff27ff6c2af
+# ╠═34470e1e-1524-11eb-0da3-bd3699f0fb43
+# ╟─c8249444-152e-11eb-29c7-733c4a7ad319
+# ╠═ecdaf7e0-1530-11eb-0bb3-1b758418ef3e
