@@ -104,12 +104,12 @@ Ein konkretes Beispiel:"
 # ╔═╡ 9a732b32-1484-11eb-207c-ef610a4271c0
 𝐁 = Tensor{2,3}([1 0 0; 0 0 1; 1 0 0])
 
-# ╔═╡ ccf73382-1484-11eb-35ef-c3e03424a433
-𝐂 = SymmetricTensor{2,3}([1,2,3,4,5,6])
-
 # ╔═╡ e9f9e9e8-1484-11eb-015a-b178f17dfdc1
 md"## Aufgabe 2.2
 Wieso hat ein Symmetrischer Tensor ein 6 zeiligen Vektor als Inhalt und keine 3×3 Koeffizientenmatrix wie oben?"
+
+# ╔═╡ ccf73382-1484-11eb-35ef-c3e03424a433
+𝐂 = SymmetricTensor{2,3}([1,2,3,4,5,6])
 
 # ╔═╡ a1c460fa-1488-11eb-1337-7d3c3e0ad20e
 md""" Tensoren können auch direkt über Indexnotation initialisiert werden"""
@@ -128,7 +128,10 @@ end
 f(i,j,k,l) = λ*δ(i,j)*δ(k,l) + μ*(δ(i,k)*δ(j,l) + δ(i,l)*δ(j,k))
 
 # ╔═╡ 2ae9446e-1488-11eb-3cdc-87e08efa77ea
-C = SymmetricTensor{4, 3}(f)
+begin
+	C = SymmetricTensor{4, 3}(f)
+	tovoigt(C)
+end
 
 # ╔═╡ 2b8a5b56-1488-11eb-0f3f-9758221b2cad
 
@@ -237,8 +240,8 @@ md"""### Kontrollfluss und Schleifen"""
 # ╠═7203efc2-1481-11eb-2a14-e999f283dda0
 # ╟─d616ee5e-1483-11eb-2892-81977042b734
 # ╠═9a732b32-1484-11eb-207c-ef610a4271c0
-# ╠═ccf73382-1484-11eb-35ef-c3e03424a433
 # ╟─e9f9e9e8-1484-11eb-015a-b178f17dfdc1
+# ╠═ccf73382-1484-11eb-35ef-c3e03424a433
 # ╠═a1c460fa-1488-11eb-1337-7d3c3e0ad20e
 # ╠═84b569fa-1488-11eb-14ee-4bf29a4afa5a
 # ╠═fece2868-1487-11eb-206f-d92557595592
