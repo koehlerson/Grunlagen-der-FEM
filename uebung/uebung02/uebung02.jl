@@ -133,11 +133,29 @@ begin
 	tovoigt(C)
 end
 
-# ╔═╡ 2b8a5b56-1488-11eb-0f3f-9758221b2cad
+# ╔═╡ ee9d76f2-1515-11eb-31e4-cf7088e9f1e8
+md"""
+## Afugabe 2.3
+Implementieren sie folgende Definition des Elastizitätstensor
 
+$$\mathbb{C} = \lambda \mathbf{I} \otimes \mathbf{I} + 2\mu \mathbb{I}$$
+
+!!! hint
+Implementieren sie zuerst den Einheitstensor 4. Stufe $\mathbb{I}$
+"""
+
+# ╔═╡ bbc1d878-1516-11eb-00f3-f7971b3df5b2
+𝕀(i,j,k,l) = (i == j == k == l) ? 1.0 : 0.0
+
+# ╔═╡ 2b8a5b56-1488-11eb-0f3f-9758221b2cad
+begin 
+	 ## Definieren sie hier g eine Funktion die die Indexnotation von ℂ beschreibt
+	ℂ = SymmetricTensor{4, 3}(g)
+	tovoigt(ℂ)
+end
 
 # ╔═╡ 2d0ec56e-1485-11eb-0e57-a52b9d71c7c3
-md"## Aufgabe 2.3 
+md"## Aufgabe 2.4
 Berechnen sie das einfach sowie doppelte Produkt der beiden oben definierten Tensoren"
 
 # ╔═╡ 403c4bf2-1485-11eb-0490-ab38f0e3b074
@@ -180,7 +198,7 @@ end
 
 # ╔═╡ 7f94ddc8-12e1-11eb-147b-6d327e18e3ee
 md"
-## Aufgabe 2.2 
+## Aufgabe 2.5 
 Kopieren sie die Funktion jeweils in eine Zelle. Die Zellen sind für sie schon angelegt. Achten sie dabei darauf, was mit dem darunterstehenden Aufruf passiert"
 
 # ╔═╡ bfd6d2b0-12e1-11eb-1707-43f522e19a24
@@ -205,7 +223,7 @@ hello_course("Student1")
 hello_course(1)
 
 # ╔═╡ 97eba36a-1361-11eb-0a5f-5b0cdc809ae9
-md"## Aufgabe 2.3
+md"## Aufgabe 2.6
 Ändern sie nun den Input werd auf einen Float, bspw. 1.0. Welche Funktionsimplementierung wird aufgerufen und wieso?"
 
 # ╔═╡ 95aafe32-1361-11eb-176d-bbc95ba8a45a
@@ -221,7 +239,22 @@ Um alle Implementierungen einer Funktion `f` gelistet zu bekommen, können sie m
 which(hello_course, (Int,))
 
 # ╔═╡ 9d05b6de-1480-11eb-2637-370719ccd01d
-md"""### Kontrollfluss und Schleifen"""
+md"""### Kontrollfluss und Schleifen""
+
+Wir können den Kontrollfluss in Julia über Konditionen steuern:
+```julia
+function test(x,y)
+	if x < y
+    	relation = "less than"
+    elseif x == y
+        relation = "equal to"
+    else
+        relation = "greater than"
+    end
+        return "x is " * relation * " y."
+    end
+```
+"""
 
 # ╔═╡ Cell order:
 # ╟─39a641c6-1458-11eb-0839-ed5e7b38e91e
@@ -246,6 +279,8 @@ md"""### Kontrollfluss und Schleifen"""
 # ╠═84b569fa-1488-11eb-14ee-4bf29a4afa5a
 # ╠═fece2868-1487-11eb-206f-d92557595592
 # ╠═2ae9446e-1488-11eb-3cdc-87e08efa77ea
+# ╠═ee9d76f2-1515-11eb-31e4-cf7088e9f1e8
+# ╠═bbc1d878-1516-11eb-00f3-f7971b3df5b2
 # ╠═2b8a5b56-1488-11eb-0f3f-9758221b2cad
 # ╟─2d0ec56e-1485-11eb-0e57-a52b9d71c7c3
 # ╠═403c4bf2-1485-11eb-0490-ab38f0e3b074
