@@ -16,6 +16,9 @@ end
 # ╔═╡ 0762dd74-1838-11eb-0bbe-e78a0e4363d2
 using PlutoUI
 
+# ╔═╡ 49a17e1e-1855-11eb-3264-e7b227556408
+DownloadButton(read("uebung01.jl"), "uebung01.jl")
+
 # ╔═╡ 13693e5c-1465-11eb-0b9b-4b560ab73661
 md"""# Grundlagen der FEM
 Wilkommen in der ersten Übung im Modul Grundlagen der FEM. In der ersten Übung werden wir uns mit Tensoren und Kontinuumsmechanik
@@ -24,6 +27,36 @@ beschäftigen.
 
 # ╔═╡ f95578fa-1464-11eb-06be-a3bc5c1d47e0
 html"""<iframe width="100%" height="450px" src="https://www.youtube.com/embed/W5UVb3BIbEw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"""
+
+# ╔═╡ b34ee25c-185f-11eb-2668-73d508910ce2
+@bind varname html"""
+<input type="text" value="" id="input_task11a">
+<span id='rendered_task11a'></span>
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+
+<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+
+<script>
+$("#input_task11a").keyup(function(e){
+	katex.render($("#input_task11a").val(), rendered_task11a,{throwOnError: false})
+});
+</script>
+"""
+
+# ╔═╡ 25c1a70c-187e-11eb-1dad-ed75e689b361
+varname
+
+# ╔═╡ c0e788dc-187b-11eb-0dbf-1f5556c4562f
+if varname == "A_{ij}" 
+	 md"!!! correct"
+else
+	 md"!!! danger"
+end
 
 # ╔═╡ 8ad346fc-1791-11eb-0c61-63c29ca2c2df
 md"""
@@ -59,15 +92,15 @@ Ihre Antwort: $(@bind task11f TextField())
 
 Schreiben Sie die folgenden Ausdrücke in Indexnotation und vereinfachen Sie soweit es geht.
 
-1. $\frac{1}{2} (grad\boldsymbol{v} + grad^T\boldsymbol{v}):\boldsymbol{A} \quad(Ann.: ... \boldsymbol{A} = \boldsymbol{A}^T)$
+1. $\frac{1}{2} (\text{grad}\boldsymbol{v} + \text{grad}^T\boldsymbol{v}):\boldsymbol{A} \quad(Ann.: ... \boldsymbol{A} = \boldsymbol{A}^T)$
 
 Ihre Antwort: $(@bind task12a TextField())
 
-2. $div(\boldsymbol{v}\boldsymbol{T})$
+2. $\text{div}(\boldsymbol{v}\boldsymbol{T})$
 
 Ihre Antwort: $(@bind task12b TextField())
 
-3. $\frac{\partial{(tr\boldsymbol{A})}}{\partial{\boldsymbol{A}}}$
+3. $\frac{\partial{(\text{tr}\boldsymbol{A})}}{\partial{\boldsymbol{A}}}$
 
 Ihre Antwort: $(@bind task12c TextField())
 
@@ -75,7 +108,7 @@ Ihre Antwort: $(@bind task12c TextField())
 
 Ihre Antwort: $(@bind task12d TextField())
 
-5. $tr(grad(\boldsymbol{vT}))$
+5. $\text{tr}(\text{grad}(\boldsymbol{vT}))$
 
 Ihre Antwort: $(@bind task12e TextField())
 
@@ -135,10 +168,14 @@ $\lambda=\frac{E \nu}{(1+\nu)(1-2 \nu)} \quad,\quad \mu=\frac{E}{2(1+\nu)}$
 """
 
 # ╔═╡ Cell order:
+# ╟─49a17e1e-1855-11eb-3264-e7b227556408
 # ╟─13693e5c-1465-11eb-0b9b-4b560ab73661
 # ╟─0762dd74-1838-11eb-0bbe-e78a0e4363d2
 # ╟─f95578fa-1464-11eb-06be-a3bc5c1d47e0
-# ╠═8ad346fc-1791-11eb-0c61-63c29ca2c2df
+# ╠═b34ee25c-185f-11eb-2668-73d508910ce2
+# ╠═25c1a70c-187e-11eb-1dad-ed75e689b361
+# ╠═c0e788dc-187b-11eb-0dbf-1f5556c4562f
+# ╟─8ad346fc-1791-11eb-0c61-63c29ca2c2df
 # ╟─bc074770-1465-11eb-3f13-f30e20bf2ad6
 # ╟─053ff316-1465-11eb-180f-cbb42b439c66
 # ╟─50bd15a0-146d-11eb-23a8-e535d61f3092
