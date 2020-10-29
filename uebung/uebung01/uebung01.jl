@@ -58,8 +58,7 @@ md"""1. $\boldsymbol{I} : (\boldsymbol{A} \otimes \boldsymbol{b})$"""
 <span id='rendered_task11a' style="margin-left: 10%;"></span>
   <!-- The loading of KaTeX is deferred to speed up page rendering -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
-
-    <!-- To automatically render math in text elements, include the auto-render extension: -->
+<!-- To automatically render math in text elements, include the auto-render extension: -->
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
 
@@ -67,7 +66,7 @@ md"""1. $\boldsymbol{I} : (\boldsymbol{A} \otimes \boldsymbol{b})$"""
 
 <script>
 $("#input_task11a").keyup(function(e){
-	katex.render($("#input_task11a").val(), rendered_task11a,{throwOnError: false})
+	katex.render($("#input_task11a").val(), rendered_task11a,{throwOnError: false, output: "mathml"})
 });
 </script>
 """
@@ -104,7 +103,7 @@ md"2. $(\boldsymbol{I} \otimes \boldsymbol{I})^{T23} : \boldsymbol{B}$
 
 <script>
 $("#input_task11b").keyup(function(e){
-	katex.render($("#input_task11b").val(), rendered_task11b,{throwOnError: false})
+	katex.render($("#input_task11b").val(), rendered_task11b,{throwOnError: false, output: "mathml"})
 });
 </script>
 """
@@ -140,7 +139,7 @@ md"3. $\boldsymbol{B} : (\boldsymbol{A} \otimes  \boldsymbol{A}^T) : \mathbb{L} 
 
 <script>
 $("#input_task11c").keyup(function(e){
-	katex.render($("#input_task11c").val(), rendered_task11c,{throwOnError: false})
+	katex.render($("#input_task11c").val(), rendered_task11c,{throwOnError: false, output: "mathml"})
 });
 </script>
 """
@@ -176,7 +175,7 @@ md"4. $\boldsymbol{I} (\boldsymbol{AB})$"
 
 <script>
 $("#input_task11d").keyup(function(e){
-	katex.render($("#input_task11d").val(), rendered_task11d,{throwOnError: false})
+	katex.render($("#input_task11d").val(), rendered_task11d,{throwOnError: false, output: "mathml"})
 });
 </script>
 """
@@ -212,7 +211,7 @@ md"5. $(\boldsymbol{I} \otimes \boldsymbol{I}) : \boldsymbol{B}$"
 
 <script>
 $("#input_task11e").keyup(function(e){
-	katex.render($("#input_task11e").val(), rendered_task11e,{throwOnError: false})
+	katex.render($("#input_task11e").val(), rendered_task11e,{throwOnError: false, output: "mathml"})
 });
 </script>
 """
@@ -248,7 +247,7 @@ md"6. $\boldsymbol{A}^T : \mathbb{A} : \boldsymbol{B}$"
 
 <script>
 $("#input_task11f").keyup(function(e){
-	katex.render($("#input_task11f").val(), rendered_task11f,{throwOnError: false})
+	katex.render($("#input_task11f").val(), rendered_task11f,{throwOnError: false, output: "mathml"})
 });
 </script>
 """
@@ -294,7 +293,7 @@ md"1. $\frac{1}{2} (\text{grad}\boldsymbol{v} + \text{grad}^T\boldsymbol{v}):\bo
 
 <script>
 $("#input_task12a").keyup(function(e){
-	katex.render($("#input_task12a").val(), rendered_task12a,{throwOnError: false})
+	katex.render($("#input_task12a").val(), rendered_task12a,{throwOnError: false, output: "mathml"})
 });
 </script>
 """
@@ -330,7 +329,7 @@ md"2. $\text{div}(\boldsymbol{v}\boldsymbol{T})$"
 
 <script>
 $("#input_task12b").keyup(function(e){
-	katex.render($("#input_task12b").val(), rendered_task12b,{throwOnError: false})
+	katex.render($("#input_task12b").val(), rendered_task12b,{throwOnError: false, output: "mathml"})
 });
 </script>
 """
@@ -366,7 +365,7 @@ md"""3. $\frac{\partial{(\text{tr}\boldsymbol{A})}}{\partial{\boldsymbol{A}}}$""
 
 <script>
 $("#input_task12c").keyup(function(e){
-	katex.render($("#input_task12c").val(), rendered_task12c,{throwOnError: false})
+	katex.render($("#input_task12c").val(), rendered_task12c,{throwOnError: false, output: "mathml"})
 });
 </script>
 """
@@ -402,7 +401,7 @@ md"4. $\frac{\partial{\boldsymbol{A}}}{\partial{\boldsymbol{A}}} : \boldsymbol{B
 
 <script>
 $("#input_task12d").keyup(function(e){
-	katex.render($("#input_task12d").val(), rendered_task12d,{throwOnError: false})
+	katex.render($("#input_task12d").val(), rendered_task12d,{throwOnError: false,output: "mathml"})
 });
 </script>
 """
@@ -438,7 +437,7 @@ md"5. $\text{tr}(\text{grad}(\boldsymbol{vT}))$"
 
 <script>
 $("#input_task12e").keyup(function(e){
-	katex.render($("#input_task12e").val(), rendered_task12e,{throwOnError: false})
+	katex.render($("#input_task12e").val(), rendered_task12e,{throwOnError: false, output: "mathml"})
 });
 </script>
 """
@@ -474,7 +473,7 @@ md"6. $\frac{\partial{(\boldsymbol{AB})}}{\partial{\boldsymbol{A}}}$"
 
 <script>
 $("#input_task12f").keyup(function(e){
-	katex.render($("#input_task12f").val(), rendered_task12f,{throwOnError: false})
+	katex.render($("#input_task12f").val(), rendered_task12f,{throwOnError: false, output: "mathml"})
 });
 </script>
 """
@@ -488,18 +487,6 @@ else
 	correct12f = false
 	 md"!!! danger 
 			Falsche oder nicht gegebene Antwort 🦥"
-end
-
-# ╔═╡ f6fc6c5e-192c-11eb-11aa-cd94a4b9f2ea
-if all([correct11a, correct11b, correct11c, correct11d, correct11e, correct12f,correct12a, correct12b, correct12c, correct12d, correct12e, correct12f])
-	md""" ### Alle Aufgaben richtig gelöst
-	
-$(Resource("https://media.giphy.com/media/l3q2Z6S6n38zjPswo/giphy.gif"))
-    """
-else
-	md""" ### Noch nicht alle Aufgaben gelöst, los geht's!
-	$(Resource("https://media.giphy.com/media/XcAa52ejGuNqdb5SFQ/giphy.gif"))
-	"""
 end
 
 # ╔═╡ 07c29dfa-193a-11eb-1a26-7dab6a949ca9
@@ -521,7 +508,7 @@ Für linear elastisches isotropes Material lässt sich der Elastizitätstensor $
 
 $\mathbb{C} = \lambda \boldsymbol{I} \otimes \boldsymbol{I} + 2\mu \mathbb{I} \qquad (1.1)$
 
-a) Zeigen Sie, dass die Ausdrucksweisen $\boldsymbol{\sigma} = \lambda (tr\varepsilon)\boldsymbol{I} + 2\mu \varepsilon$ und $\boldsymbol{\sigma} = \mathbb{C}:\varepsilon$
+a) Zeigen Sie, dass die Ausdrucksweisen $\boldsymbol{\sigma} = \lambda (tr\varepsilon)\boldsymbol{I} + 2\mu \boldsymbol{\varepsilon}$ und $\boldsymbol{\sigma} = \mathbb{C}:\boldsymbol{\varepsilon}$
 äquivalent sind.
 Setzen Sie dazu $(1.1)$ ein, schreiben die beiden Ausdrücke in Indexschreibweise und vereinfachen Sie soweit wie möglich.
 """
@@ -529,9 +516,14 @@ Setzen Sie dazu $(1.1)$ ein, schreiben die beiden Ausdrücke in Indexschreibweis
 # ╔═╡ 5730b86e-19c8-11eb-021f-890f971a5ebc
 md""" Lösung anzeigen $(@bind solution_task13a CheckBox(default=false))"""
 
-# ╔═╡ 5f077352-19c8-11eb-2fc9-832d435ea501
+# ╔═╡ 28428bba-19d5-11eb-04bb-f353179c60f7
 if solution_task13a
-	md" $\delta_{il} \delta_{jm} B_{jk}$"
+	md"""$\boldsymbol{\sigma} = \mathbb{C} : \boldsymbol{\varepsilon} = (\lambda \boldsymbol{I} \otimes \boldsymbol{I} + 2\mu \mathbb{I}):\boldsymbol{\varepsilon} = \lambda (\boldsymbol{I} \otimes \boldsymbol{I}):\boldsymbol{\varepsilon} + 2\mu\mathbb{I}:\boldsymbol{\varepsilon}$ 
+	$\lambda (\boldsymbol{I} \otimes \boldsymbol{I}):\boldsymbol{\varepsilon} = \lambda \delta_{ij} \delta_{mn} \varepsilon_{mn} \boldsymbol{e}_i \boldsymbol{e}_j = \lambda \delta_{ij} \varepsilon_{mm} \boldsymbol{e}_i \boldsymbol{e}_j = \lambda (tr\varepsilon)\boldsymbol{I}$
+	$2\mu\mathbb{I}:\boldsymbol{\varepsilon} = 2\mu \delta_{ij} \delta_{kl} \boldsymbol{e}_i \boldsymbol{e}_k \boldsymbol{e}_j \boldsymbol{e}_l : \varepsilon_{mn} \boldsymbol{e}_m \boldsymbol{e}_n = 2\mu \delta_{ij} \delta_{kl} \delta_{jm} \delta_{ln} \varepsilon_{mn} \boldsymbol{e}_i \boldsymbol{e}_k = 2\mu\varepsilon_{ik}\boldsymbol{e}_i\boldsymbol{e}_k = 2\mu \boldsymbol{\varepsilon}$
+	$\boldsymbol{\sigma} = \lambda (tr\varepsilon)\boldsymbol{I} + 2\mu \boldsymbol{\varepsilon}$
+	
+	"""
 else
 	md""
 end
@@ -548,7 +540,96 @@ md""" Lösung anzeigen $(@bind solution_task13b CheckBox(default=false))"""
 
 # ╔═╡ 6ec8d2ea-19c8-11eb-3032-41ea38d096cc
 if solution_task13b
-	md" $\delta_{il} \delta_{jm} B_{jk}$"
+	md"""
+	Matrixnotation: $\boldsymbol{\sigma} = \begin{bmatrix}
+	\sigma_{11} & \sigma_{12} & \sigma_{13} \\
+	\sigma_{21} & \sigma_{22} & \sigma_{23} \\
+	\sigma_{31} & \sigma_{32} & \sigma_{33}
+	\end{bmatrix}$ 
+	
+	voigh-notation:
+	$\underline{\boldsymbol{\sigma}}^{9\text{x}1} = \begin{bmatrix}
+	\sigma_{11} & \sigma_{22} & \sigma_{33} &
+	\sigma_{23} & \sigma_{13} & \sigma_{12} & 
+	\sigma_{32} & \sigma_{31} & \sigma_{21}
+	\end{bmatrix}^T$
+	$\underline{\boldsymbol{I}}^{9\text{x}1} = \begin{bmatrix}
+	1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0
+	\end{bmatrix}^T$
+	
+	$(\underline{\boldsymbol{I}} \otimes \underline{\boldsymbol{I}})^{9\text{x}9} = \begin{bmatrix}
+	1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+	1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+	1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	\end{bmatrix}$
+	
+	$\mathbb{I}^{9\text{x}9} = \begin{bmatrix}
+	1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+	\end{bmatrix}$
+	
+	$\mathbb{C}^{9\text{x}9} = \begin{bmatrix}
+	\lambda & \lambda & \lambda & 0 & 0 & 0 & 0 & 0 & 0\\
+	\lambda & \lambda & \lambda & 0 & 0 & 0 & 0 & 0 & 0\\
+	\lambda & \lambda & \lambda & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	\end{bmatrix} +  \begin{bmatrix}
+	2\mu & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 2\mu & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 2\mu & 0 & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 2\mu & 0 & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 2\mu & 0 & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 2\mu & 0 & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 2\mu & 0 & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 2\mu & 0\\
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 2\mu\\
+	\end{bmatrix}$
+	
+	$\underline{\boldsymbol{\varepsilon}}^{9\text{x}1} = \begin{bmatrix}
+	\varepsilon_{11} & \varepsilon_{22} & \varepsilon_{33} &
+	\varepsilon_{23} & \varepsilon_{13} & \varepsilon_{12} & 
+	\varepsilon_{32} & \varepsilon_{31} & \varepsilon_{21}
+	\end{bmatrix}^T$
+	
+	$\underline{\boldsymbol{\sigma}}^{9\text{x}1} = \mathbb{C}^{9\text{x}9} \underline{\boldsymbol{\varepsilon}}^{9\text{x}1}$
+	
+	Aufnahmen für voigh-notation: 
+	1. Symmetrie von $\boldsymbol{\sigma}: \sigma_{ij} = \sigma_{ji}$
+	2. Symmetrie von $\boldsymbol{\varepsilon}: \varepsilon_{ij} = \varepsilon_{ji}$
+	3. Kleine symmetri von $\mathbb{C}: \mathbb{C}_{ijkl} = \mathbb{C}_{jikl} =      \mathbb{C}_{ijlk}$
+	
+	$\underline{\boldsymbol{\sigma}}^v = \begin{bmatrix}
+	\sigma_{11} & \sigma_{22} & \sigma_{33} &
+	\sigma_{23} & \sigma_{13} & \sigma_{12}
+	\end{bmatrix}^T$
+	
+	$\mathbb{C}^v = \begin{bmatrix}
+	\lambda + 2\mu & \lambda & \lambda & 0 & 0 & 0\\
+	\lambda & \lambda +2\mu & \lambda & 0 & 0 & 0\\
+	\lambda & \lambda & \lambda +2\mu & 0 & 0 & 0\\
+	0 & 0 & 0 & \mu & 0 & 0\\
+	0 & 0 & 0 & 0 & \mu & 0\\
+	0 & 0 & 0 & 0 & 0 & \mu
+	\end{bmatrix}$
+	"""
 else
 	md""
 end
@@ -580,6 +661,143 @@ Bestimmen Sie die Konstanten $\alpha, \beta, \gamma$ aus den Randbedingungen.
 Nutzen sie dazu das Cauchy-Theorem $\boldsymbol{\sigma}\boldsymbol{n}=\boldsymbol{t}$
 """
 
+# ╔═╡ e77998a8-19ed-11eb-0932-f3399b2dfd6c
+md"""
+Ihre Antwort für $\alpha$: 
+"""
+
+# ╔═╡ ee3c7d56-19e6-11eb-00df-4d69dad82e9a
+@bind task14aa html"""
+<input type="text" value="" id="input_task14aa">
+<span id='rendered_task14aa' style="margin-left: 10%;"></span>
+
+<script>
+$("#input_task14aa").keyup(function(e){
+	katex.render($("#input_task14aa").val(), rendered_task14aa,{throwOnError: false, output: "mathml"})
+});
+</script>
+"""
+
+# ╔═╡ c3b1bcb2-19ec-11eb-2bfa-8b7d9ffd608f
+if rstrip(lstrip(task14aa)) == "-\\frac{q(\\lambda + \\mu)}{\\mu(3\\lambda + 2\\mu)}"
+	correct14aa = true
+	 md"!!! correct
+			Korrekte Antwort 🦆"
+else
+	correct14aa = false
+	 md"!!! danger 
+			Falsche oder nicht gegebene Antwort 🦥"
+end
+
+# ╔═╡ 5ff26594-19ee-11eb-31ac-7b83406e1d2c
+md"""
+Ihre Antwort für $\beta$:
+"""
+
+# ╔═╡ ed94609e-19e6-11eb-1e99-cde57c7f5d4d
+@bind task14ab html"""
+<input type="text" value="" id="input_task14ab">
+<span id='rendered_task14ab' style="margin-left: 10%;"></span>
+
+<script>
+$("#input_task14ab").keyup(function(e){
+	katex.render($("#input_task14ab").val(), rendered_task14ab,{throwOnError: false, output: "mathml"})
+});
+</script>
+"""
+
+# ╔═╡ c48883f0-19ec-11eb-372a-e5249a3997bf
+if rstrip(lstrip(task14ab)) == "\\frac{q\\lambda}{2\\mu(3\\lambda + 2\\mu)}"
+	correct14ab = true
+	 md"!!! correct
+			Korrekte Antwort 🦆"
+else
+	correct14ab = false
+	 md"!!! danger 
+			Falsche oder nicht gegebene Antwort 🦥"
+end
+
+# ╔═╡ 7a8d434e-19ee-11eb-14ab-61593eef4629
+md"""
+Ihre Antwort für $\gamma$:
+"""
+
+# ╔═╡ ecb13e2c-19e6-11eb-0758-d7b2d9f3973b
+@bind task14ac html"""
+<input type="text" value="" id="input_task14ac">
+<span id='rendered_task14ac' style="margin-left: 10%;"></span>
+
+<script>
+$("#input_task14ac").keyup(function(e){
+	katex.render($("#input_task14ac").val(), rendered_task14ac,{throwOnError: false, output: "mathml"})
+});
+</script>
+"""
+
+# ╔═╡ c5907a00-19ec-11eb-077b-ed211385c6c4
+if rstrip(lstrip(task14ac)) == "\\frac{q\\lambda}{2\\mu(3\\lambda + 2\\mu)}"
+	correct14ac = true
+	 md"!!! correct
+			Korrekte Antwort 🦆"
+else
+	correct14ac = false
+	 md"!!! danger 
+			Falsche oder nicht gegebene Antwort 🦥"
+end
+
+# ╔═╡ 84419740-19d9-11eb-1926-e39fc47f3399
+md""" Lösung anzeigen $(@bind solution_task14a CheckBox(default=false))"""
+
+# ╔═╡ a2b37624-19db-11eb-3a0e-134d650c11db
+if solution_task14a
+	md""" Impulsebilanz: $-\text{div}\boldsymbol{\sigma} = \boldsymbol{b} - \rho\ddot{\boldsymbol{x}} = \boldsymbol{0}$ (da keine körperkräfte und statisches problem)\
+	$$\boldsymbol{u} = \begin{bmatrix}
+\alpha x_1\\
+\beta x_2\\
+\gamma x_3
+	\end{bmatrix}$$ $\Rightarrow$ $\text{grad}\boldsymbol{u} = \begin{bmatrix}
+\alpha & 0 & 0\\
+0 & \beta & 0 \\
+0 & 0 & \gamma	
+	\end{bmatrix}$ 
+	\
+	$\text{Wir wissen das}$
+$\varepsilon = \frac{1}{2}(\text{grad}\boldsymbol{\varepsilon} + \text{grad}^T\boldsymbol{\varepsilon)} = \text{sym}(\text{grad}\boldsymbol{\varepsilon)}$ \
+	$\text{tr}\boldsymbol{\varepsilon} = \alpha + \beta + \gamma$ 
+	\
+	$\text{Hook's law: }\boldsymbol{\sigma} = \lambda \begin{bmatrix}
+\alpha + \beta + \gamma & 0 & 0\\
+0 & \alpha + \beta + \gamma & 0\\
+0 & 0 & \alpha + \beta + \gamma	
+	\end{bmatrix} +2\mu\begin{bmatrix}
+\alpha & 0 & 0\\
+0 & \beta & 0 \\
+0 & 0 & \gamma	
+	\end{bmatrix}$
+	$\Rightarrow -\text{div}\boldsymbol{\sigma} = \boldsymbol{0} \quad \text{da } \boldsymbol{\sigma} \text{ constant in } \boldsymbol{x}$
+
+Randbedingungen:
+* $x_3 = \frac{t}{2} \quad \boldsymbol{\sigma}.\boldsymbol{e}_3 = \boldsymbol{0} \Rightarrow \lambda (\alpha + \beta + \gamma) + 2\mu \gamma = 0 \qquad Eq(1)$
+* $x_2 = \frac{l}{2} \quad \boldsymbol{\sigma}.\boldsymbol{e}_2 = \boldsymbol{0} \Rightarrow \lambda (\alpha + \beta + \gamma) + 2\mu \beta = 0 \qquad Eq(2)$
+* $x_1 = l \quad \boldsymbol{\sigma}.\boldsymbol{e}_1 = \boldsymbol{0} \Rightarrow \lambda (\alpha + \beta + \gamma) + 2\mu \alpha = -q \qquad Eq(3)$ 
+	
+ $Eq(1) - Eq(2) = 2\mu \gamma - 2\mu \beta \Rightarrow \gamma = \beta \qquad Eq(4)$ 
+\
+ $Eq(1) - Eq(3) = 2\mu \gamma - 2\mu \alpha \Rightarrow \alpha = \gamma - \frac{q}{2\mu} \qquad Eq(5)$
+\
+Eq(4) und Eq(5) in Eq(2):  
+	$ \lambda (\gamma - \frac{q}{2\mu} + 2\gamma)+2\mu\gamma = 0  \Rightarrow \gamma(3\lambda + 2\mu) = \frac{q\lambda}{2\mu}$
+\
+$\boxed{\beta = \gamma = \frac{q\lambda}{2\mu(3\lambda + 2\mu)}}$
+\
+In Eq(5): 
+$\boxed{\alpha = \frac{q\lambda}{2\mu(3\lambda + 2\mu)} - \frac{q}{2\mu} = -\frac{q(\lambda + \mu)}{\mu(3\lambda + 2\mu)}}$
+	
+	"""
+else
+	md""
+end
+
 # ╔═╡ 95d4bdc4-19c6-11eb-3307-03a3f9465604
 md"""
 b)Berechnen Sie die Verschiebung im Punkt A für den Parametersatz $\{E,\nu,q,t,l\}=\{210 \text{GPa},0.3,500 \text{MPa},100 \text{mm} ,100\text{mm}\}$
@@ -588,6 +806,58 @@ b)Berechnen Sie die Verschiebung im Punkt A für den Parametersatz $\{E,\nu,q,t,
 
 $\lambda=\frac{E \nu}{(1+\nu)(1-2 \nu)} \quad,\quad \mu=\frac{E}{2(1+\nu)}$
 """
+
+# ╔═╡ 77308eae-19e7-11eb-32cc-71930d96c317
+@bind task14b html"""
+<input type="text" value="" id="input_task14b">
+<span id='rendered_task14b' style="margin-left: 10%;"></span>
+
+<script>
+$("#input_task14b").keyup(function(e){
+	katex.render($("#input_task14b").val(), rendered_task14b,{throwOnError: false, output: "mathml"})
+});
+</script>
+"""
+
+# ╔═╡ a09558a6-19ee-11eb-1ed0-8f8091a05903
+if rstrip(lstrip(task14b)) == "-0.238"
+	correct14b = true
+	 md"!!! correct
+			Korrekte Antwort 🦆"
+else
+	correct14b = false
+	 md"!!! danger 
+			Falsche oder nicht gegebene Antwort 🦥"
+end
+
+# ╔═╡ f6fc6c5e-192c-11eb-11aa-cd94a4b9f2ea
+if all([correct11a, correct11b, correct11c, correct11d, correct11e, correct12f,correct12a, correct12b, correct12c, correct12d, correct12e, correct12f, correct14aa,correct14ab, correct14ac, correct14b])
+	md""" ### Alle Aufgaben richtig gelöst
+	
+$(Resource("https://media.giphy.com/media/l3q2Z6S6n38zjPswo/giphy.gif"))
+    """
+else
+	md""" ### Noch nicht alle Aufgaben gelöst, los geht's!
+	$(Resource("https://media.giphy.com/media/XcAa52ejGuNqdb5SFQ/giphy.gif"))
+	"""
+end
+
+# ╔═╡ 94b1db7c-19e7-11eb-3947-eb06a78bb810
+md""" Lösung anzeigen $(@bind solution_task14b CheckBox(default=false))"""
+
+# ╔═╡ ae69f482-19e7-11eb-28b1-a3eb8511aa07
+if solution_task14b
+	md""" 
+	Verschiebung am Punkt A: 
+	\
+	$\lambda = 80,769 \text{ Gpa}, \mu = 121,154 \text{ Gpa} \Rightarrow \alpha = -0,00238$
+	\
+	$\Rightarrow \boldsymbol{u}(l,0,0) = -0,238 \text{mm } \boldsymbol{e}_1$
+	
+	"""
+else
+	md""
+end
 
 # ╔═╡ Cell order:
 # ╟─49a17e1e-1855-11eb-3264-e7b227556408
@@ -660,7 +930,7 @@ $\lambda=\frac{E \nu}{(1+\nu)(1-2 \nu)} \quad,\quad \mu=\frac{E}{2(1+\nu)}$
 # ╟─083d3d4c-193a-11eb-000a-49f73b0ee0b7
 # ╟─8ad346fc-1791-11eb-0c61-63c29ca2c2df
 # ╟─5730b86e-19c8-11eb-021f-890f971a5ebc
-# ╟─5f077352-19c8-11eb-2fc9-832d435ea501
+# ╟─28428bba-19d5-11eb-04bb-f353179c60f7
 # ╟─7c8f29e4-19c6-11eb-2a76-31caf9825131
 # ╟─6eae056e-19c8-11eb-237c-f91cc664d7f1
 # ╟─6ec8d2ea-19c8-11eb-3032-41ea38d096cc
@@ -669,4 +939,19 @@ $\lambda=\frac{E \nu}{(1+\nu)(1-2 \nu)} \quad,\quad \mu=\frac{E}{2(1+\nu)}$
 # ╟─50bd15a0-146d-11eb-23a8-e535d61f3092
 # ╟─280a0fae-146e-11eb-2f2f-fdb24267944d
 # ╟─c1ddd1b0-183d-11eb-33af-41164af82c03
+# ╟─e77998a8-19ed-11eb-0932-f3399b2dfd6c
+# ╟─ee3c7d56-19e6-11eb-00df-4d69dad82e9a
+# ╟─c3b1bcb2-19ec-11eb-2bfa-8b7d9ffd608f
+# ╟─5ff26594-19ee-11eb-31ac-7b83406e1d2c
+# ╟─ed94609e-19e6-11eb-1e99-cde57c7f5d4d
+# ╟─c48883f0-19ec-11eb-372a-e5249a3997bf
+# ╟─7a8d434e-19ee-11eb-14ab-61593eef4629
+# ╟─ecb13e2c-19e6-11eb-0758-d7b2d9f3973b
+# ╟─c5907a00-19ec-11eb-077b-ed211385c6c4
+# ╟─84419740-19d9-11eb-1926-e39fc47f3399
+# ╟─a2b37624-19db-11eb-3a0e-134d650c11db
 # ╟─95d4bdc4-19c6-11eb-3307-03a3f9465604
+# ╟─77308eae-19e7-11eb-32cc-71930d96c317
+# ╟─a09558a6-19ee-11eb-1ed0-8f8091a05903
+# ╟─94b1db7c-19e7-11eb-3947-eb06a78bb810
+# ╟─ae69f482-19e7-11eb-28b1-a3eb8511aa07
