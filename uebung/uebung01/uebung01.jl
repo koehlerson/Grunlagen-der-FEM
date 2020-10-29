@@ -497,7 +497,7 @@ if all([correct11a, correct11b, correct11c, correct11d, correct11e, correct12f,c
 $(Resource("https://media.giphy.com/media/l3q2Z6S6n38zjPswo/giphy.gif"))
     """
 else
-	md""" ### Noch nicht alle Aufgabgen gelöst, los geht's!
+	md""" ### Noch nicht alle Aufgaben gelöst, los geht's!
 	$(Resource("https://media.giphy.com/media/XcAa52ejGuNqdb5SFQ/giphy.gif"))
 	"""
 end
@@ -524,13 +524,34 @@ $\mathbb{C} = \lambda \boldsymbol{I} \otimes \boldsymbol{I} + 2\mu \mathbb{I} \q
 a) Zeigen Sie, dass die Ausdrucksweisen $\boldsymbol{\sigma} = \lambda (tr\varepsilon)\boldsymbol{I} + 2\mu \varepsilon$ und $\boldsymbol{\sigma} = \mathbb{C}:\varepsilon$
 äquivalent sind.
 Setzen Sie dazu $(1.1)$ ein, schreiben die beiden Ausdrücke in Indexschreibweise und vereinfachen Sie soweit wie möglich.
+"""
 
+# ╔═╡ 5730b86e-19c8-11eb-021f-890f971a5ebc
+md""" Lösung anzeigen $(@bind solution_task13a CheckBox(default=false))"""
+
+# ╔═╡ 5f077352-19c8-11eb-2fc9-832d435ea501
+if solution_task13a
+	md" $\delta_{il} \delta_{jm} B_{jk}$"
+else
+	md""
+end
+
+# ╔═╡ 7c8f29e4-19c6-11eb-2a76-31caf9825131
+md"""
 b) Schreiben Sie das Materialgesetz $\boldsymbol{\sigma} = \mathbb{C}:\varepsilon$ zunächst in genereller Matrixnotation und dann in Voigt-Notation.
 Unter welchen Annahmen ist dies möglich?
 
-*Hinweis*: $\varepsilon$ lautet in in Voigt-Notation $\varepsilon^T = [\varepsilon_{11}, \varepsilon_{22}, \varepsilon_{33}, 2 \varepsilon_{23}, 2 \varepsilon_{13}, 2 \varepsilon_{12}]$
+**Hinweis**: $\varepsilon$ lautet in in Voigt-Notation $\varepsilon^T = [\varepsilon_{11}, \varepsilon_{22}, \varepsilon_{33}, 2 \varepsilon_{23}, 2 \varepsilon_{13}, 2 \varepsilon_{12}]$"""
 
-"""
+# ╔═╡ 6eae056e-19c8-11eb-237c-f91cc664d7f1
+md""" Lösung anzeigen $(@bind solution_task13b CheckBox(default=false))"""
+
+# ╔═╡ 6ec8d2ea-19c8-11eb-3032-41ea38d096cc
+if solution_task13b
+	md" $\delta_{il} \delta_{jm} B_{jk}$"
+else
+	md""
+end
 
 # ╔═╡ bc074770-1465-11eb-3f13-f30e20bf2ad6
 md"## Übung 1 Teil 2 - Kontinuumsmechanik"
@@ -557,13 +578,15 @@ a) Erfüllt der Verschiebungszustand $\boldsymbol{u}= \alpha x_1 \boldsymbol{e}_
 die Impulsbilanz? 
 Bestimmen Sie die Konstanten $\alpha, \beta, \gamma$ aus den Randbedingungen.
 Nutzen sie dazu das Cauchy-Theorem $\boldsymbol{\sigma}\boldsymbol{n}=\boldsymbol{t}$
+"""
 
+# ╔═╡ 95d4bdc4-19c6-11eb-3307-03a3f9465604
+md"""
 b)Berechnen Sie die Verschiebung im Punkt A für den Parametersatz $\{E,\nu,q,t,l\}=\{210 \text{GPa},0.3,500 \text{MPa},100 \text{mm} ,100\text{mm}\}$
 
-*Hinweis*: Die Beziehungen zwischen den Elastizitätsparametern lauten:
+**Hinweis**: Die Beziehungen zwischen den Elastizitätsparametern lauten:
 
 $\lambda=\frac{E \nu}{(1+\nu)(1-2 \nu)} \quad,\quad \mu=\frac{E}{2(1+\nu)}$
-
 """
 
 # ╔═╡ Cell order:
@@ -626,7 +649,7 @@ $\lambda=\frac{E \nu}{(1+\nu)(1-2 \nu)} \quad,\quad \mu=\frac{E}{2(1+\nu)}$
 # ╟─4adf4024-1939-11eb-17b3-27129640dc35
 # ╟─4b519e14-1939-11eb-2a53-211dfaf0983e
 # ╟─afc9452e-1935-11eb-09d7-d549a9e81f00
-# ╠═9559da24-1939-11eb-06d7-71b5cf174ba7
+# ╟─9559da24-1939-11eb-06d7-71b5cf174ba7
 # ╟─9699cc8c-1939-11eb-2af1-d92a46a89418
 # ╟─95768458-1939-11eb-21a6-f7f6283273d7
 # ╟─959bbbe2-1939-11eb-2cf7-e91c25f7db30
@@ -636,8 +659,14 @@ $\lambda=\frac{E \nu}{(1+\nu)(1-2 \nu)} \quad,\quad \mu=\frac{E}{2(1+\nu)}$
 # ╟─07c29dfa-193a-11eb-1a26-7dab6a949ca9
 # ╟─083d3d4c-193a-11eb-000a-49f73b0ee0b7
 # ╟─8ad346fc-1791-11eb-0c61-63c29ca2c2df
+# ╟─5730b86e-19c8-11eb-021f-890f971a5ebc
+# ╟─5f077352-19c8-11eb-2fc9-832d435ea501
+# ╟─7c8f29e4-19c6-11eb-2a76-31caf9825131
+# ╟─6eae056e-19c8-11eb-237c-f91cc664d7f1
+# ╟─6ec8d2ea-19c8-11eb-3032-41ea38d096cc
 # ╟─bc074770-1465-11eb-3f13-f30e20bf2ad6
 # ╟─053ff316-1465-11eb-180f-cbb42b439c66
 # ╟─50bd15a0-146d-11eb-23a8-e535d61f3092
 # ╟─280a0fae-146e-11eb-2f2f-fdb24267944d
 # ╟─c1ddd1b0-183d-11eb-33af-41164af82c03
+# ╟─95d4bdc4-19c6-11eb-3307-03a3f9465604
