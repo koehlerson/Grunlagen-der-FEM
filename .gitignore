@@ -1,4 +1,5 @@
 administration/
 uebung_old/
 pruefung/
+*.sh
 **.ipynb_checkpoints
