@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.12.4
+# v0.12.7
 
 using Markdown
 using InteractiveUtils
@@ -144,7 +144,7 @@ end
 
 # ╔═╡ ee9d76f2-1515-11eb-31e4-cf7088e9f1e8
 md"""
-## Afugabe 2.3
+## Aufgabe 2.3
 Implementieren sie folgende Definition des Elastizitätstensor
 
 $$\mathbb{C} = \lambda \mathbf{I} \otimes \mathbf{I} + 2\mu \mathbb{I}$$
@@ -160,7 +160,7 @@ Implementieren sie zuerst den Einheitstensor 4. Stufe $\mathbb{I}$
 # ╔═╡ 2b8a5b56-1488-11eb-0f3f-9758221b2cad
 begin 
 	## Definieren sie hier g eine Funktion die die Indexnotation von ℂ beschreibt
-	
+	g(i,j,k,l) 
 	ℂ = SymmetricTensor{4, 3}(g)
 	tovoigt(ℂ)
 end
@@ -235,7 +235,7 @@ hello_course(1)
 
 # ╔═╡ 97eba36a-1361-11eb-0a5f-5b0cdc809ae9
 md"## Aufgabe 2.6
-Ändern sie nun den Input werd auf einen Float, bspw. 1.0. Welche Funktionsimplementierung wird aufgerufen und wieso?"
+Ändern sie nun den Input Wert auf einen Float, bspw. 1.0. Welche Funktionsimplementierung wird aufgerufen und wieso?"
 
 # ╔═╡ 95aafe32-1361-11eb-176d-bbc95ba8a45a
 # Rufen sie hier hello_course mit einem Float Input auf 
@@ -362,23 +362,89 @@ Beachten sie die Notation des 𝐲 Arguments
 Dieses Konstrukt nennt man Anonyme Funktion oder auch lambda Funktion.
 Das sind Funktionen, die man innerhalb eines Codes definiert, aber sonst nie wieder braucht und daher auch keinen Namen brauchen (deswegen der Name anonym). Sie können wie im oben dargestellten Fall hilfreich sein. Zum konstruieren sollte man sich immer folgende Sprechart vorstellen:
 * meine Argumente in runden Klammern () bilden -> auf folgendes ab ...
-* Im beispiel vom Plot mein Vektor (𝐱) bildet -> auf $a\sin(\omega(x+\phi))$ ab
+* Im beispiel vom Plot mein Vektor (𝐱) bildet -> auf $a\sin(\omega(x_i+\phi))$ ab
 Diese Arten von Funktionen können bspw. sehr gut bei der Konstruktion von Tensoren in Indexnotation angewendet werden. Logischerweise erlauben sie auch mehrere Argumente, so dass der Elastizitätstensor von vorhin, z.b. wie folgt definiert werden kann
 
 ```julia
 C = SymmetricTensor{4, 3}((i,j,k,l) -> λ*δ(i,j)*δ(k,l) + μ*(δ(i,k)*δ(j,l) + δ(i,l)*δ(j,k)))
 ```
-
-### Aufgabe 2.8 
-Plotten Sie die Fläche 
-
-$$f(x,y) = x_0\sin((x+\phi)\cdot\omega)+x_0\cos((y+\phi)\cdot\omega)$$
 """
 
-# ╔═╡ ecdaf7e0-1530-11eb-0bb3-1b758418ef3e
+# ╔═╡ b35d502c-20f6-11eb-0d46-175ff430a00d
+md"""
+## Srukturen (engl. Structs)
+
+Zusammen mit Funktionen ergeben Structs die essentielle Bausteine von Julia. Strukturen sind Sammlungen von Feldern, wobei Felder hier als arbiträre Variable gesehen werden kann. Beispielsweise lässt sich ein klassisches Material in einem `Elasticity` struct zusammenfassen. Das Struct braucht lediglich zwei Parameter `λ` und `μ`
+```julia
+struct Elasticity
+	λ::Float64
+	μ::Float64
+end
+```
+Nun wäre es zusätzlich gut, wenn wir nicht jedes Mal den Elastizitätstensor neu aufbauen müssen, wenn wir ihn brauchen. Also entscheiden wir uns dazu diesen Tensor als Feld in unserem Struct mit abzuspeichern
+
+```julia
+struct Elasticity{dim}
+	λ::Float64
+	μ::Float64
+	elasticity_tensor::SymmetricTensor{4,dim}
+end
+```
+
+Hierbei habe ich das Struct bzgl `dim` parametrisiert. Da wir nicht wissen, wie viele Dimensionen später diskretisiert werden, führen wir diesbezüglich Flexibilität ein.
+
+Nun stellt sich die Frage, wir können wir unser Struct erzeugen? Indem wir uns einen sogenannten *Konstruktor* definieren. Das ist eine Funktion, die genau wie das Struct heißen muss und uns das besagte struct zurück gibt.
+
+```julia
+function Elasticity(λ, μ, dim)
+	C = SymmetricTensor{4, dim}((i,j,k,l) -> λ*δ(i,j)*δ(k,l) + μ*(δ(i,k)*δ(j,l) + δ(i,l)*δ(j,k)))
+	return Elasticity(λ,μ, C)
+end
+```
+"""
+
+# ╔═╡ 8bea648a-20fb-11eb-00a6-5b0f2d7ea52a
 begin
-	y = collect(0:0.01:10)
-	# Hier kommt ihre Plot Code-Zeile hin
+	struct Elasticity{dim}
+		λ::Float64
+		μ::Float64
+		elasticity_tensor::SymmetricTensor{4,dim}
+	end
+	
+	function Elasticity(λ, μ, dim)
+		C = SymmetricTensor{4, dim}((i,j,k,l) -> λ*δ(i,j)*δ(k,l) + μ*(δ(i,k)*δ(j,l) + δ(i,l)*δ(j,k)))
+		return Elasticity(λ,μ, C)
+	end
+end
+
+# ╔═╡ acea91d2-20fb-11eb-2228-8fdb39ef21e1
+Elasticity(λ, μ, 2)
+
+# ╔═╡ c1d0c020-21b0-11eb-2c2e-3bc5cec84eab
+md"""## Aufgabe 2.9
+* Erweitern sie die Methode `hello_course` um den Dispatch mit dem Input Argument `elasticity_tensor`. In der Implementierung dieses Dispatches geben Sie folgenden String zurück ` "Das ist mein Elastizitätstensor ℂ: ..."`, wobei die Punkte ersetzt werden sollen mit der reduzierten Schreibweise von $\mathbb{C}$. Sie können weiter oben nachsehen, wie wir zuvor die reduzierte Schreibweise von `Tensors.jl` bekommen haben.
+* Plotten sie anschließend das Ergebnis aus der doppelten Überschiebung von $\mathbb{C}$ mit $\varepsilon$. $\varepsilon$ ist für sie schon definiert und ist ein **Array** von Dehnungen der Dimension 2. Das Ergebnis soll in der Variable $\sigma$ gespeichert werden. Plotten sie zuerst die $_{xx}$ Komponente und anschließend im selben Plot die $_{yy}$ Komponente.
+
+### Hinweis
+Wir haben hier quasi-zeitabhängige $\varepsilon$ Werte, die in einem Array gespeichert sind. Also jeder Array Eintrag ist ein Tensor 2. Stufe. Das bedeutet, dass ihr Ergebnis $\sigma$ auch ein Array gefüllt mit Tensoren 2. Stufe sein muss.
+Zusätzlich möchten ich ihnen für die Bearbeitung dieser Aufgabe noch folgende vereinfachende Syntax für Array Erzeugung mit auf den Weg geben
+
+	[dosomething(ε) for ε in ε_array]
+
+erzeugt ein Array, wobei auf jedes Element des Array die Funktion `dosomething` angewendet wird. Sie müssen dabei nicht zwangsläufig Funktionen aufrufen. Bspw. ist auch folgendes möglich
+
+	[ε ⋅ γ for ε in ε_array]
+
+wobei $\gamma$ ein konstanter Tensor 2. Stufe wäre.
+"""
+
+# ╔═╡ 576028d0-21b2-11eb-2ebc-416983a04e9d
+ε = [SymmetricTensor{2,2}([i 0; 0 -ν*i]) for i in 0:0.0005:0.02]
+
+# ╔═╡ d957c282-21b2-11eb-0347-17acffd3cbcb
+begin
+	plot(getindex.(ε,(1)), getindex.([Elasticity(λ,μ,2).elasticity_tensor ⊡ ε_t for ε_t in ε],1))
+	plot!(getindex.(ε,(4)), getindex.([Elasticity(λ,μ,2).elasticity_tensor ⊡ ε_t for ε_t in ε],2))
 end
 
 # ╔═╡ Cell order:
@@ -434,4 +500,9 @@ end
 # ╟─412b68fa-152e-11eb-057d-3ff27ff6c2af
 # ╠═34470e1e-1524-11eb-0da3-bd3699f0fb43
 # ╟─c8249444-152e-11eb-29c7-733c4a7ad319
-# ╠═ecdaf7e0-1530-11eb-0bb3-1b758418ef3e
+# ╟─b35d502c-20f6-11eb-0d46-175ff430a00d
+# ╠═8bea648a-20fb-11eb-00a6-5b0f2d7ea52a
+# ╠═acea91d2-20fb-11eb-2228-8fdb39ef21e1
+# ╟─c1d0c020-21b0-11eb-2c2e-3bc5cec84eab
+# ╠═576028d0-21b2-11eb-2ebc-416983a04e9d
+# ╠═d957c282-21b2-11eb-0347-17acffd3cbcb
