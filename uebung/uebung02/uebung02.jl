@@ -13,6 +13,18 @@ macro bind(def, element)
     end
 end
 
+# ╔═╡ 3c1ef852-2282-11eb-1213-77fb22f9862e
+begin
+	using PlutoUI
+	hint(text) = Markdown.MD(Markdown.Admonition("hint", "Hilfe", [text]))
+	warning(text) = Markdown.MD(Markdown.Admonition("warning", "Warnung", [text]))
+	yays = [md"Sehr gut! 🐣", md"Yay ❤", md"Genau so! 🎉", md"Gut gemacht! 🐦", md"Weiter so! 🐤", md"Klasse! 🐧", md"Korrekt! 🐖", md"Sehr schön! 🐿"]
+	correct(text=rand(yays)) = Markdown.MD(Markdown.Admonition("correct", "Richtig!", [text]))
+	still_missing(text=md"Ersetzen sie `missing` mit ihrer Antwort") = Markdown.MD(Markdown.Admonition("warning", "Here we go! 🦦", [text]))
+	keep_working(text=md"Noch nicht die richtige Antwort, noch ein Versuch! 🦥") = Markdown.MD(Markdown.Admonition("danger", "Falsch", [text]))
+	nothing
+end
+
 # ╔═╡ 17fba392-147c-11eb-3385-85ad7992d53e
 using Tensors, Plots
 
@@ -23,18 +35,26 @@ Wilkommen in der zweiten Übung im Modul Grundlagen der FEM. In dieser zweiten �
 ## Übung 2
 "
 
+# ╔═╡ c4be359c-2327-11eb-3397-c31749a3351d
+begin 
+	check_dict = Dict("2.1" => false, "2.3" => false, "2.4" => false, "2.7" => false)
+	nothing
+end
+
 # ╔═╡ 630bc766-12d9-11eb-2c25-eb321e5df528
 md"### Variablen
-Zunächst werden wir lernen wie Variablen in Julia funktionieren und wie sie in Pluto miteinander interagieren. Prinzipiell können alle Unicode Charaktere akzeptiert, nicht nur standard Buchstaben und Wörter. Beispielsweise definieren wir in der nächsten Zelle 𝐅."
+Zunächst werden wir lernen wie Variablen in Julia funktionieren und wie sie in Pluto miteinander interagieren. Prinzipiell werden alle Unicode Charaktere akzeptiert, nicht nur standard Buchstaben und Wörter. Beispielsweise definieren wir in der nächsten Zelle 𝐅."
 
 # ╔═╡ 51e80510-12d9-11eb-1943-41a799a99bfb
-𝐅 = 1.0 # initiiert 𝐅 als Float64
+𝐅 = 1.0 # initialisiert 𝐅 als Float64
 
 # ╔═╡ d73d4a14-12f1-11eb-3376-0df3c73299a3
 begin
-	𝔽 = "Das ist eine String Variable"
+	𝔽 = "Das ist 1 String Variable"
 	γ = 'D' #γ ist ein Char, achten sie auf den unterschied zwischen " und '
 	σ = 1 # das ist eine integer Variable
+	fancystring = md"""
+	$$\int_{a}^{b} x^2 dx$$"""
 end
 
 # ╔═╡ aff894ce-12db-11eb-01d1-f9a36eb6ee1d
@@ -42,13 +62,23 @@ md"Falls sie sich nun fragen, wie sie diesen Charakter erzeugen, können sie [au
 
 Doppelt geschriebene Buchstaben wie 𝔸 werden über \bb + Buchstabe + Tab erzeugt.
 
-Auch große, sowie kleine griechischen Buchstaben sind Verfügbar wie \sigma (σ) \Sigma (Σ), \gamma (γ) , \Gamma (Γ)"
+Auch große, sowie kleine griechischen Buchstaben sind Verfügbar wie \sigma (σ) \Sigma (Σ), \gamma (γ) , \Gamma (Γ)
+"
+
+# ╔═╡ 44985e10-22a0-11eb-30f8-8734b90bb3f3
+md"""
+Diese Zelle soll ihnen zeigen wie sie mithilfe von Markdown - Strings selber Notizen machen können, die im Notebook bestehen bleiben. Auch Mathenotizen sind möglich $\sigma$, innerhalb der Zeile oder in einer neuen Zeile 
+
+$$\mathbb{C}_{ijkl} \varepsilon_{kl}$$
+
+Für mathematische Notizen werden LaTeX Gleichungen benutzt. [Dazu finden Sie hier alle möglichen Symbole](https://www.caam.rice.edu/~heinken/latex/symbols.pdf)
+"""
 
 # ╔═╡ ae95dfc0-12df-11eb-1c0a-43f01227939d
 md"### Packages
 Natürlich müssen wir nicht bei jedem Problem von null anfangen und das Rad neu erfinden. Viele Menschen überall auf der Welt kreieren ein Ökosystem für wissenschaftliches Rechnen innerhalb Julia. Einzelne Funktionen und Strukturen (engl. Structs) werden zusammen gefasst in Packages.
 
-In zukünftigen werden wir Pakete wie folgt importieren:
+In zukünftigen Übungen werden wir Pakete wie folgt importieren:
 ```julia 
 using Tensors
 using Plots, LinearAlgebra
@@ -92,11 +122,23 @@ Auf einzelne Einträge kann über folgende Notation zugegriffen werden
 
 # ╔═╡ 8ba57640-1480-11eb-384b-b57d583138e9
 md"## Aufgabe 2.1
-Speichern sie die zweite Spalte und dritte Zeile der Matrix 𝐊 in separate Variablen und addieren sie diese zusammen. Skalieren sie anschließend das Ergebnis um den Eintrag in der dritten Spalte, dritte zeile"
+Speichern sie die zweite Spalte und dritte Zeile der Matrix 𝐊 in separate Variablen und addieren sie diese zusammen. Skalieren sie anschließend das Ergebnis um den Eintrag in der dritten Spalte, dritte Zeile"
 
 # ╔═╡ 7203efc2-1481-11eb-2a14-e999f283dda0
 # Code Zelle für die Bearbeitung der Aufgabe
+# Platz für das Zwischenspeichern
 
+aufgabe21 = missing # das ist ihre Final Antwort 
+
+# ╔═╡ d6206fdc-2327-11eb-2231-fdc6b0d97115
+if ismissing(aufgabe21)
+	still_missing()
+elseif aufgabe21 == (𝐊[:,2] + 𝐊[3,:])*𝐊[3,3]
+	check_dict["2.1"] = true
+	correct()
+else
+	keep_working()
+end
 
 # ╔═╡ d616ee5e-1483-11eb-2892-81977042b734
 md"### Tensoren
@@ -134,7 +176,7 @@ begin
 end
 
 # ╔═╡ fece2868-1487-11eb-206f-d92557595592
-f(i,j,k,l) = λ*δ(i,j)*δ(k,l) + μ*(δ(i,k)*δ(j,l) + δ(i,l)*δ(j,k))
+f(i,j,k,l) = μ*δ(i,i)*δ(k,k)
 
 # ╔═╡ 2ae9446e-1488-11eb-3cdc-87e08efa77ea
 begin
@@ -149,33 +191,75 @@ Implementieren sie folgende Definition des Elastizitätstensor
 
 $$\mathbb{C} = \lambda \mathbf{I} \otimes \mathbf{I} + 2\mu \mathbb{I}$$
 
-!!! hint
 Implementieren sie zuerst den Einheitstensor 4. Stufe $\mathbb{I}$
 """
 
+# ╔═╡ 8421da86-2282-11eb-0846-09ad6dd07f7e
+hint(md"""
+	Der Einheitstensor 4. Stufe kann wie folgt definiert werden:
+	```math
+	\delta_{ik} \delta_{jl}
+	```
+	""")
+
 # ╔═╡ bbc1d878-1516-11eb-00f3-f7971b3df5b2
 ## Definieren sie in dieser Zelle den Einheitstensor 4. Stufe in Indexnotation
-
+𝕀(i,j,k,l) = missing
 
 # ╔═╡ 2b8a5b56-1488-11eb-0f3f-9758221b2cad
 begin 
 	## Definieren sie hier g eine Funktion die die Indexnotation von ℂ beschreibt
-	g(i,j,k,l) 
+	g(i,j,k,l) = missing
 	ℂ = SymmetricTensor{4, 3}(g)
 	tovoigt(ℂ)
 end
 
+# ╔═╡ 8ea72e98-232a-11eb-232d-972c230442c3
+begin
+	korrekt_ℂ = SymmetricTensor{4,3}((i,j,k,l)->λ*δ(i,j)*δ(k,l)+2*μ*δ(i,k)*δ(j,l))
+	if !(@isdefined ℂ)
+		still_missing()
+	elseif ℂ == korrekt_ℂ
+		check_dict["2.3"] = true
+		correct()
+	else
+		keep_working()
+	end
+end
+
+# ╔═╡ c7665f8a-2299-11eb-1c10-fff04c68853b
+hint(md"""
+	Das dyadische Produkt aus zwei Einheitstensoren 2. Stufe ist in Indexnotation definiert wie folgt
+	```math
+	\delta_{ij} \delta_{kl}
+	```
+	""")
+
 # ╔═╡ 2d0ec56e-1485-11eb-0e57-a52b9d71c7c3
 md"## Aufgabe 2.4
-Berechnen sie das einfach sowie doppelte Produkt der beiden oben definierten Tensoren"
+Berechnen sie das einfach sowie doppelte Produkt der beiden oben definierten Tensoren $\boldsymbol{B}$ und $\boldsymbol{C}$
+
+$$\boldsymbol{B} \boldsymbol{C}$$
+$$\boldsymbol{B}\ \colon \boldsymbol{C}$$
+"
 
 # ╔═╡ 403c4bf2-1485-11eb-0490-ab38f0e3b074
 # das einfache Produkt hier \cdot + tab ist die dazugehörige Operation
-
+aufgabe24a = missing
 
 # ╔═╡ 56a81c0e-1485-11eb-0d8c-379d5507aa2a
 # das doppelte Produkt hier \boxdot + tab ist die dazugehörige Operation, auf Papier geschrieben als ":"
+aufgabe24b = missing
 
+# ╔═╡ 68c1e338-232c-11eb-1d8b-7fa85242fd5f
+if ismissing(aufgabe24a) || ismissing(aufgabe24b)
+	still_missing()
+elseif aufgabe24a == 𝐁 ⋅ 𝐂 && aufgabe24b == 𝐁 ⊡ 𝐂
+	check_dict["2.4"] = true
+	correct()
+else
+	keep_working()
+end
 
 # ╔═╡ abe50f8a-12df-11eb-2eb8-8f687db89f9f
 md"### Funktionen
@@ -242,7 +326,7 @@ md"## Aufgabe 2.6
 hello_course(1.0)
 
 # ╔═╡ 7a886134-1466-11eb-1b97-216405a0324a
-md"!!! hint 
+md"
 Um alle Implementierungen einer Funktion `f` gelistet zu bekommen, können sie mit `methods(f)` einen Dispatch Table von Julia erfragen. Probieren sie das mit unserer `hello_course` Methode."
 
 # ╔═╡ 9f0a358c-1466-11eb-122f-0505b19dd76f
@@ -295,7 +379,7 @@ Ein klassisches Beispiel für while Schleifen sind iterative Löser wie z.B. New
 
 # ╔═╡ f7d54034-151d-11eb-0f54-bdae21564eb3
 md"""## Aufgabe 2.7
-Nun sind sie gerüstet ihre ersten komplett selbst geschrieben Funktionen zu schreiben, die die vorgestellten Konzepte nutzen. Schreiben sie hierfür eine eigene funktion namens `my_dot_operation(a,b)`, die Skalare, Vektoren (Skalar Produkt) und Tensoren 2. Stufe miteinander multipliziert. Verwenden sie dabei keine vordefinierten Operationen wie bspw. den \cdot Operator ⋅, sondern lösen sie es ausschließlich über die normalen Arithmetik Operatoren wie +,-,*,/, sowie den vorgestellten Konzepten in dem Kontrollfluss Kapitel.
+Nun sind sie gerüstet ihre ersten komplett selbst geschrieben Funktionen zu schreiben, die die vorgestellten Konzepte nutzen. Schreiben sie hierfür eine eigene Funktion namens `my_dot_operation(a,b)`, die Skalare und Vektoren (Skalar Produkt) miteinander multipliziert. Verwenden sie dabei keine vordefinierten Operationen wie bspw. den \cdot Operator ⋅, sondern lösen sie es ausschließlich über die normalen Arithmetik Operatoren wie +,-,*,/, sowie den vorgestellten Konzepten in dem Kontrollfluss Kapitel.
 
 * Die Skalarmultiplikationen können sie mit den Werten 2 und 3 überprüfen, was 6 ergeben sollte.
 * Die Vektoren Operationen sollte mit folgenden Vektoren überprüft werden
@@ -304,18 +388,53 @@ Nun sind sie gerüstet ihre ersten komplett selbst geschrieben Funktionen zu sch
 𝐲 = Vec{3}([4.0,5.0,6.0])
 ```
 welches zum Ergebnis `32.0` führen sollte
-* Testen sie ihre Implementierung mit den schon definierten Tensoren 2. Stufe 𝐁 und 𝐂. Das ergebnis sollte folgendes sein 
-```julia
-3×3 Tensor{2,3,Int64,9}:
- 1  2  3
- 3  5  6
- 1  2  3
-```
 """
 
 # ╔═╡ 9b3be99c-1523-11eb-20c1-1f1320c732be
-## Ihre my_dot_operation Implementierung
+## Ihre my_dot_operation Implementierung für zwei Skalare
+function my_dot_operation()
+	missing
+end
 
+# ╔═╡ e0f23f94-232f-11eb-03ea-2b5197233e6b
+## Ihre my_dot_operation Implementierung für zwei Skalare
+
+
+# ╔═╡ 1e76e6ec-2283-11eb-277a-63b90113ce65
+𝐲 = Vec{3}([4.0,5.0,6.0])
+
+# ╔═╡ 35a35e38-2286-11eb-2e1e-9dc2700788e0
+𝐱 = Vec{3}([1.0,2.0,3.0])
+
+# ╔═╡ a6c55a28-232e-11eb-2638-a188814cec75
+
+try
+	if !(length(methods(my_dot_operation)) == 2)
+		still_missing()
+	elseif my_dot_operation(3,2) && my_dot_operation(𝐱,𝐲) == 32.
+		check_dict["2.7"] = true
+		correct()
+	else
+		keep_working()
+	end
+catch
+	keep_working()
+end
+
+# ╔═╡ cd2ef6d0-2282-11eb-11f4-af153e461a23
+hint(md"""
+	Machen sie sich multiple dispatch zu nutze!
+	Definieren sie verschiedene Implementierungen basierend auf den Input Argumenten, wie bspw.
+	```julia
+	function my_dot_operation(a::Number, b::Number)
+		# toller code
+	end
+	
+	function my_dot_operation(a::Vec, b::Vec)
+		# wow ist das leer hier
+	end
+	```
+	""")
 
 # ╔═╡ d9c89d9a-1523-11eb-3fa6-b99bcb363457
 md"""## Eine kleine Einführung in das Plotten
@@ -363,7 +482,12 @@ Dieses Konstrukt nennt man Anonyme Funktion oder auch lambda Funktion.
 Das sind Funktionen, die man innerhalb eines Codes definiert, aber sonst nie wieder braucht und daher auch keinen Namen brauchen (deswegen der Name anonym). Sie können wie im oben dargestellten Fall hilfreich sein. Zum konstruieren sollte man sich immer folgende Sprechart vorstellen:
 * meine Argumente in runden Klammern () bilden -> auf folgendes ab ...
 * Im beispiel vom Plot mein Vektor (𝐱) bildet -> auf $a\sin(\omega(x_i+\phi))$ ab
-Diese Arten von Funktionen können bspw. sehr gut bei der Konstruktion von Tensoren in Indexnotation angewendet werden. Logischerweise erlauben sie auch mehrere Argumente, so dass der Elastizitätstensor von vorhin, z.b. wie folgt definiert werden kann
+Diese Arten von Funktionen können bspw. sehr gut bei der Konstruktion von Tensoren in Indexnotation angewendet werden.
+!!! note "Achtung"
+    Die Punktnotation nach `sin` sowie der Punkt vor `+` hat das Array zu den einzelnen Elementen aufgelöst. Den Sinus auf ein Array anzuwenden ist nicht wohl definiert. Den Sinus hingegen auf alle Einträge anzuwenden hingegen schon. Genau dieses Verhalten wird von dem `.` Operator (Broadcast Operator) erzeugt. Er wendet Funktionen auf **alle** Einträgen von Kollektionen(Arrays, Matrizen) an
+
+
+Logischerweise erlauben sie auch mehrere Argumente, so dass der Elastizitätstensor von vorhin, z.b. wie folgt definiert werden kann
 
 ```julia
 C = SymmetricTensor{4, 3}((i,j,k,l) -> λ*δ(i,j)*δ(k,l) + μ*(δ(i,k)*δ(j,l) + δ(i,l)*δ(j,k)))
@@ -372,9 +496,9 @@ C = SymmetricTensor{4, 3}((i,j,k,l) -> λ*δ(i,j)*δ(k,l) + μ*(δ(i,k)*δ(j,l) 
 
 # ╔═╡ b35d502c-20f6-11eb-0d46-175ff430a00d
 md"""
-## Srukturen (engl. Structs)
+## Strukturen (engl. Structs)
 
-Zusammen mit Funktionen ergeben Structs die essentielle Bausteine von Julia. Strukturen sind Sammlungen von Feldern, wobei Felder hier als arbiträre Variable gesehen werden kann. Beispielsweise lässt sich ein klassisches Material in einem `Elasticity` struct zusammenfassen. Das Struct braucht lediglich zwei Parameter `λ` und `μ`
+Zusammen mit Funktionen ergeben Structs die essentiellen Bausteine von Julia. Strukturen sind Sammlungen von Feldern, wobei Felder hier als arbiträre Variable gesehen werden kann. Beispielsweise lässt sich ein klassisches Material in einem `Elasticity` Struct zusammenfassen. Das Struct braucht lediglich zwei Parameter `λ` und `μ`
 ```julia
 struct Elasticity
 	λ::Float64
@@ -393,7 +517,7 @@ end
 
 Hierbei habe ich das Struct bzgl `dim` parametrisiert. Da wir nicht wissen, wie viele Dimensionen später diskretisiert werden, führen wir diesbezüglich Flexibilität ein.
 
-Nun stellt sich die Frage, wir können wir unser Struct erzeugen? Indem wir uns einen sogenannten *Konstruktor* definieren. Das ist eine Funktion, die genau wie das Struct heißen muss und uns das besagte struct zurück gibt.
+Nun stellt sich die Frage, wir können wir unser Struct erzeugen? Indem wir uns einen sogenannten *Konstruktor* definieren. Das ist eine Funktion, die genau wie das Struct heißen muss und uns das besagte Struct zurück gibt.
 
 ```julia
 function Elasticity(λ, μ, dim)
@@ -422,7 +546,16 @@ Elasticity(λ, μ, 2)
 
 # ╔═╡ c1d0c020-21b0-11eb-2c2e-3bc5cec84eab
 md"""## Aufgabe 2.9
-* Erweitern sie die Methode `hello_course` um den Dispatch mit dem Input Argument `elasticity_tensor`. In der Implementierung dieses Dispatches geben Sie folgenden String zurück ` "Das ist mein Elastizitätstensor ℂ: ..."`, wobei die Punkte ersetzt werden sollen mit der reduzierten Schreibweise von $\mathbb{C}$. Sie können weiter oben nachsehen, wie wir zuvor die reduzierte Schreibweise von `Tensors.jl` bekommen haben.
+* Erweitern sie die Methode `my_dot_operation` um den Dispatch mit dem Input Argument `material::Elasticity, `. Hierbei dürfen Sie nun auch Gebrauch von einfachen und doppelten Überschiebungsoperatoren machen, also $\cdot$ (\cdot) und $\boxdot$ (\boxdot, zweifache Überschiebung, geschrieben als :). Führen sie in diesem Dispatch eine doppelte Überschiebung aus mit dem Elastizitätstensor der unter `material.elasticity_tensor` gespeichert ist und einem Tensor 2. Stufe der ε_t genannt wird. Geben Sie am Ende das Produkt ($\sigma$) zurück
+```math
+\sigma = \mathbb{C} \colon \varepsilon
+```
+
+```julia
+function my_dot_operation(material::Elasticity, ε_t::SymmetricTensor)
+	
+end
+```
 * Plotten sie anschließend das Ergebnis aus der doppelten Überschiebung von $\mathbb{C}$ mit $\varepsilon$. $\varepsilon$ ist für sie schon definiert und ist ein **Array** von Dehnungen der Dimension 2. Das Ergebnis soll in der Variable $\sigma$ gespeichert werden. Plotten sie zuerst die $_{xx}$ Komponente und anschließend im selben Plot die $_{yy}$ Komponente.
 
 ### Hinweis
@@ -441,18 +574,40 @@ wobei $\gamma$ ein konstanter Tensor 2. Stufe wäre.
 # ╔═╡ 576028d0-21b2-11eb-2ebc-416983a04e9d
 ε = [SymmetricTensor{2,2}([i 0; 0 -ν*i]) for i in 0:0.0005:0.02]
 
-# ╔═╡ d957c282-21b2-11eb-0347-17acffd3cbcb
+# ╔═╡ 816aa4d6-2289-11eb-2d2e-c3544b626494
+## neue my_dot_operation Implementierung
+
+
+# ╔═╡ 86a49128-2289-11eb-1ba7-2f3e072208bb
+## Eine Zelle für Arithmetik Aufgaben
 begin
-	plot(getindex.(ε,(1)), getindex.([Elasticity(λ,μ,2).elasticity_tensor ⊡ ε_t for ε_t in ε],1))
-	plot!(getindex.(ε,(4)), getindex.([Elasticity(λ,μ,2).elasticity_tensor ⊡ ε_t for ε_t in ε],2))
+	
 end
 
+# ╔═╡ d957c282-21b2-11eb-0347-17acffd3cbcb
+begin
+	plot()
+	plot!()
+end
+
+# ╔═╡ 1e3c2196-2289-11eb-048e-c164f1333413
+hint(md"""
+	Der Broadcast Operator kann ihnen für das plotten jede Menge Arbeit ersparen. Sobald sie ihr Array von $\sigma$ Tensoren haben, können sie alle $_{xx}$ Einträge (Indexpaar (1,1)) abrufen unter
+	```julia
+	getindex.(σ, 1,1)
+	```
+	Wir broadcasten damit auf jedes Element des Arrays (was einem Tensor entspricht) die Funktion `getindex`, was zur Folge hat, dass wir ein Array von Zahleneinträgen (eben genau jene die an (1,1) sitzen) zurückbekommen
+	""")
+
 # ╔═╡ Cell order:
+# ╟─3c1ef852-2282-11eb-1213-77fb22f9862e
 # ╟─39a641c6-1458-11eb-0839-ed5e7b38e91e
+# ╟─c4be359c-2327-11eb-3397-c31749a3351d
 # ╟─630bc766-12d9-11eb-2c25-eb321e5df528
 # ╠═51e80510-12d9-11eb-1943-41a799a99bfb
 # ╠═d73d4a14-12f1-11eb-3376-0df3c73299a3
 # ╟─aff894ce-12db-11eb-01d1-f9a36eb6ee1d
+# ╠═44985e10-22a0-11eb-30f8-8734b90bb3f3
 # ╟─ae95dfc0-12df-11eb-1c0a-43f01227939d
 # ╠═17fba392-147c-11eb-3385-85ad7992d53e
 # ╟─af8ff79e-12df-11eb-0d5d-c18481643e25
@@ -462,6 +617,7 @@ end
 # ╟─b2721566-147e-11eb-2a7c-cf3e6adef77c
 # ╟─8ba57640-1480-11eb-384b-b57d583138e9
 # ╠═7203efc2-1481-11eb-2a14-e999f283dda0
+# ╟─d6206fdc-2327-11eb-2231-fdc6b0d97115
 # ╟─d616ee5e-1483-11eb-2892-81977042b734
 # ╠═9a732b32-1484-11eb-207c-ef610a4271c0
 # ╟─e9f9e9e8-1484-11eb-015a-b178f17dfdc1
@@ -471,11 +627,15 @@ end
 # ╠═fece2868-1487-11eb-206f-d92557595592
 # ╠═2ae9446e-1488-11eb-3cdc-87e08efa77ea
 # ╟─ee9d76f2-1515-11eb-31e4-cf7088e9f1e8
+# ╟─8421da86-2282-11eb-0846-09ad6dd07f7e
 # ╠═bbc1d878-1516-11eb-00f3-f7971b3df5b2
 # ╠═2b8a5b56-1488-11eb-0f3f-9758221b2cad
+# ╟─8ea72e98-232a-11eb-232d-972c230442c3
+# ╟─c7665f8a-2299-11eb-1c10-fff04c68853b
 # ╟─2d0ec56e-1485-11eb-0e57-a52b9d71c7c3
 # ╠═403c4bf2-1485-11eb-0490-ab38f0e3b074
 # ╠═56a81c0e-1485-11eb-0d8c-379d5507aa2a
+# ╟─68c1e338-232c-11eb-1d8b-7fa85242fd5f
 # ╟─abe50f8a-12df-11eb-2eb8-8f687db89f9f
 # ╟─7f94ddc8-12e1-11eb-147b-6d327e18e3ee
 # ╠═bfd6d2b0-12e1-11eb-1707-43f522e19a24
@@ -491,6 +651,11 @@ end
 # ╟─9d05b6de-1480-11eb-2637-370719ccd01d
 # ╟─f7d54034-151d-11eb-0f54-bdae21564eb3
 # ╠═9b3be99c-1523-11eb-20c1-1f1320c732be
+# ╠═e0f23f94-232f-11eb-03ea-2b5197233e6b
+# ╟─a6c55a28-232e-11eb-2638-a188814cec75
+# ╠═1e76e6ec-2283-11eb-277a-63b90113ce65
+# ╠═35a35e38-2286-11eb-2e1e-9dc2700788e0
+# ╟─cd2ef6d0-2282-11eb-11f4-af153e461a23
 # ╟─d9c89d9a-1523-11eb-3fa6-b99bcb363457
 # ╠═5d3675fc-1525-11eb-134b-f51f3e2a826d
 # ╟─77ee562c-1524-11eb-2126-cd18b7f54c7b
@@ -505,4 +670,7 @@ end
 # ╠═acea91d2-20fb-11eb-2228-8fdb39ef21e1
 # ╟─c1d0c020-21b0-11eb-2c2e-3bc5cec84eab
 # ╠═576028d0-21b2-11eb-2ebc-416983a04e9d
+# ╠═816aa4d6-2289-11eb-2d2e-c3544b626494
+# ╠═86a49128-2289-11eb-1ba7-2f3e072208bb
 # ╠═d957c282-21b2-11eb-0347-17acffd3cbcb
+# ╟─1e3c2196-2289-11eb-048e-c164f1333413
